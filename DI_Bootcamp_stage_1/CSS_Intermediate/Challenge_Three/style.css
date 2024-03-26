@@ -1,0 +1,41 @@
+/* Exercise 1 */
+
+/* * {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    width: 90%;
+    margin-left: 10px;
+}
+
+.left {
+    background-color: red;
+    width: 20%;
+    height: 100px;
+}
+
+.right {
+    background-color: blue;
+    width: 70%;
+    height: 100px;
+}
+
+div, footer {
+    display: inline-block;
+    height: 100px;
+}
+
+.container {
+    width: 100%;
+    margin: 20px 0px;
+}
+
+footer {
+    width: 98.5%;
+    background-color: yellow;
+}  */
+
+
