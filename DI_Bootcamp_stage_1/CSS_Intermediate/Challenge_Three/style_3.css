@@ -1,0 +1,47 @@
+/* Exercise 3 with flexbox (exercise4) */
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+.heading {
+    background-color: rgb(35, 99, 35);
+    height: 100px;
+    width: 98.9%;
+    margin: 10px;
+}
+
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px;
+    
+}
+
+img {
+    height: 400px;
+    width: 32%;
+    margin: 12px;
+}
+
+.col {
+    height: 400px ;
+    width: 32%;
+    margin: 12px;
+}
+
+.col-left {
+    background-color: orange;
+}
+
+.col-mid {
+    background-color: red;
+}
+
+.col-right {
+    background-color: lightblue;
+}
+
