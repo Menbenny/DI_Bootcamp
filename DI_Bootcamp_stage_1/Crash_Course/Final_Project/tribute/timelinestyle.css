@@ -23,6 +23,11 @@
     color: white;
   }
 
+  
+.footer-icons i {
+  color: black;
+}
+
   .timeline > .col {
     border-right: 1px solid black;
     box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.401);
