@@ -22,6 +22,8 @@ body {
     color: grey;
   }
 
+
+
   /* .col-4 img {
     width: 300px;
     padding-top:100px;
@@ -38,13 +40,19 @@ img.d-block.w-100 {
   padding-top: 50px;
 } */
 
-/* img {
-  width: 20vw;
+img {
+  width: 100%;
   padding: 0px 0px;
-} */
+}
 
 
 .display-1 {
   font-family: condensed light;
   font-size: 7em;
+}
+
+.footer-icons {
+  font-size: 2.5em;
+  margin: 5%;
+  
 }
