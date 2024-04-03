@@ -1,102 +1,33 @@
-/* * {
+* {
     box-sizing: border-box;
-    margin: 0px;
     padding: 0px;
-} */
-
-
-body {
-  background-color: black;
-  margin: 0px;
-  padding: 0px;
-  overflow-x: hidden;
-  height: 100vh;
-  }
-
-p, a {
-    color: white;
+    margin: 0px;
 }
 
-a {
-    text-decoration: none;
-    display: flex;
-    padding: 10px;
-    /* justify-content: flex-start; */
-}
+.navbar {
+    height: 5vh;
+    width: 100vw;
+    background-color: aqua;
 
-.header {
-    border-bottom: 1px solid white;
-    width: 99.8vw;
-    height: 50px;
     display: flex;
-    /* justify-content: center; */
-
-    display: inline-flex;
     justify-content: space-between;
+    align-items: center;
 
-    position:sticky ;
-    background-color: black;
+    padding: 10px;
 }
 
-
-.image-with-shadow {
+.container {
+    /* container properties */
     display: flex;
-    /* flex-direction: column; */
-    /* position: relative; */
-    margin: 50px auto; /* Adjust to center the image */
-    padding: 100px;
-    position: absolute;
-    top: 0px;
-    left: 0;
-    width: 100%;
-    height:100vh;
-    background: linear-gradient(90deg, rgba(300, 2, 2, 0) 30%, rgba(255, 255, 255, 0.461) 85%, rgba(255, 0, 0, 0.477) 100%, rgba(164, 112, 112, 0.783) 100%); /* Adjust gradient stops as needed */
-  }
+    justify-content: space-around;
 
-  .image-with-shadow img {
-    /* display: block; */
-    max-width: 100%;
-    height: auto;
-    border-radius: 50%; /* Optional: Add border radius to image */
-    position: relative;
-    top: 10px;
-    margin-right: 400px;
-    width: 20vw;
+    /* container background */
+    background-color: rgba(165, 42, 42, 0.283);
+}
+
+
+div .col {
+    background-color: rgba(0, 0, 0, 0.477);
     height: 70vh;
-  }
-
-.right {
-    /* padding: 10px;
-    margin-top: 100px; */
-    padding-right: 100px;
+    width: 45vw;
 }
-
-p {
-    font-size: 3.5em;
-    font-family: fantasy;
-}
-
-span {
-    color: white;
-    font-size: 1em;
-}
-
-
-.simple-icons--tesla {
-    display: inline-block;
-    width: 4em;
-    height: 2em;
-    --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' d='m12 5.362l2.475-3.026s4.245.09 8.471 2.054c-1.082 1.636-3.231 2.438-3.231 2.438c-.146-1.439-1.154-1.79-4.354-1.79L12 24L8.619 5.034c-3.18 0-4.188.354-4.335 1.792c0 0-2.146-.795-3.229-2.43C5.28 2.431 9.525 2.34 9.525 2.34zl-.004.002H12zm0-3.899c3.415-.03 7.326.528 11.328 2.28c.535-.968.672-1.395.672-1.395C19.625.612 15.528.015 12 0C8.472.015 4.375.61 0 2.349c0 0 .195.525.672 1.396C4.674 1.989 8.585 1.435 12 1.46z'/%3E%3C/svg%3E");
-    background-color: currentColor;
-    -webkit-mask-image: var(--svg);
-    mask-image: var(--svg);
-    -webkit-mask-repeat: no-repeat;
-    mask-repeat: no-repeat;
-    -webkit-mask-size: 100% 100%;
-    mask-size: 100% 100%;
-    color: white;
-  }
-
-  span {
-    text-shadow: 10px 10px 5px rgb(0, 0, 0);
-  }

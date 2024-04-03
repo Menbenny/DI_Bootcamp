@@ -1,6 +1,0 @@
-Charles Babbage
-English Mathematician who devised the analytical engine in the mid 1830s, the 
-forerunner of the modern digital computer -- in 1843 Babbage's friend 
-mathematician Ada Lovelace translated a french paper about an analytical 
-engine. In her own words, Annotations, published how ti could perform a 
-sequence of calculations -- The first computer program. 
