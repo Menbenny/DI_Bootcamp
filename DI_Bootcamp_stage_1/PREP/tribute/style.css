@@ -45,7 +45,7 @@
 
 .links a:hover {
     /* transform: scale(9.9); */
-    color: white;
+    color: #4c6b53;
     /* transform: scale(2,9); */
     transition-duration: 0.3s;
     font-size: 1.9em;
@@ -147,6 +147,10 @@ c {
 .containerTwo h1 {
     font-size: 3em;
     color: white;
+}
+
+.containerTwo p {
+    line-height: 200%;
 }
 
 /* FOOTER */
