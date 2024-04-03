@@ -4,6 +4,10 @@
     margin: 0px;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 .background {
     background-image: url('/images/Background_Picture.jpg');
     background-repeat:no-repeat;
