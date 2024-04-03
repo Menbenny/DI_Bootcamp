@@ -40,14 +40,15 @@
     color: #89b592;
     padding-left: 20px;
     
-    font-size: 2em;
+    font-size: 1.3em;
 }
 
-.navbar .link:hover {
-    /* transition: scale(1.5); */
+.links a:hover {
+    /* transform: scale(9.9); */
     color: white;
-    transform: scale(1.2);
-    transition-duration: 1.2s;
+    /* transform: scale(2,9); */
+    transition-duration: 0.3s;
+    font-size: 1.9em;
 }
 
 /* CONTAINER */
@@ -91,18 +92,22 @@
 
 .container .heading {
     font-size: 1.5em;
-    color: #EAB7C0;
+    color: white;
     /* border-bottom: 1px solid white ; */
     padding-bottom: 20px;
 }
 
-.container .heading:hover {
+/* .container .heading:hover {
     font-size: 1.5em;
     color: white;
     transform:scale(1,1);
     transition-duration: 0.3s;
       
     padding-bottom: 20px;
+} */
+
+span {
+    color: white;
 }
 
 c {
