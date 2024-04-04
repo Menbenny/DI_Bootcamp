@@ -158,12 +158,13 @@ c {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    background-color: #f8f3ed;
 }
 
 .mediaCard {
     width: 45vw;
     height: 45vh;
-    background-color: #4c6b53;
+    /* background-color: #4c6b53; */
 
     display: flex;
     flex-direction: column;
@@ -171,13 +172,29 @@ c {
     padding: 20px;
 }
 
-iframe {
-    width: 100%;
+.mediaCard img {
+    width: 40%;
+}
+
+.one iframe {
+    width: 70%;
     height: 100%;
+    
+    box-shadow: 25px 25px 20px rgba(0, 0, 0, 0.483);
+}
+
+.three iframe {
+    width: 70%;
+    height: 100%;
+    
+    box-shadow: 25px 25px 20px rgba(0, 0, 0, 0.483);
 }
 
 
-
+.mediaCard p {
+    padding: 5vh;
+    line-height: 150%;
+}
 
 
 /* FOOTER */
