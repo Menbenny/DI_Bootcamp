@@ -18,7 +18,7 @@ body {
 .navbar {
     height: 15vh;
     width: 100vw;
-    /* background-color: rgba(0, 255, 255, 0.288); */
+    
 
     display: flex;
     justify-content: space-around;
@@ -43,15 +43,12 @@ body {
     text-decoration: none;
     color: #89b592;
     padding-left: 20px;
-    
     font-size: 1.3em;
 }
 
 .links a:hover {
-    /* transform: scale(9.9); */
     color: #4c6b53;
-    /* transform: scale(2,9); */
-    transition-duration: 0.3s;
+    transition: 0.3s;
     font-size: 1.9em;
 }
 
@@ -60,16 +57,13 @@ body {
 
 .container {
     /* container properties */
+
     display: flex;
     justify-content: space-around;
-
-    /* container background */
-    /* background-color: rgba(63, 29, 29, 0.283); */
 }
 
 
 .container .col {
-    /* background-color: rgba(0, 0, 0, 0.477); */
     height: 100vh;
     width: 45vw;
 }
@@ -90,8 +84,7 @@ body {
 }
 
 .container .right {
-    flex-direction: column;
-    
+    flex-direction: column;  
 }
 
 .container .heading {
@@ -123,11 +116,9 @@ c {
 .containerTwo .left {
     height: 30vh;
     width: 30vw;
-    /* background-color: rgba(127, 255, 212, 0.429); */
     align-items: center;
 
     border-right: 1px solid #89b592;
-  
 }
 
 
@@ -135,9 +126,12 @@ c {
 .containerTwo .right {
     height: 30vh;
     width: 65vw;
-    /* background-color: rgba(207, 136, 48, 0.297); */
     align-items: center;
     color: white;
+
+    display: flex;
+    flex-direction: column;
+    
 }
 
 
@@ -157,23 +151,42 @@ c {
     line-height: 200%;
 }
 
+/* Container Three */
+
+.containerThree {
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.mediaCard {
+    width: 45vw;
+    height: 45vh;
+    background-color: #4c6b53;
+
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+
+
+
+
 /* FOOTER */
 
 .footer {
-    height: 100vh;
+    height: 30vh;
     width: 100vw;
-
-    background-color: rgba(240, 248, 255, 0.421);
+    background-color: #89b592;
 }
 
 .bottom {
     height: 5vh;
     width: 100vw;
-
     background-color: rgba(0, 0, 0, 0.223);
-
-    display: flex;
-    
+    display: flex; 
 }
 
 .bottom div {
