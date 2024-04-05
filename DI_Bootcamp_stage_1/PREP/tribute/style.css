@@ -1,3 +1,11 @@
+/* Font imports */
+/* Abril Fatface for HEADING */
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+/* Avro static for sub headings */
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
+
 * {
     box-sizing: border-box;
     padding: 0px;
@@ -6,6 +14,7 @@
 
 body {
     overflow-x: hidden;
+  
 }
 
 .background {
@@ -38,6 +47,12 @@ body {
     color: #e7415f84;
 }
 
+audio {
+    /* background-color: #4c6b53; */
+    position: relative;
+    left: 9vw;
+    width: 9vw;
+}
 
 .links a {
     text-decoration: none;
@@ -92,6 +107,7 @@ body {
     color: white;
     line-height: 350%;
     padding-bottom: 20px;
+    
 }
 
 
@@ -99,9 +115,42 @@ span {
     color: white;
 }
 
-c {
+@keyframes slideIn{
+    from {
+     margin-left: 51%;
+     width: 300%;
+   }
+ 
+   to {
+     margin-left: 0%;
+     width: 100%;
+     font-size: 2em;
+   }
+ }
+
+ .slideIn{
+    animation: slideIn 2s;
+  }
+
+.heading i {
     font-size: 2.5em;
 }
+
+/* @keyframes slideInLeft {
+    from {
+        margin-right: -100%;
+        width: -300%;
+    }
+
+    to {
+        margin-right:0%;
+        width: -100%;
+    }
+}
+
+.slideInLeft {
+    animation: slideInLeft 2s;
+} */
 
 /* CONTAINER_TWO */
 
@@ -117,8 +166,6 @@ c {
     height: 30vh;
     width: 30vw;
     align-items: center;
-
-    border-right: 1px solid #89b592;
 }
 
 
@@ -130,10 +177,19 @@ c {
     color: white;
 
     display: flex;
-    flex-direction: column;
-    
+    flex-direction: column;   
 }
 
+.right a {
+    text-decoration: none;
+    color: white;
+    /* position: relative; */
+    /* right: 28.5vw; */
+}
+
+.right a:hover {
+    color: #344b39;
+}
 
 
 .containerTwo div {
@@ -163,7 +219,7 @@ c {
 
 .mediaCard {
     width: 45vw;
-    height: 45vh;
+    height: 55vh;
     /* background-color: #4c6b53; */
 
     display: flex;
@@ -172,7 +228,7 @@ c {
     padding: 20px;
 }
 
-.mediaCard img {
+.two img {
     width: 40%;
 }
 
@@ -190,19 +246,94 @@ c {
     box-shadow: 25px 25px 20px rgba(0, 0, 0, 0.483);
 }
 
+.five iframe {
+    width: 70%;
+    height: 100%;
+    
+    box-shadow: 25px 25px 20px rgba(0, 0, 0, 0.483);
+}
+
+
+
 
 .mediaCard p {
     padding: 5vh;
     line-height: 150%;
 }
 
+.six img {
+    width: 100%;
+}
+
 
 /* FOOTER */
 
-.footer {
-    height: 30vh;
+footer {
+    height: 190vh;
     width: 100vw;
-    background-color: #89b592;
+    background-color: #f8f3ed;
+
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+
+.footer {
+    display: flex;
+    align-items: flex-end;
+}
+
+.footer .left {
+    height: 80vh;
+    width: 100vh;
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid #89b592;
+    padding-left: 5vw;
+    padding-bottom: 5vh;
+    margin-bottom: 9vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer .right {
+    height: 80vh;
+    width: 100vh;
+    /* background-color: rgb(181, 32, 32); */
+    display: flex;
+    justify-content: center;
+    
+    
+}
+
+.ticket {
+    
+    width: 100%;
+    height: 4vh;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ticket a {
+    background-color: #eab7c0;
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+}
+
+.ticket a:hover {
+    color: #4c6b53;
+}
+
+.ticket p {
+    position: absolute;
+    right: 62%;
 }
 
 .bottom {
@@ -210,6 +341,9 @@ c {
     width: 100vw;
     background-color: rgba(0, 0, 0, 0.223);
     display: flex; 
+    position: fixed;
+    bottom: 0vh;
+
 }
 
 .bottom div {
@@ -221,15 +355,21 @@ c {
 }
 
 .bottom .left {
-    background-color: #89b592;
+    
+    background-image:linear-gradient(to right,#89b592,#7ca884,#f8f3ed) ;
 }
 
 .bottom .right {
-    background-color: #eab7c0;
+    background-image:linear-gradient(to right,#f8f3ed, #bb7470,#eab7c0) ;
+    width: 60vw;
    
 }
 
 .bottom a {
     text-decoration: none;
     color: white;
+}
+
+.ticket h3 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }

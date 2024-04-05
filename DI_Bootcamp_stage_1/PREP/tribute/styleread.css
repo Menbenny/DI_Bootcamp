@@ -1,0 +1,91 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-image: url('/images/Yellow_background_image.jpg');
+    background-size:32%;
+    background-repeat: no-repeat;
+
+    background-color: #f1bd4f;
+}
+
+.navbar {
+    height: 15vh;
+    width: 100vw;
+    
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    padding: 10px;
+    position: fixed;
+}
+
+.navlogo img {
+    width: 2vw;
+    height: 2.5vh;
+}
+
+.navlogo a {
+    text-decoration: none;
+    color: #fc532f;
+}
+
+audio {
+    /* background-color: #4c6b53; */
+    position: relative;
+    left: 9vw;
+    width: 9vw;
+}
+
+.links a {
+    text-decoration: none;
+    color: white;
+    padding-left: 20px;
+    font-size: 1.3em;
+}
+
+.links a:hover {
+    color: #fc532f;
+    transition: 0.3s;
+    font-size: 1.9em;
+}
+
+/* FOOTER */
+
+.bottom {
+    height: 5vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.223);
+    display: flex; 
+    position: fixed;
+    bottom: 0vh;
+
+}
+
+.bottom div {
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.bottom .left {
+    background-color: #f1bd4f;
+}
+
+.bottom .right {
+    background-color: #f1bd4f;
+    width: 60vw;
+   
+}
+
+.bottom a {
+    text-decoration: none;
+    color: white;
+}
