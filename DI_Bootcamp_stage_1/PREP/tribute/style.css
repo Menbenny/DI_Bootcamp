@@ -271,7 +271,7 @@ span {
 footer {
     height: 190vh;
     width: 100vw;
-    background-color: #f8f3ed;
+    /* background-color: #f8f3ed; */
 
     display: flex;
     justify-content: flex-end;
@@ -453,7 +453,7 @@ footer {
         flex-direction: column;
 
         position: relative;
-        bottom: 33.5vh;
+        bottom: 40vh;
     }
 
     .containerTwo .left {
@@ -464,6 +464,52 @@ footer {
         width: 100vw;
     }
 
+    .popularHits {
+        position: relative;
+        top: -40vh;
+    }
+
+    /* CONTAINER THEEE */
+    .containerThree {
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        bottom: 40vh;
+        height: 250vh;
+    }
+
+    .mediaCard {
+        width: 100vw;
+        padding-top: 10vh;
+        position: relative;
+        
+    }
+
+    .containerThree iframe {
+        width: 98vw;
+    }
+
+    .two img {
+        width: 80%;
+    }
+
+    .footer {
+
+        display: flex;
+        flex-direction: column;
+        /* flex-wrap:nowrap ; */
+        height: 100vh;
+    }
+
+    .ticket {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        
+
+
+        
+    }
 }
 
 
