@@ -271,7 +271,7 @@ span {
 footer {
     height: 190vh;
     width: 100vw;
-    /* background-color: #f8f3ed; */
+    background-color: #f8f3ed;
 
     display: flex;
     justify-content: flex-end;
@@ -494,10 +494,10 @@ footer {
     }
 
     .footer {
-
+        background-color: none;
         display: flex;
         flex-direction: column;
-        /* flex-wrap:nowrap ; */
+
         height: 100vh;
     }
 
@@ -510,7 +510,6 @@ footer {
     .ticket {
         display: flex;
         flex-direction: column;
-        /* align-content: space-between; */
         margin-bottom: 5vh;
         margin-top: 5vh;
     }
@@ -530,9 +529,6 @@ footer {
         position: relative;
         left: 25%;
         margin-left: 9vh;
-        /* line-height: 10vh; */
-        /* display: flex; */
-        /* justify-content: center; */
     }
 
     .footer .right {
@@ -557,5 +553,157 @@ footer {
 
 /* iPads, Tablets */
 @media screen and (min-width: 481px) and (max-width: 768px) {
-    
+    * {
+        box-sizing: border-box;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .background {
+        background-size: 180%;
+        background-position:top;
+    }
+
+    /* NAVBAR */
+
+    .navbar {
+        display: flex;
+        /* flex-direction: column; */
+        align-items: flex-start;
+        
+    }
+
+    .links {
+        display: flex;
+        /* flex-direction: column; */
+        align-items:flex-start;
+    }
+
+    .links a {
+        padding: 10px;
+    }
+
+    .audio {
+        display: none;
+        
+    }
+
+    /* CONTAINER */
+
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .container .col {
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container img {
+        position: relative;
+        /* left: 10vw; */
+        bottom: 10vh;
+        width: 80vw;
+        height: 80vh;
+    }
+
+    .container .right {
+        display: none;
+    }
+
+    .containerTwo {
+        display: flex;
+        flex-direction: column;
+
+        position: relative;
+        bottom: 40vh;
+    }
+
+    .containerTwo .left {
+        width: 100vw;
+    }
+
+    .containerTwo .right {
+        width: 100vw;
+    }
+
+    .popularHits {
+        position: relative;
+        top: -40vh;
+    }
+
+    /* CONTAINER THEEE */
+    .containerThree {
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        bottom: 40vh;
+        height: 250vh;
+    }
+
+    .mediaCard {
+        width: 100vw;
+        padding-top: 10vh;
+        position: relative;
+        
+    }
+
+    .containerThree iframe {
+        width: 98vw;
+    }
+
+    .two img {
+        width: 80%;
+    }
+
+    .footer {
+
+        display: flex;
+        flex-direction: column;
+        background-color: none;
+        height: 100vh;
+    }
+
+    .footer .left {
+        padding: 0px;
+        display: flex;
+        justify-items: center;
+    }
+
+    .ticket {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 5vh;
+        margin-top: 5vh;
+    }
+
+    .heading{
+        position: relative;
+        left: 20vw;
+    }
+
+    .ticket p {
+        /* display: none; */
+
+    }
+
+
+    .ticket h3 {
+        position: relative;
+        left: 25%;
+        margin-left: 9vh;
+    }
+
+    .footer .right {
+        position:relative ;
+        top: -150vh;
+    }
+
+    .footer a {
+        position: relative;
+        top: -5vh;
+    }
 }
