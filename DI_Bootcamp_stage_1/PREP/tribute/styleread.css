@@ -8,7 +8,7 @@ body {
     background-image: url('/images/Yellow_background_image.jpg');
     background-size:32%;
     background-repeat: no-repeat;
-
+    background-attachment: fixed;
     background-color: #f1bd4f;
 }
 
@@ -85,6 +85,14 @@ audio {
     font-size: 1.2em;
 } */
 
+.right a {
+    text-decoration: none;
+    color: black;
+}
+
+.right a:hover{
+    color: #fc532f
+}
 
 
 .container .right {
