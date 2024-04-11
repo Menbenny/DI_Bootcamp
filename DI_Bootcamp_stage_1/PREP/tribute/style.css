@@ -110,6 +110,11 @@ audio {
     
 }
 
+.slideIn {
+    color: #89b592;
+    text-shadow: 10px 10px 20px black;
+    font-size: 2em;
+}
 
 span {
     color: white;
@@ -126,6 +131,10 @@ span {
      width: 100%;
      font-size: 2em;
    }
+ }
+
+ #colorSpan {
+    color: #89b592;
  }
 
  .slideIn{
@@ -168,7 +177,9 @@ span {
     align-items: center;
 }
 
-
+.andSign {
+    color: #eab7c0;
+}
 
 .containerTwo .right {
     height: 30vh;
@@ -207,6 +218,18 @@ span {
     line-height: 200%;
 }
 
+.popularHits {
+    height: 8vh;
+    padding-top: 1vh;
+    font-size: 2em;
+    padding-left: 10vw; 
+    background-image: linear-gradient(to right,#89b592,#7ca884,#f8f3ed,#bb7470,#eab7c0);
+}
+
+.popularHits h2 {
+    color: #f8f3ed; ;
+}
+
 /* Container Three */
 
 .containerThree {
@@ -226,6 +249,24 @@ span {
     flex-direction: column;
     align-items: center;
     padding: 20px;
+}
+
+.mediaCard p {
+    font-size: 1.3em;
+}
+
+.five > div {
+    height: 20vh;
+}
+
+.five h2 {
+    line-height: 190%;
+    align-self: center;
+}
+
+.five span {
+    background-color: rgb(200, 15, 15);
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;padding: 3px;
 }
 
 .two img {
@@ -269,7 +310,7 @@ span {
 /* FOOTER */
 
 footer {
-    height: 190vh;
+    height: 160vh;
     width: 100vw;
     background-color: #f8f3ed;
 
@@ -281,6 +322,10 @@ footer {
 .footer {
     display: flex;
     align-items: flex-end;
+}
+
+.UpcomingTours {
+    color: black;
 }
 
 .footer .left {
@@ -393,8 +438,12 @@ footer {
         padding: 0px;
     }
 
+    body {
+        overflow-x: hidden;
+    }
+
     .background {
-        background-size: 180%;
+        background-size: 260%;
         background-position:top;
     }
 
@@ -497,7 +546,7 @@ footer {
         background-color: none;
         display: flex;
         flex-direction: column;
-
+        align-items: flex-end;
         height: 100vh;
     }
 
@@ -509,7 +558,8 @@ footer {
 
     .ticket {
         display: flex;
-        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
         margin-bottom: 5vh;
         margin-top: 5vh;
     }
@@ -529,11 +579,16 @@ footer {
         position: relative;
         left: 25%;
         margin-left: 9vh;
+        
     }
 
     .footer .right {
         position:relative ;
         top: -150vh;
+    }
+
+    .date {
+        display: none;
     }
 
     .footer a {
@@ -551,8 +606,23 @@ footer {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* iPads, Tablets */
-@media screen and (min-width: 481px) and (max-width: 768px) {
+@media screen and (min-width: 481px) and (max-width: 800px) {
     * {
         box-sizing: border-box;
         margin: 0px;
@@ -560,7 +630,7 @@ footer {
     }
 
     .background {
-        background-size: 180%;
+        background-size: 1070px;
         background-position:top;
     }
 
@@ -604,7 +674,6 @@ footer {
 
     .container img {
         position: relative;
-        /* left: 10vw; */
         bottom: 10vh;
         width: 80vw;
         height: 80vh;
@@ -648,7 +717,6 @@ footer {
         width: 100vw;
         padding-top: 10vh;
         position: relative;
-        
     }
 
     .containerThree iframe {
@@ -659,51 +727,31 @@ footer {
         width: 80%;
     }
 
-    .footer {
-
-        display: flex;
-        flex-direction: column;
-        background-color: none;
-        height: 100vh;
-    }
 
     .footer .left {
         padding: 0px;
+        width: 100vh;
         display: flex;
-        justify-items: center;
+        flex-direction: column;
     }
 
     .ticket {
         display: flex;
-        flex-direction: column;
-        margin-bottom: 5vh;
-        margin-top: 5vh;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 6vw;
     }
 
-    .heading{
-        position: relative;
-        left: 20vw;
+    footer{
+        height: 130vh;
     }
 
-    .ticket p {
-        /* display: none; */
-
-    }
-
-
-    .ticket h3 {
-        position: relative;
-        left: 25%;
-        margin-left: 9vh;
+    .date {
+       display: none;
     }
 
     .footer .right {
-        position:relative ;
-        top: -150vh;
+     display: none;
     }
 
-    .footer a {
-        position: relative;
-        top: -5vh;
-    }
 }
