@@ -1,0 +1,82 @@
+
+
+a {
+    color: blue;
+}
+
+article {
+    padding: 20px;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.cat_senses {
+    text-decoration: underline;
+    margin-left: 20px;
+}
+
+ul {
+    margin-left: 20px;
+}
+
+ol {
+    list-style: upper-roman;
+}
+
+.media {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.media img {
+    width: 60%;
+    height: 100%;
+    border: 10px solid green;
+}
+
+.heading {
+    margin: 20px;
+    text-align: center;
+    color: red;
+    border: 1px solid red;
+    padding: 20px 24.5vw 20px 24.5vw;
+}
+
+table {
+    margin: 50px;
+    text-align: center;
+    display: flex;
+    justify-content: center ;
+}
+
+td {
+    border: 1px solid black;
+    
+}
+
+.content_padding td{
+    padding: 20px;
+}
+
+.lion {
+    width: 40%;
+    height: 60%;
+    border: 10px solid orange;
+    
+}
+
+.lion_div {
+    display: flex;
+    justify-content: center;
+}
+
+section {
+    padding: 20px;
+}
+
+header {
+    padding: 20px;
+}

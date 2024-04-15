@@ -1,0 +1,21 @@
+body {
+    background-image: url('background_picture.avif');
+    background-size:100vw ;
+    background-repeat: no-repeat;
+    background-position-y: -30vh;
+
+}
+
+#container_two {
+    margin-top: 70%;
+}
+
+.height {
+    height: 90vh;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
