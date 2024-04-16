@@ -1,0 +1,31 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+header {
+    width: 100vw;
+    height: 40vh;
+
+    background-color: antiquewhite;
+}
+
+.container {
+    height: 50vh;
+    width: 100vw;
+
+    background-color: aqua;
+
+    /* padding: 5%; */
+
+    display: flex;
+    justify-content: space-around;
+}
+
+.row {
+    width: 40vw;
+    height: 100%;
+
+    background-color: black;
+}
