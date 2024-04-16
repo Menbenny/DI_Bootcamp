@@ -5,12 +5,12 @@
 } */
 
 body {
-    background-image: url('black-panther-marvel-superheroes-black-background-amoled-5k-3440x1440-8385.jpg');
-    background-size: 80%;
+    background-image: url('chadwick-boseman-as-black-panther-tribute-black-background-2560x2560-9122.jpg');
+    background-size: 50%;
     background-repeat: no-repeat;
     background-color: black;
-    background-position-x: 30vw;
-    background-position-y: 20vh;
+    background-position-x: 4vw;
+    background-position-y: 0vh;
     overflow-y: none;
 }
 
@@ -42,7 +42,7 @@ a {
 }
 
 a:hover {
-    color: rgb(188, 92, 188);
+    color: #d8c59c;
 }
 
 img{
@@ -52,18 +52,20 @@ img{
 
 .content {
     display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+   
+    justify-content: space-around;
+    align-items: end;
     color: white;
     
     /* background-color: rgba(36, 108, 171, 0.315); */
     height: 60vh;
+    ;
 }
 
 
 .content h1 {
-    font-size: 7rem;
-    background: linear-gradient(to right, #ffffff, #363636,#2d033c, #120819);
+    font-size: 4rem;
+    background: linear-gradient(to right, #ffffff, #363636,#a19479, #a19479);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
     /* margin-bottom: -10vh; */
@@ -71,13 +73,17 @@ img{
 
 
 h1, p{
-    padding-left: 10vw;
+    padding-right: 10vw;
     
+}
+
+h1 {
+    margin-left: 20vw;
 }
 
 .content p {
     width: 50vw;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     line-height: 20px;
     color: rgba(117, 117, 117, 0.178);
 }
@@ -85,7 +91,7 @@ h1, p{
 .content p:hover {
     color: rgb(161, 161, 161);
     transition: 1s;
-    box-shadow: 10px 100px 100px rgba(58, 5, 86, 0.224);
+   
 }
 
 .footer {
@@ -100,7 +106,7 @@ h1, p{
     /* border-top: 1px solid white; */
     position: fixed;
 
-    background-image: linear-gradient(180deg, black, rgba(255, 21, 255, 0.258));
+    background-image: linear-gradient(180deg, black, #a1947987);
 }
 
 .left .right {
