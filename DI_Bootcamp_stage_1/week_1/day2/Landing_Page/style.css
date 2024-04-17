@@ -1,3 +1,8 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
 body {
     background-image: url('background_picture.avif');
     background-size:100vw ;
@@ -14,8 +19,13 @@ body {
     height: 90vh;
 }
 
-.center {
+/* .center {
     display: flex;
     justify-content: center;
     align-items: center;
-}
+} */
+
+/* .flex {
+    display: flex;
+    width: 100vw;
+} */

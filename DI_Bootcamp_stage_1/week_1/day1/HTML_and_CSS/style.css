@@ -1,0 +1,107 @@
+/* ex 1 */
+
+p {
+  
+    color: rgb(0, 0, 0);
+    padding: 20px;
+    margin-left: 25%;
+}
+
+/*  ex 2 */
+
+article {
+    background-color: rgba(0, 128, 0, 0.575);
+    border: 3px solid green;
+    margin: 20px;
+}
+
+.flag div {
+    height: 100px;
+    width: 30px;
+    display: inline-block;
+    margin: -2px;
+}
+
+/* .flag {
+    display: inline;
+    margin: 20px;
+} */
+
+.blue {
+    
+    background-color: blue;
+}
+
+.red {
+    background-color: red;
+}
+
+.white {
+    background-color: white;
+}
+
+/* ex 3 */
+
+/* 1 */
+/* li:nth-child(2) {
+    color: blue;
+} */
+
+/* li:first-child + li{
+    color: blue;
+} */
+
+
+/* 2 */
+/* ul {
+    font-weight: bold;
+} */
+
+/* div ul {
+    font-weight: bold;
+} */
+
+/* 3 */
+/* div:nth-child(2) p:nth-child(1){
+    background: pink;
+    color: white;
+} */
+
+/* div:last-child, p:first-child {
+    background-color: pink;
+    color: white;
+} */
+
+/* 4 */
+/* div:last-child, p:last-child {
+    background-color: lightblue;
+    margin: 20px;
+    padding: 40px;
+} */
+
+/* div:nth-child(2), p:nth-child(2) {
+    background-color: lightblue;
+    margin: 20px;
+    padding: 40px;
+} */
+table {
+    padding: 30px;
+}
+
+tr:first-child td{
+    border: 1px solid black;
+    padding: 20px ;
+}
+
+
+td {
+    width: 33vh;
+    text-align: center;
+    padding: 20px;
+
+}
+
+tr {
+    background-color: antiquewhite;
+}
+

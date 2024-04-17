@@ -1,0 +1,32 @@
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    height: 50vh;
+
+    background-color: grey;
+
+    padding: 20px;
+}
+
+.box {
+    width: 30vw;
+    height: 40vh;
+
+    padding: 10vh;
+
+}
+
+.blue {
+    background-color: blue;
+}
+
+div:last-child {
+    background-color: orange;
+    position:absolute;
+    top: 5vh;
+    left: 2.5vw;
+}
+
