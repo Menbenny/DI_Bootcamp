@@ -22,7 +22,7 @@
 }
 
 .container {
-    background-color: antiquewhite;
+    /* background-color: antiquewhite; */
 
     width: 100%;
     height: 90vh;
@@ -41,7 +41,7 @@
     width: 20%;
     height: 60vh;
 
-    background-color: rgb(110, 110, 110);
+    /* background-color: rgb(110, 110, 110); */
 
     display: flex;
     justify-content: center;
@@ -59,6 +59,34 @@
 
     display: flex;
     justify-content: space-between;
+    background-size: 100%;
+   
+}
+
+.one {
+    background-image: url('/images/gatsby-original2.jpg');
+   
+}
+.two{
+    background-image: url('/images/03c42fb8-ac02-4647-b8fd-8b17474a1efc.jpg');
+}
+.three{
+    background-image: url('/images/61oL+aVHqeL._SL500_.jpg');
+}
+.four{
+    background-image: url('/images/d0f5a0f0b6459ef5685c3e8cc812b064.jpg');
+}
+.five{
+    background-image: url('/images/deathly-hallows-us-childrens-edition.jpg');
+}
+.six{
+    background-image: url('/images/Dying-of-the-Light-768x1152-1.jpeg');
+}
+.seven{
+    background-image: url('/images/fantasy5a.webp');
+}
+.eight{
+    background-image: url('/images/Jaws-BTS-91.png');
 }
 
 .image div {
@@ -66,7 +94,7 @@
 }
 
 .new b{
-    background-color: green;
+    background-color: rgba(0, 128, 0, 0.719);
     padding: 20px;
     border-radius: 60%;
 
@@ -74,9 +102,9 @@
 }
 
 .discount b{
-    background-color: red;
+    background-color: rgba(255, 0, 0, 0.66);
     padding: 20px;
-
+    color: white;
     border-radius: 50%;
 }
 
@@ -86,6 +114,10 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+
+.content div {
+    padding: 3px;
 }
 
 .description {
@@ -98,10 +130,15 @@
 }
 
 .price {
-    width: 80%;
+    width: 70%;
     display: flex;
     justify-content: space-between;
     /* justify-content: flex-start; */
     /* padding-bottom: 10vh; */
 }
 
+.addToChart button{
+    padding: 10px;
+
+    border: none;
+}
