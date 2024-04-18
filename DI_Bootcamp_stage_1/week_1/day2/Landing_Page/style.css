@@ -8,7 +8,7 @@
     height: 10vh;
     width: 100vw;
 
-    background-color: aqua;
+    background-color: grey;
 
     display: flex;
     justify-content: center;
@@ -16,6 +16,19 @@
     align-items: center;
 
     padding: 30px;
+}
+
+.navbar div {
+    margin: 0px 40px 0px 40px;
+}
+
+.sign_up button {
+    padding: 10px;
+
+    background-color: blue;
+    color: white;
+
+    border: none;
 }
 
 /* CONTAINER */
@@ -65,7 +78,7 @@
     justify-content: center;
     align-items: center;
     padding: 20px;
-    background-color: rgba(108, 36, 36, 0.306);
+   
 }
 
 .col {
@@ -77,11 +90,16 @@
     flex-direction: column;
 
     padding: 20px;
-    background-color: rgba(44, 44, 116, 0.626);
+    /* background-color: rgba(44, 44, 116, 0.626); */
 
     margin-top: 20vh;
 }
 
 .col div {
     padding: 10px;
+}
+
+.icon {
+    font-size: 3em;
+    color: rgba(0, 0, 254, 0.527);
 }
