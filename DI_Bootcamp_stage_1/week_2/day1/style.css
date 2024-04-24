@@ -1,0 +1,99 @@
+/* Exercise 1 */
+
+/* .container div {
+    background-color: lightblue;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: 800;
+    font-size: 2em;
+}
+
+div:first-child, div:last-child {
+    height: 30vh;
+    width: 90vw;
+    
+}
+
+.middle {
+    height: 200%;
+    width: 60%;
+    margin: 10px;
+}
+
+.container {
+    display: flex;
+    margin: 10px;
+    flex-direction: column;
+    align-items: center;
+    border: 3px solid red;
+    padding: 20px;
+} */
+
+/* Exercise 2 */
+
+/* .container div {
+    background-color: lightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+    font-size: 4em;
+    font-weight: bold;
+}
+
+.container {
+    padding: 20px;
+    border: 3px solid red;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+div:first-child, div:last-child {
+    height: 10vh;
+    width: 98vw;
+}
+
+.middle {
+    height: 30vh;
+    margin: 10px 0px 10px 0px;
+    width: 30%;
+} */
+/* 
+.container div {
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.logo {
+    background-color: rgba(128, 0, 128, 0.521);
+    width: 15vw;
+}
+
+.middle {
+    background-color: rgba(173, 216, 230, 0.436);
+    width: 30vw;
+}
+
+.Product {
+    background-color: rgba(255, 0, 0, 0.571);
+    width: 50vw;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    border: 5px solid orange;
+} */
+
