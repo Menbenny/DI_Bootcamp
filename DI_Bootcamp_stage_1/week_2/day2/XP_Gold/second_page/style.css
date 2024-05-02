@@ -1,0 +1,50 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+.main {
+    display: flex;
+    justify-content: center
+    ;
+    
+}
+
+.inner {
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr;
+    width: 70vw;
+}
+
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.price__tag {
+    font-size: 2em;
+}
+
+button {
+    background-color: green;
+    color: white;
+    padding: 10px;
+    border: none;
+}
+
+button:hover {
+    background-color: white;
+    color: black;
+    padding: 10px;
+    border: 1px solid grey;
+}
+
+
+
+
