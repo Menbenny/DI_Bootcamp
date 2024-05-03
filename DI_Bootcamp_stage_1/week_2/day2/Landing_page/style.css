@@ -22,7 +22,15 @@ body {
     width: 100vw;
     text-align: center;
     padding: 20px;
-    font-size: 2em ;
+    font-size: 1.1em ;
+
+    display: flex;
+    justify-content: center;
+ 
+}
+
+.header h1{
+    width: 44vw;
 }
 
 .stats__headings {
@@ -45,15 +53,10 @@ body {
     justify-content: space-around;
 }
 
-.main > * {
-    width: 30vw;
-    margin: 10px;
-}
-
 .main {
     display: flex;
     justify-content: center;
-    height: 80vh;
+    height: 75vh;
 
     padding: 20px;
 
@@ -74,6 +77,11 @@ body {
     height: 40%;
     padding: 10px;
     /* background-color: brown; */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .middle {
@@ -92,11 +100,16 @@ body {
     background-image: url('https://picsum.photos/200');
     background-size: cover;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  
     
 
+}
+
+img {
+    height: 60px;
+    width: 60px;
+    /* position: absolute; */
+    border-radius: 999px;
 }
 
 .inner {
