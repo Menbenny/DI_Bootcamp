@@ -1,0 +1,117 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    /* background-image: url('scott-webb-OxHPDs4WV8Y-unsplash.jpg'); */
+    background-size: cover;
+    
+}
+
+.header .stats__headings{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header {
+    /* background-color: antiquewhite; */
+    height: fit-content;
+    width: 100vw;
+    text-align: center;
+    padding: 20px;
+    font-size: 2em ;
+}
+
+.stats__headings {
+    height: fit-content;
+    width: 100vw;
+    /* background-color: aquamarine; */
+
+   
+    display: flex;
+    flex-direction: column;
+}
+
+.numbers {
+    display: flex;
+    justify-content: space-around;
+}
+
+.description {
+    display: flex;
+    justify-content: space-around;
+}
+
+.main > * {
+    width: 30vw;
+    margin: 10px;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    height: 80vh;
+
+    padding: 20px;
+
+    background-color: grey;
+}
+
+.main > div {
+    padding: 20px;
+}
+ 
+.content {
+    height: 60%;
+    /* background-color: aqua; */
+    padding: 10px;
+}
+
+.name_and_description {
+    height: 40%;
+    padding: 10px;
+    /* background-color: brown; */
+}
+
+.middle {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.image {
+    /* background-color: black; */
+    height: 60px;
+    width: 60px;
+    position: absolute;
+    border-radius: 999px;
+    
+    background-image: url('https://picsum.photos/200');
+    background-size: cover;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+
+.inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    background-color: white;
+    padding: 30px;
+}
+
+.name_and_description {
+    background-color: brown;
+    padding: 30px;
+}
