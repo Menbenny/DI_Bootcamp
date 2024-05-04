@@ -1,0 +1,22 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+.row {
+    display: flex;
+}
+
+.box {
+    height: 80px;
+    width: 80px;
+}
+
+.light__red {
+    background-color: rgb(255, 147, 147);
+}
+
+.red {
+    background-color: red;
+}
