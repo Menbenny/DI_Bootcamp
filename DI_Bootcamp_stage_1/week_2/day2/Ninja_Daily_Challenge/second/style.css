@@ -1,0 +1,33 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+.row {
+    display: flex;
+}
+
+.box {
+    height: 70px;
+    width: 70px;
+
+    margin: 2px;
+}
+
+.one {
+    background-color: lightgray;
+}
+
+.two {
+    background-color:rgb(155, 155, 155);
+}
+
+.three {
+    background-color: rgb(82, 82, 82);
+}
+
+.four {
+    background-color: rgb(49, 49, 49);
+
+}
