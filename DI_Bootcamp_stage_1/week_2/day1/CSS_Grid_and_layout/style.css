@@ -1,4 +1,4 @@
-body {
+/* body {
     overflow-y: hidden;
 }
 
@@ -24,7 +24,7 @@ section div{
 }
 
 .yellow{
-    /* background-color: yellow; */
+    
     display: grid;
     grid-template-columns: 4fr;
 
@@ -33,6 +33,172 @@ section div{
 .yellow div {
     background-color:rgba(254, 254, 111, 0.536);
 }
+*/
+
+/* exercise 2 */
+
+/* section {
+    display: grid;
+}
+
+.header {
+    grid-template-columns: 4fr;
+}
+
+.blue {
+    background-color: blue;
+    height: 10vh;
+}
+
+.container {
+    grid-template-columns: 2fr 3fr ;
+    grid-template-rows: 4fr ;
+    height: 100vh;
+}
+
+.purple {
+    background-color: purple;
+    height: 45%;
+}
+
+.orange {
+    background-color: orange;
+    height: 70%;
+}
+
+.green {
+    background-color: green;
+    height: 55%;
+    
+}
+
+.grey {
+    background-color: grey;
+    height: 30%;
+}
+
+.bottom {
+    grid-template-columns: 3fr 1fr;
+    height: 10vh;
+    
+}
+
+.body__bottom {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    width: 250%;
+    padding: 2px;
+    height: 20vh;
+}
+
+.green__sub {
+    background-color: greenyellow;
+    height: 100%;
+    width: 100%;
+}
+
+.pink {
+    background-color: pink;
+    height: 100%;
+    width: 100%;
+}
+
+.footer {
+    width: 100vw;
+    height: 10vh;
+
+    background-color: orange;
+} */
+
+                /* Exercise 3 */
+ * {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+ }
+
+.container {
+    display: grid;
+    grid-template-rows: 1fr 2fr 1fr 1fr; 
+    height: 60vh;   
+}
+
+.row {
+    display: grid;
+    
+}
+
+.one {
+    grid-template-columns: 4fr;
+}
+
+.two {
+    grid-template-columns: 1fr 3fr;
+}
+
+.right {
+    display: grid;
+    grid-template-rows: 2fr 2fr;
+}
+
+.right__top {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+}
+
+.right__bottom {
+    height: 100%;
+}
+
+.three {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
+.four {
+    display: grid;
+    grid-template-columns: 4fr;
+    grid-template-rows: 1fr;
+}
+
+
+
+/* colors */
+
+.maroon {
+    background-color: maroon;
+}
+
+.purple {
+    background-color: purple;
+}
+
+.indigo {
+    background-color: indigo;
+}
+
+.lightblue {
+    background-color: lightblue;
+}
+
+.lightpurple {
+    background-color: rgb(255, 143, 255);
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+* div > .center {
+    margin: 5px;
+}
+
 
 
 
