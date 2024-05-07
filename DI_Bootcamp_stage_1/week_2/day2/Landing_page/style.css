@@ -5,9 +5,9 @@
 }
 
 body {
-    background-image: url('world_map_backrground_image.jpg');
-    background-size: cover;
-    
+    background-image: url('background.avif');
+    background-size: 120vw;
+    background-repeat: no-repeat;
 }
 
 .header .stats__headings{
@@ -31,6 +31,8 @@ body {
 
 .header h1{
     width: 44vw;
+
+    color: white;
 }
 
 .stats__headings {
@@ -41,6 +43,8 @@ body {
    
     display: flex;
     flex-direction: column;
+
+    color: silver;
 }
 
 .numbers {
@@ -98,8 +102,8 @@ body {
     border-radius: 999px;
     
     background-image: url('https://picsum.photos/200');
-    background-size: cover;
-
+    background-size:100vw;
+    
     
     margin: 7vh 0vw 3vh 0vw;
     
@@ -124,18 +128,26 @@ img {
 }
 
 .content {
-    background-color: white;
+    background-color: rgba(142, 142, 142, 0.473);
     padding: 30px;
+
+    color: white;
 }
 
 .name_and_description {
-    background-color: brown;
+    background-color: #8028cd;
     padding: 30px;
+
+    color: silver;
 }
 
 /* Screen Queries */
 
 @media  screen and (min-width:320px) and (max-width:680px) {
+
+    body {
+        background-size: 800vw;
+    }
 
     .description {
         text-align: center;
@@ -156,6 +168,11 @@ img {
 }
 
 @media screen and (min-width:681px) and (max-width:880px) {
+
+    body {
+        background-size: 300vw;
+    }
+
     .stats__headings {
         width: 100vw;
         display: flex;
