@@ -25,6 +25,23 @@
     margin-top: 20px;
 }
 
-.form {
+/* .form {
     display: grid;
+    grid-template-rows: max-content;
+} */
+
+.form {
+    /* background-color: black; */
+
+   display: grid;
+   grid-template-columns: 2fr 2fr 2fr;
+   grid-template-rows: 1fr 1fr 1fr;
+   grid-gap: 10px;
 }
+
+
+/* .row > * div {
+    background-color: grey;
+    width: 100%;
+    height: 20vh;
+} */

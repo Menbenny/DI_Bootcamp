@@ -15,7 +15,7 @@ body {
     height: 100vh;
     width: 30vw;
 
-    background-color: rgba(147, 94, 26, 0.984);
+    background-color: rgba(227, 227, 227, 0.984);
 
     padding: 1%;
 
@@ -57,7 +57,7 @@ body {
 }
 
 .name h1{
-    color: white;
+    color: black;
 }
 
 .links {
@@ -145,14 +145,14 @@ body {
     width: 100%;
     height: 60%;
     padding: 30px;
-    background-color: aqua;
+    /* background-color: aqua; */
 }
 
 .carousel ul {
     width: 100vh;
     height: 100%;
 
-    background-color: beige;
+    /* background-color: beige; */
 
     display: flex;
     flex-direction: row;

@@ -42,21 +42,21 @@
     align-items: center;
 }
 
-.card {
+/* .card {
     width: 20%;
     height: 60vh;
 
-    /* background-color: rgb(110, 110, 110); */
+    background-color: rgb(110, 110, 110);
 
     display: flex;
     justify-content: center;
     align-items: center;
     justify-content: space-around;
     flex-direction: column;
-}
+} */
 
-.card:hover {
-    background-color: white;
+.card:hover .icons{
+    display: block;
 }
 
 .image {

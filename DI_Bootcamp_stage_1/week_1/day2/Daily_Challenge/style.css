@@ -1,3 +1,9 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
 body {
     background-image: url('black-panther-marvel-superheroes-black-background-amoled-5k-3440x1440-8385.jpg');
 
@@ -55,11 +61,12 @@ img{
     color: white;
    
     height: 60vh;
+    /* font-size: 0.4em; */
 }
 
 
 .content h1 {
-    font-size: 7rem;
+    font-size: 5rem;
     background: linear-gradient(to right, #ffffff, #363636,#2d033c, #120819);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
@@ -126,5 +133,9 @@ h1, p{
 
 .right {
     margin-left: 44vw;
+}
+
+@media screen and (min-width:300px) and (max-width:480px) {
+    
 }
 
