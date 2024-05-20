@@ -14,6 +14,8 @@ If the user speaks Hebrew : display “Shalom”
 If the user doesn’t speak any of these 3 languages: display ‘01110011 01101111 01110010 01110010 01111001’
 */
 
+// !   I need to apply REGEX on this exercise
+
 // let language = prompt(`Enter a language`);
 // let result = /language/i;
 
