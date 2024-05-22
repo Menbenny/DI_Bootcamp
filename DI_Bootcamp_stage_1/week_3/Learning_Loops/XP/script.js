@@ -118,13 +118,18 @@ While the number is smaller than 10 continue asking the user for a new number.
 Tip : Which while loop is more relevant for this situation?
 
 
-let input;
+var  input;
+
+
 
 while (input < 10) {
     input = Number(prompt(`Enter a number`));
-}
+    if (input >= 10) {
+        break
+    }
+};
 
-console.log(input);
+// console.log(input);
 
 
 /*
@@ -164,31 +169,102 @@ Check if the sum of Sarah’s and David’s rent is bigger than Dan’s rent. If
 
 
 
-const building = {
-    numberOfFloors: 4,
-    numberOfAptByFloor: {
-        firstFloor: 3,
-        secondFloor: 4,
-        thirdFloor: 9,
-        fourthFloor: 2,
-    },
-    nameOfTenants: ["Sarah", "Dan", "David"],
-    numberOfRoomsAndRent:  {
-        sarah: [3, 990],
-        dan:  [4, 1000],
-        david: [1, 500],
-    },
+// const building = {
+//     numberOfFloors: 4,
+//     numberOfAptByFloor: {
+//         firstFloor: 3,
+//         secondFloor: 4,
+//         thirdFloor: 9,
+//         fourthFloor: 2,
+//     },
+//     nameOfTenants: ["Sarah", "Dan", "David"],
+//     numberOfRoomsAndRent:  {
+//         sarah: [3, 990],
+//         dan:  [4, 1000],
+//         david: [1, 500],
+//     },
+// }
+
+// console.log(building.numberOfFloors);
+
+// ? number of apartments:
+// console.log(building.numberOfAptByFloor.firstFloor + building.numberOfAptByFloor.thirdFloor);
+
+// console.log(`${building.nameOfTenants[1]} has ${building.numberOfRoomsAndRent.dan[0]} rooms in his apartment`);
+
+// console.log(building.numberOfRoomsAndRent.sarah[1]);
+
+// var sarah_rent = building.numberOfRoomsAndRent.sarah[1];
+// var david_rent =  building.numberOfRoomsAndRent.david[1];
+// var dan_rent = building.numberOfRoomsAndRent.dan[1];
+
+// var sum =building.numberOfRoomsAndRent.david[1] + building.numberOfRoomsAndRent.sarah[1];
+
+// if (sum > dan_rent) {
+//     var dan_rent = dan_rent + 200; 
+// }
+
+// console.log(sarah_rent, david_rent);
+// console.log(dan_rent);
+
+
+/*
+
+🌟 Exercise 5 : Family
+Instructions
+Create an object called family with a few key value pairs.
+Using a for in loop, console.log the keys of the object.
+Using a for in loop, console.log the values of the object.
+*/
+
+
+
+
+// var family = {
+//     type: "text-styling",
+//     family_font: "DI Italic",
+// }
+
+
+// for (n in family) {
+//     console.log(family[n])
+// }
+
+// console.log(family.key(family));
+
+
+/*
+
+Exercise 6 : Rudolf
+Instructions
+const details = {
+  my: 'name',
+  is: 'Rudolf',
+  the: 'raindeer'
+}
+Given the object above and using a for loop, console.log “my name is Rudolf the raindeer”
+*/
+
+const details = {
+  my: 'name',
+  is: 'Rudolf',
+  the: 'raindeer'
 }
 
-console.log(building.numberOfFloors);
-console.log(building.numberOfAptByFloor.firstFloor + building.numberOfAptByFloor.thirdFloor);
+
+// for (keys() in details) {
+//     console.log(keys);
+// }
+// console.log(details.join(' ')); 
+
+let sentence = '';
+for (const key in details) {
+    // sentence += key + ' ' + details[key] + ' ';
+    sentence += `${key} ${details[key]} `;
+}
 
 
-
-
-
-
-
+console.log(sentence);
 
 
 
@@ -210,24 +286,6 @@ console.log(building.numberOfAptByFloor.firstFloor + building.numberOfAptByFloor
 
 
 /*
-
-🌟 Exercise 5 : Family
-Instructions
-Create an object called family with a few key value pairs.
-Using a for in loop, console.log the keys of the object.
-Using a for in loop, console.log the values of the object.
-
-
-Exercise 6 : Rudolf
-Instructions
-const details = {
-  my: 'name',
-  is: 'Rudolf',
-  the: 'raindeer'
-}
-Given the object above and using a for loop, console.log “my name is Rudolf the raindeer”
-
-
 Exercise 7 : Secret Group
 Instructions
 const names = ["Jack", "Philip", "Sarah", "Amanda", "Bernard", "Kyle"];
