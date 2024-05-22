@@ -83,47 +83,30 @@ Bonus: Change it to console.log “My 1st choice”, “My 2nd choice”, “My 
 Hint : create an array of suffixes to do the Bonus
 */
 
-let colors = ["Mauve", "Turquoise", "Mint", "Teal"];
+// let colors = ["Mauve", "Turquoise", "Mint", "Teal"];
 
-for (let i = 0; i < 4;i++){
-    // console.log(`My #${i + 1} choice is ${colors[i]}`);
+// for (let i = 0; i < 4;i++){
+//     // console.log(`My #${i + 1} choice is ${colors[i]}`);
     
-    let suffix = i + 1; 
+//     let suffix = i + 1; 
     
-    switch (suffix) {
-    case (1):
-       suffix = `${suffix}st`;
-       break
-    case (2):
-       suffix = `${suffix}nd`;
-       break
-    case (3):
-       suffix = `${suffix}rd`;
-       break
-    default:
-       suffix = `${suffix}th`;
+//     switch (suffix) {
+//     case (1):
+//        suffix = `${suffix}st`;
+//        break
+//     case (2):
+//        suffix = `${suffix}nd`;
+//        break
+//     case (3):
+//        suffix = `${suffix}rd`;
+//        break
+//     default:
+//        suffix = `${suffix}th`;
        
-    }
+//     }
     
-    console.log(`My ${suffix} choice is ${colors[i]}.`);
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//     console.log(`My ${suffix} choice is ${colors[i]}.`);
+// }
 
 /*
 🌟 Exercise 3 : Repeat The Question
@@ -134,6 +117,17 @@ Hint : Check the data type you receive from the prompt (ie. Use the typeof metho
 While the number is smaller than 10 continue asking the user for a new number.
 Tip : Which while loop is more relevant for this situation?
 
+
+let input;
+
+while (input < 10) {
+    input = Number(prompt(`Enter a number`));
+}
+
+console.log(input);
+
+
+/*
 
 🌟 Exercise 4 : Building Management
 Instructions:
@@ -164,7 +158,58 @@ Console.log how many apartments are on the floors 1 and 3.
 Console.log the name of the second tenant and the number of rooms he has in his apartment.
 
 Check if the sum of Sarah’s and David’s rent is bigger than Dan’s rent. If it is, than increase Dan’s rent to 1200.
+*/
 
+
+
+
+
+const building = {
+    numberOfFloors: 4,
+    numberOfAptByFloor: {
+        firstFloor: 3,
+        secondFloor: 4,
+        thirdFloor: 9,
+        fourthFloor: 2,
+    },
+    nameOfTenants: ["Sarah", "Dan", "David"],
+    numberOfRoomsAndRent:  {
+        sarah: [3, 990],
+        dan:  [4, 1000],
+        david: [1, 500],
+    },
+}
+
+console.log(building.numberOfFloors);
+console.log(building.numberOfAptByFloor.firstFloor + building.numberOfAptByFloor.thirdFloor);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 
 🌟 Exercise 5 : Family
 Instructions
