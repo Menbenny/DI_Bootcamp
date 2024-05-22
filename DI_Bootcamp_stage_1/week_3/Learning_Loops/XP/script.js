@@ -92,16 +92,20 @@ for (let i = 0; i < 4;i++){
     
     switch (suffix) {
     case (1):
-        suffix + `st`;
+       suffix = `${suffix}st`;
+       break
     case (2):
-        suffix + `nd`;
+       suffix = `${suffix}nd`;
+       break
     case (3):
-        suffix + `rd`;
-    case (4):
-        suffix + `th`;
+       suffix = `${suffix}rd`;
+       break
+    default:
+       suffix = `${suffix}th`;
+       
     }
     
-    console.log(`My ${suffix} choice is ${colors[i]}`);
+    console.log(`My ${suffix} choice is ${colors[i]}.`);
 }
 
 
