@@ -86,7 +86,7 @@ Hint : create an array of suffixes to do the Bonus
 // let colors = ["Mauve", "Turquoise", "Mint", "Teal"];
 
 // for (let i = 0; i < 4;i++){
-//     // console.log(`My #${i + 1} choice is ${colors[i]}`);
+//     console.log(`My #${i + 1} choice is ${colors[i]}`);
     
 //     let suffix = i + 1; 
     
@@ -117,17 +117,24 @@ Hint : Check the data type you receive from the prompt (ie. Use the typeof metho
 While the number is smaller than 10 continue asking the user for a new number.
 Tip : Which while loop is more relevant for this situation?
 
-
+*/
 var  input;
 
 
 
-while (input < 10) {
-    input = Number(prompt(`Enter a number`));
-    if (input >= 10) {
-        break
-    }
-};
+// while (input < 10) {
+//     input = Number(prompt(`Enter a number`));
+//     if (input >= 10) {
+//         break
+//     }
+// };
+
+let num;
+
+while (parseInt.num < 10) {
+    num = prompt(`Enter a number: `)
+}
+
 
 // console.log(input);
 
@@ -269,7 +276,7 @@ A group of friends have decided to start a secret society. The society’s name 
 Hint: a string is an array of letters
 Console.log the name of their secret society. The output should be “ABJKPS”
 */
-const names = ["Jack", "Philip", "Sarah", "Amanda", "Bernard", "Kyle"];
+// const names = ["Jack", "Philip", "Sarah", "Amanda", "Bernard", "Kyle"];
 // society;
 
 // for (i of names) {
@@ -280,15 +287,15 @@ const names = ["Jack", "Philip", "Sarah", "Amanda", "Bernard", "Kyle"];
 
 // console.log(names[0]);
 
-const sorted_letters = names.sort();
+// const sorted_letters = names.sort();
 
-let secret_society = '';
+// let secret_society = '';
 
-sorted_letters.forEach(item => {
-    secret_society += item[0]
-});
+// sorted_letters.forEach(item => {
+//     secret_society += item[0]
+// });
 
-console.log(secret_society);
+// console.log(secret_society);
 
 
 
