@@ -245,26 +245,64 @@ const details = {
 Given the object above and using a for loop, console.log “my name is Rudolf the raindeer”
 */
 
-const details = {
-  my: 'name',
-  is: 'Rudolf',
-  the: 'raindeer'
-}
-
-
-// for (keys() in details) {
-//     console.log(keys);
+// const details = {
+//   my: 'name',
+//   is: 'Rudolf',
+//   the: 'raindeer'
 // }
-// console.log(details.join(' ')); 
-
-let sentence = '';
-for (const key in details) {
-    // sentence += key + ' ' + details[key] + ' ';
-    sentence += `${key} ${details[key]} `;
-}
 
 
-console.log(sentence);
+// let sentence = '';
+// for (const key in details) {
+//     // sentence += key + ' ' + details[key] + ' ';
+//     sentence += `${key} ${details[key]} `;
+// }
+
+
+// console.log(sentence);
+
+/*
+Exercise 7 : Secret Group
+Instructions
+const names = ["Jack", "Philip", "Sarah", "Amanda", "Bernard", "Kyle"];
+A group of friends have decided to start a secret society. The society’s name will be the first letter of each of their names sorted in alphabetical order.
+Hint: a string is an array of letters
+Console.log the name of their secret society. The output should be “ABJKPS”
+*/
+const names = ["Jack", "Philip", "Sarah", "Amanda", "Bernard", "Kyle"];
+// society;
+
+// for (i of names) {
+//     var society = console.log(i[0]);
+// }
+
+// console.log(society);
+
+// console.log(names[0]);
+
+const sorted_letters = names.sort();
+
+let secret_society = '';
+
+sorted_letters.forEach(item => {
+    secret_society += item[0]
+});
+
+console.log(secret_society);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -286,13 +324,6 @@ console.log(sentence);
 
 
 /*
-Exercise 7 : Secret Group
-Instructions
-const names = ["Jack", "Philip", "Sarah", "Amanda", "Bernard", "Kyle"];
-A group of friends have decided to start a secret society. The society’s name will be the first letter of each of their names sorted in alphabetical order.
-Hint: a string is an array of letters
-Console.log the name of their secret society. The output should be “ABJKPS”
-
 
 Submit Your Exercises :
 Don’t forget to push to Github
