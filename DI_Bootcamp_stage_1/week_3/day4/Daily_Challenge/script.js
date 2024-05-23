@@ -10,21 +10,21 @@
 // For example, the result here should be : “The movie is good, I like it”
 // If the word “bad” does not come after “not” or the words are not in the sentence, console.log the original sentence.
 
-// var sentence = "not bad";
-// let wordNot = "not";
-// let wordBad = "bad";
+var sentence = "not that bad";
+let wordNot = "not";
+let wordBad = "bad";
 
-// let string = prompt(``);
+let string = prompt(``);
 
-//  if (wordNot > wordBad) {
-//     alert(string.replace(sentence, 'good'))
-//  };
+ if (wordNot > wordBad) {
+    alert(string.replace(sentence, 'good'))
+ };
 
 
-// console.log(string.indexOf("not"));
+console.log(string.indexOf("not"));
 
-// var wordGood = string[string.indexOf("not")] + string[string.indexOf("bad")] == "good";
+var wordGood = string[string.indexOf("not")] + string[string.indexOf("bad")] == "good";
 
-// console.log(`${string[string.indexOf("not")] + string[string.indexOf("bad")] == "good"}`);
+console.log(`${string[string.indexOf("not")] + string[string.indexOf("bad")] == "good"}`);
 
-// console.log("not" < "bad");
+console.log("not" < "bad");
