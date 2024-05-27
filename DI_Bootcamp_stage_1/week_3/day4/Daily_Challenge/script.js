@@ -21,10 +21,4 @@ let string = prompt(``);
  };
 
 
-console.log(string.indexOf("not"));
 
-var wordGood = string[string.indexOf("not")] + string[string.indexOf("bad")] == "good";
-
-console.log(`${string[string.indexOf("not")] + string[string.indexOf("bad")] == "good"}`);
-
-console.log("not" < "bad");
