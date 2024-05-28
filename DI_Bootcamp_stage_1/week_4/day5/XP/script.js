@@ -70,3 +70,18 @@ const playGame = () => {
         }
     }
 }
+
+// PART II
+
+const compareNumbers = (userNumber, computerNumber) => {
+    if (userNumber == computerNumber) {
+        alert(`WINNEr`)
+    } else if ( userNumber > computerNumber) {
+        alert(`Your number is bigger than the computer's, guess again: `)
+    }
+
+    if (userNumber < computerNumber) {
+        alert(`Your number is smaller than the computer's, guess again: `)
+    }
+}
+
