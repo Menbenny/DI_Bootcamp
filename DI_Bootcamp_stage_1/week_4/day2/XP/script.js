@@ -85,16 +85,21 @@ isDivisible(45) : Console.log all the numbers divisible by 45, and their sum
 
 
 
+
 // function isDivisible() {
+//     let sum = 0;
 //     for (let i = 0; i < 500; i++) {
 //         if (i % 23 === 0) {
-//             let numbers;
+//             // let numbers =[];
+
 //             // numbers = numbers + i;
 //             // console.log(numbers);
-
-//             numbers = eval(i);
-
+//             sum += i;
 //             console.log((i));
+
+//             // numbers.push(i);
+
+//             // return numbers
 //         }
         
 //     }
@@ -103,6 +108,31 @@ isDivisible(45) : Console.log all the numbers divisible by 45, and their sum
 // }
 
 // isDivisible();
+
+// * With divisor *
+// ! Revise summing up the values ! 
+
+// function isDivisible(divisor) {
+//     for (let i = 0; i < 500; i++) {
+//         if (i % divisor === 0) {
+//             let numbers =[];
+
+//             // numbers = numbers + i;
+//             // console.log(numbers);
+
+//             console.log((i));
+
+//             // numbers.push(i);
+
+//             // return numbers
+//         }
+        
+//     }
+
+    
+// }
+
+// isDivisible(99);
 
 
 
@@ -166,35 +196,36 @@ Bonus: If the item is in stock, decrease the item’s stock by 1
 
 
 
-const stock = { 
-    "banana": 6, 
-    "apple": 0,
-    "pear": 12,
-    "orange": 32,
-    "blueberry":1
-}  
+// const stock = { 
+//     "banana": 6, 
+//     "apple": 0,
+//     "pear": 12,
+//     "orange": 32,
+//     "blueberry":1
+// }  
 
-const prices = {    
-    "banana": 4, 
-    "apple": 2, 
-    "pear": 1,
-    "orange": 1.5,
-    "blueberry":10
-} 
+// const prices = {    
+//     "banana": 4, 
+//     "apple": 2, 
+//     "pear": 1,
+//     "orange": 1.5,
+//     "blueberry":10
+// } 
 
-var shoppingList = ["banana", "apple", "orange"];
+// var shoppingList = ["banana", "apple", "orange"];
 
-function myBill() {
-    for (i in shoppingList) {
-        if (i in stock) {
-            console.log(i);
-        }
-    }
-}
+// function myBill() {
+//     for (key in stock) {
+//        if (key in shoppingList) {
+//         value = stock[key];
+//         console.log(key, value);
+//        }
+//     }
+// }
 
 
 
-myBill();
+// myBill();
 
 
 
@@ -268,6 +299,35 @@ Examples
 
 changeEnough(14.11, [2,100,0,0]) => returns false
 changeEnough(0.75, [0,0,20,5]) => returns true
+
+*/
+var wallet = [0.25, 0.10, 0.05, 0.01];
+function changeEnough(itemPrice, amountOfChange) {
+    
+    for (i in wallet) {
+        let sum;
+        sum += i;
+    }
+    console.log(sum);
+}
+
+changeEnough()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 
 
 🌟 Exercise 6 : Vacations Costs
