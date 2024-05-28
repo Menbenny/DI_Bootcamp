@@ -46,3 +46,27 @@
 // }
 
 // compareNumbers(playTheGame());
+
+const playGame = () => {
+    const play = confirm(`Would you like to play the game? `);
+
+    if (!play) {
+        alert(`No problem, Goodbye!`)
+    } else {
+        const userNumber = prompt(`Please enter a number between 0 - 10: `);
+
+        // * validity
+        if (userNumber === null || isNaN(userNumber)) {
+            alert(`Sorry, not a number. Goodbye. `);
+        } else {
+            const userNumber = parseFloat(userNumber);
+
+            if (isNaN(userNumber) || userNumber < 0 || userNumber > 10) {
+                alert(`Sorry, not a good number. Goodbye. `);
+            } else {
+                const computerNumber = Math.floor(Math.random() * 11);
+                alert(`Your number: ${userNumber}        Computer's number: ${computerNumber}`)
+            }
+        }
+    }
+}
