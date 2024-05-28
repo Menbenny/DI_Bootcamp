@@ -59,13 +59,13 @@ const playGame = () => {
         if (userNumber === null || isNaN(userNumber)) {
             alert(`Sorry, not a number. Goodbye. `);
         } else {
-            const userNumber = parseFloat(userNumber);
+            const userInput = parseFloat(userNumber);
 
-            if (isNaN(userNumber) || userNumber < 0 || userNumber > 10) {
+            if (isNaN(userInput) || userInput < 0 || userInput > 10) {
                 alert(`Sorry, not a good number. Goodbye. `);
             } else {
                 const computerNumber = Math.floor(Math.random() * 11);
-                alert(`Your number: ${userNumber}        Computer's number: ${computerNumber}`)
+                alert(`Your number: ${userInput}        Computer's number: ${computerNumber}`)
             }
         }
     }
@@ -73,15 +73,22 @@ const playGame = () => {
 
 // PART II
 
-const compareNumbers = (userNumber, computerNumber) => {
-    if (userNumber == computerNumber) {
-        alert(`WINNEr`)
-    } else if ( userNumber > computerNumber) {
-        alert(`Your number is bigger than the computer's, guess again: `)
-    }
+// const compareNumbers = (userNumber, computerNumber) => {
+//   let numGuesses = 0;
 
-    if (userNumber < computerNumber) {
-        alert(`Your number is smaller than the computer's, guess again: `)
-    }
-}
+//   while (numGuesses < 3) {
+//     if (userNumber === computerNumber) {
+//         alert(`WINNER`);
+//         return;
+//     } else if (userNumber > computerNumber) {
+//         userNumber = prompt(`Your number is bigger than thee computer's. Guess again. `);
+//     } else if (userNumber < computerNumber) {
+//         userNumber = prompt(`Your number is smaller than the computer's`)
+//     }
+//     numGuesses++;
+//   }
+//   alert(`Out of chance`);
+// }
+
+playGame();
 
