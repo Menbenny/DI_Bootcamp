@@ -196,36 +196,36 @@ Bonus: If the item is in stock, decrease the item’s stock by 1
 
 
 
-// const stock = { 
-//     "banana": 6, 
-//     "apple": 0,
-//     "pear": 12,
-//     "orange": 32,
-//     "blueberry":1
-// }  
+const stock = { 
+    "banana": 6, 
+    "apple": 0,
+    "pear": 12,
+    "orange": 32,
+    "blueberry":1
+}  
 
-// const prices = {    
-//     "banana": 4, 
-//     "apple": 2, 
-//     "pear": 1,
-//     "orange": 1.5,
-//     "blueberry":10
-// } 
+const prices = {    
+    "banana": 4, 
+    "apple": 2, 
+    "pear": 1,
+    "orange": 1.5,
+    "blueberry":10
+} 
 
-// var shoppingList = ["banana", "apple", "orange"];
+var shoppingList = ["banana", "apple", "orange"];
 
-// function myBill() {
-//     for (key in stock) {
-//        if (key in shoppingList) {
-//         value = stock[key];
-//         console.log(key, value);
-//        }
-//     }
-// }
+function myBill() {
+    for (key in stock) {
+       if (key in shoppingList) {
+        value = stock[key];
+        console.log(key, value);
+       }
+    }
+}
+ console.log(stock.key);
 
 
-
-// myBill();
+myBill();
 
 
 
@@ -301,17 +301,17 @@ changeEnough(14.11, [2,100,0,0]) => returns false
 changeEnough(0.75, [0,0,20,5]) => returns true
 
 */
-var wallet = [0.25, 0.10, 0.05, 0.01];
-function changeEnough(itemPrice, amountOfChange) {
+// var wallet = [0.25, 0.10, 0.05, 0.01];
+// function changeEnough(itemPrice, amountOfChange) {
     
-    for (i in wallet) {
-        let sum;
-        sum += i;
-    }
-    console.log(sum);
-}
+//     for (i in wallet) {
+//         let sum;
+//         sum += i;
+//     }
+//     console.log(sum);
+// }
 
-changeEnough()
+// changeEnough()
 
 
 
@@ -370,3 +370,37 @@ Submit your exercises to DI Learning
 
 More Info
 */
+ const hotelCost = () => {
+    var nights = Number (prompt(`Enter the number of nights you want to spend: `));
+
+    if (isNaN(nights) || nights === null) {
+        return nights;
+    } else {
+        var price = 140 * nights;
+        var statement = alert(`The total cost for ${nights} nights is $${price}`);
+        return statement;
+    }
+ }
+
+ hotelCost()
+
+ const planeRideCost = () => {
+    var destination = prompt(`Enter your destination: `);
+    if (destination !== String) {
+        return destination;
+    } else if (destination) {
+        let price;
+        var statement = alert(`Your flight to ${destination} will cost ${price}`);
+        switch(destination) {
+            case(`London`):
+            price === `$${183}`;
+            case(`Paris`):
+            price === `$${220}`;
+            case(`Other`):
+            price === `$${300}`;
+        }
+        return statement;
+    } 
+ }
+
+ planeRideCost();

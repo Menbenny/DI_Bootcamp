@@ -73,22 +73,28 @@ const playGame = () => {
 
 // PART II
 
-// const compareNumbers = (userNumber, computerNumber) => {
-//   let numGuesses = 0;
+const compareNumbers = (userInput, computerNumber) => {
+  let numGuesses = 0;
 
-//   while (numGuesses < 3) {
-//     if (userNumber === computerNumber) {
-//         alert(`WINNER`);
-//         return;
-//     } else if (userNumber > computerNumber) {
-//         userNumber = prompt(`Your number is bigger than thee computer's. Guess again. `);
-//     } else if (userNumber < computerNumber) {
-//         userNumber = prompt(`Your number is smaller than the computer's`)
-//     }
-//     numGuesses++;
-//   }
-//   alert(`Out of chance`);
-// }
+  while (numGuesses < 3) {
+    if (userInput === computerNumber) {
+        alert(`WINNER`);
+        return;
+    }
+     if (userInput > computerNumber) {
+        userInput = prompt(`Your number is bigger than the computer's. Guess again. `);
+        
+    }
+     if (userInput < computerNumber) {
+
+        userInput = prompt(`Your number is smaller than the computer's`)
+    }
+    numGuesses++;
+  }
+  alert(`Out of chance`);
+}
 
 playGame();
+compareNumbers();
+
 
