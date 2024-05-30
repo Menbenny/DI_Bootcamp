@@ -90,20 +90,13 @@ isDivisible(45) : Console.log all the numbers divisible by 45, and their sum
 //     let sum = 0;
 //     for (let i = 0; i < 500; i++) {
 //         if (i % 23 === 0) {
-//             // let numbers =[];
-
-//             // numbers = numbers + i;
-//             // console.log(numbers);
-//             sum += i;
 //             console.log((i));
-
-//             // numbers.push(i);
-
-//             // return numbers
+//             sum += i;
 //         }
         
 //     }
-
+    
+//     console.log(`the sum is: ${sum}`)
     
 // }
 
@@ -196,36 +189,36 @@ Bonus: If the item is in stock, decrease the item’s stock by 1
 
 
 
-const stock = { 
-    "banana": 6, 
-    "apple": 0,
-    "pear": 12,
-    "orange": 32,
-    "blueberry":1
-}  
+// const stock = { 
+//     "banana": 6, 
+//     "apple": 0,
+//     "pear": 12,
+//     "orange": 32,
+//     "blueberry":1
+// }  
 
-const prices = {    
-    "banana": 4, 
-    "apple": 2, 
-    "pear": 1,
-    "orange": 1.5,
-    "blueberry":10
-} 
+// const prices = {    
+//     "banana": 4, 
+//     "apple": 2, 
+//     "pear": 1,
+//     "orange": 1.5,
+//     "blueberry":10
+// } 
 
-var shoppingList = ["banana", "apple", "orange"];
+// var shoppingList = ["banana", "apple", "orange"];
 
-function myBill() {
-    for (key in stock) {
-       if (key in shoppingList) {
-        value = stock[key];
-        console.log(key, value);
-       }
-    }
-}
- console.log(stock.key);
+// function myBill() {
+//     for (const item  in stock) {
+//        quantityinStock = stock[item];
+//        if (item in shoppingList) {
+//         console.log(key, value);
+//        }
+//     }
+// }
+//  console.log(stock.key);
 
 
-myBill();
+// myBill();
 
 
 
@@ -370,37 +363,37 @@ Submit your exercises to DI Learning
 
 More Info
 */
- const hotelCost = () => {
-    var nights = Number (prompt(`Enter the number of nights you want to spend: `));
+//  const hotelCost = () => {
+//     var nights = Number (prompt(`Enter the number of nights you want to spend: `));
 
-    if (isNaN(nights) || nights === null) {
-        return nights;
-    } else {
-        var price = 140 * nights;
-        var statement = alert(`The total cost for ${nights} nights is $${price}`);
-        return statement;
-    }
- }
+//     if (isNaN(nights) || nights === null) {
+//         return nights;
+//     } else {
+//         var price = 140 * nights;
+//         var statement = alert(`The total cost for ${nights} nights is $${price}`);
+//         return statement;
+//     }
+//  }
 
- hotelCost()
+//  hotelCost()
 
- const planeRideCost = () => {
-    var destination = prompt(`Enter your destination: `);
-    if (destination !== String) {
-        return destination;
-    } else if (destination) {
-        let price;
-        var statement = alert(`Your flight to ${destination} will cost ${price}`);
-        switch(destination) {
-            case(`London`):
-            price === `$${183}`;
-            case(`Paris`):
-            price === `$${220}`;
-            case(`Other`):
-            price === `$${300}`;
-        }
-        return statement;
-    } 
- }
+//  const planeRideCost = () => {
+//     var destination = prompt(`Enter your destination: `);
+//     if (destination !== String) {
+//         return destination;
+//     } else if (destination) {
+//         let price;
+//         var statement = alert(`Your flight to ${destination} will cost ${price}`);
+//         switch(destination) {
+//             case(`London`):
+//             price === `$${183}`;
+//             case(`Paris`):
+//             price === `$${220}`;
+//             case(`Other`):
+//             price === `$${300}`;
+//         }
+//         return statement;
+//     } 
+//  }
 
- planeRideCost();
+//  planeRideCost();
