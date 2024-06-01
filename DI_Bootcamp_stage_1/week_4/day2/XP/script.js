@@ -308,18 +308,39 @@ changeEnough(0.75, [0,0,20,5]) => returns true
 
 */
 
+//  amountOfChange = [0.25, 0.10, 0.05, 0.01];
 
-// var wallet = [0.25, 0.10, 0.05, 0.01];
-// function changeEnough(itemPrice, amountOfChange) {
+function changeEnough(itemPrice, amountOfChange) {
     
-//     for (i in wallet) {
-//         let sum;
-//         sum += i;
-//     }
-//     console.log(sum);
-// }
+   amountOfChange = [0.25, 0.10, 0.05, 0.01];
 
-// changeEnough()
+    calculateSum = (amountOfChange) => {
+        let sum = 0
+    
+        for (const num of amountOfChange) {
+            sum = sum + num
+            if (sum >= itemPrice) {
+                console.log(`You can afford the item`);
+                return true
+                
+            }
+            if ( sum <= itemPrice) {
+                console.log(`You cannot afford the item`);
+                return false 
+            }
+        }
+        
+    
+      
+    
+    }
+   }
+
+// changeEnough()  
+
+
+
+calculateSum([1, 2, 3])
 
 
 
