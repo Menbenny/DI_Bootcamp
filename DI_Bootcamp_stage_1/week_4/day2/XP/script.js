@@ -308,11 +308,11 @@ changeEnough(0.75, [0,0,20,5]) => returns true
 
 */
 
-//  amountOfChange = [0.25, 0.10, 0.05, 0.01];
+amountOfChange = [0.25, 0.10, 0.05, 0.01];
 
 function changeEnough(itemPrice, amountOfChange) {
     
-   amountOfChange = [0.25, 0.10, 0.05, 0.01];
+
 
     calculateSum = (amountOfChange) => {
         let sum = 0
@@ -329,18 +329,11 @@ function changeEnough(itemPrice, amountOfChange) {
                 return false 
             }
         }
-        
-    
-      
-    
     }
+    calculateSum([amountOfChange])
    }
 
-// changeEnough()  
-
-
-
-calculateSum([1, 2, 3])
+changeEnough()  
 
 
 
