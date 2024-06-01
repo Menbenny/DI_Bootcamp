@@ -208,16 +208,29 @@ Bonus: If the item is in stock, decrease the item’s stock by 1
 // var shoppingList = ["banana", "apple", "orange"];
 
 // function myBill() {
-//     for (const item  in stock) {
+
+//     // const item = shoppingList[0];
+
+//     for (const item of shoppingList) {
 //        quantityinStock = stock[item];
-//        if (item in shoppingList) {
-//         console.log(key, value);
+//        if (quantityinStock > 0) {
+//         const price = prices[item]
+//         console.log(`The price of ${item} is $${price}`);
+//         console.log(`and we have this many in stock: ${quantityinStock}`);
+        
+//         quantityinStock = stock[item] - 1;
+//         console.log(`the new quanity of ${item}s stock is: ${quantityinStock}`);
+//        } else { 
+//         console.log(`There is no ${item} in stock`);
 //        }
 //     }
 // }
-//  console.log(stock.key);
 
 
+
+
+
+// 
 // myBill();
 
 
@@ -294,6 +307,8 @@ changeEnough(14.11, [2,100,0,0]) => returns false
 changeEnough(0.75, [0,0,20,5]) => returns true
 
 */
+
+
 // var wallet = [0.25, 0.10, 0.05, 0.01];
 // function changeEnough(itemPrice, amountOfChange) {
     
