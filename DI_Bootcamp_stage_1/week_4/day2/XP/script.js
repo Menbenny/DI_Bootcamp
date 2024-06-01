@@ -308,47 +308,43 @@ changeEnough(0.75, [0,0,20,5]) => returns true
 
 */
 
-amountOfChange = [0.25, 0.10, 0.05, 0.01];
+const amountOfChange = [25, 20, 5, 0];
 
-function changeEnough(itemPrice, amountOfChange) {
-    
-
-
-    calculateSum = (amountOfChange) => {
-        let sum = 0
-    
-        for (const num of amountOfChange) {
-            sum = sum + num
-            if (sum >= itemPrice) {
-                console.log(`You can afford the item`);
-                return true
-                
-            }
-            if ( sum <= itemPrice) {
-                console.log(`You cannot afford the item`);
-                return false 
-            }
+changeEnough = (itemPrice, amountOfChange) => {
+    const sum = calculateSum (amountOfChange) 
+        if (sum > itemPrice) {
+            console.log(`You can afford`);
+            return true
+        } else {
+            console.log(`You cant afford`);
+            return false 
         }
+    
+}
+
+calculateSum = (arr) => {
+    let sum = 0 
+
+    for (let i = 0; i < arr.length; i++) {
+        let valueOfCoin
+
+        const coinNumber = arr[i]
+        if (i === 0){valueOfCoin = 0.25}
+        if (i === 1){valueOfCoin = 0.10}
+        if (i === 2){valueOfCoin = 0.05}
+        if (i === 3){valueOfCoin = 0.01}
+        console.log(`we have ${coinNumber} coins that have a value of ${valueOfCoin}`);
+
+        sum = sum + coinNumber * valueOfCoin
     }
-    calculateSum([amountOfChange])
-   }
+    console.log(`The total sum is: ${sum}`);
 
-changeEnough()  
+    return sum
 
-
-
+}
 
 
-
-
-
-
-
-
-
-
-
-
+changeEnough(12.3, amountOfChange)
 /*
 
 
