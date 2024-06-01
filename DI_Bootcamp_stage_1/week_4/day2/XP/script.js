@@ -308,43 +308,43 @@ changeEnough(0.75, [0,0,20,5]) => returns true
 
 */
 
-const amountOfChange = [25, 20, 5, 0];
+// const amountOfChange = [25, 20, 5, 0];
 
-changeEnough = (itemPrice, amountOfChange) => {
-    const sum = calculateSum (amountOfChange) 
-        if (sum > itemPrice) {
-            console.log(`You can afford`);
-            return true
-        } else {
-            console.log(`You cant afford`);
-            return false 
-        }
+// changeEnough = (itemPrice, amountOfChange) => {
+//     const sum = calculateSum (amountOfChange) 
+//         if (sum > itemPrice) {
+//             console.log(`You can afford`);
+//             return true
+//         } else {
+//             console.log(`You cant afford`);
+//             return false 
+//         }
     
-}
+// }
 
-calculateSum = (arr) => {
-    let sum = 0 
+// calculateSum = (arr) => {
+//     let sum = 0 
 
-    for (let i = 0; i < arr.length; i++) {
-        let valueOfCoin
+//     for (let i = 0; i < arr.length; i++) {
+//         let valueOfCoin
 
-        const coinNumber = arr[i]
-        if (i === 0){valueOfCoin = 0.25}
-        if (i === 1){valueOfCoin = 0.10}
-        if (i === 2){valueOfCoin = 0.05}
-        if (i === 3){valueOfCoin = 0.01}
-        console.log(`we have ${coinNumber} coins that have a value of ${valueOfCoin}`);
+//         const coinNumber = arr[i]
+//         if (i === 0){valueOfCoin = 0.25}
+//         if (i === 1){valueOfCoin = 0.10}
+//         if (i === 2){valueOfCoin = 0.05}
+//         if (i === 3){valueOfCoin = 0.01}
+//         console.log(`we have ${coinNumber} coins that have a value of ${valueOfCoin}`);
 
-        sum = sum + coinNumber * valueOfCoin
-    }
-    console.log(`The total sum is: ${sum}`);
+//         sum = sum + coinNumber * valueOfCoin
+//     }
+//     console.log(`The total sum is: ${sum}`);
 
-    return sum
+//     return sum
 
-}
+// }
 
 
-changeEnough(12.3, amountOfChange)
+// changeEnough(12.3, amountOfChange)
 /*
 
 
@@ -388,37 +388,39 @@ Submit your exercises to DI Learning
 
 More Info
 */
-//  const hotelCost = () => {
-//     var nights = Number (prompt(`Enter the number of nights you want to spend: `));
+ const hotelCost = () => {
+    let nights
 
-//     if (isNaN(nights) || nights === null) {
-//         return nights;
-//     } else {
-//         var price = 140 * nights;
-//         var statement = alert(`The total cost for ${nights} nights is $${price}`);
-//         return statement;
-//     }
-//  }
+    while (isNaN(nights)) {
+        nights = Number (prompt(`Enter the number of nights you want to spend: `));
+    }
+    
+    const numberOfnights = nights
+    const costPerNights = 140
+    const totalPrice = numberOfnights * costPerNights
+    console.log(`total hotel cost: $${totalPrice}`);
 
-//  hotelCost()
+    return totalPrice //Any code place below return //! WILL NOT BE EXECUTED 
+ }
 
-//  const planeRideCost = () => {
-//     var destination = prompt(`Enter your destination: `);
-//     if (destination !== String) {
-//         return destination;
-//     } else if (destination) {
-//         let price;
-//         var statement = alert(`Your flight to ${destination} will cost ${price}`);
-//         switch(destination) {
-//             case(`London`):
-//             price === `$${183}`;
-//             case(`Paris`):
-//             price === `$${220}`;
-//             case(`Other`):
-//             price === `$${300}`;
-//         }
-//         return statement;
-//     } 
-//  }
+ hotelCost()
 
-//  planeRideCost();
+ includesNumbers = (str) => {
+    const regex = new RegExp(/\d/)
+    return regex.test(str)
+ }
+
+ const planeRideCost = () => {
+    let destination = ""
+
+    while (destination == "" || includesNumbers(destination)) {
+        destination = prompt(`Enter your destination: `)
+    }
+    if (destination === "\nLondon") return `$183`
+    if (destination === "\nParis") return `$220`
+    
+    return "$300"
+ }
+
+ price  = planeRideCost();
+console.log(`flight ${price}`);
