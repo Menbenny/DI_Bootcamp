@@ -453,10 +453,10 @@ totalVacationCost = () => {
     let numberOfDays // Car rental 
     let destination = ""
 
-    while (!isOnlyNumbers(numberOfnights)) {
+    while (! isOnlyNumbers(numberOfnights)) {
         numberOfnights = prompt(`Enter the number of nights at the Hotel: `)
     }
-    while (!isOnlyNumbers(numberOfDays)) {
+    while (! isOnlyNumbers(numberOfDays)) {
         numberOfDays = prompt(`Enter the number of car rental days: `)
     }
     while (destination == "" || includesNumbers(destination)) {
