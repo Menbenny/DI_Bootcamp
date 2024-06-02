@@ -365,12 +365,6 @@ The function should return a different price depending on the location.
 “Paris” : 220$
 All other destination : 300$
 
-Define a function called rentalCarCost().
-It should ask the user for the number of days they would like to rent the car.
-If the user doesn’t answer or if the answer is not a number, ask again.
-Calculate the cost to rent the car. The car costs $40 everyday.
-If the user rents a car for more than 10 days, they get a 5% discount.
-The function should return the total price of the car rental.
 
 Define a function called totalVacationCost() that returns the total cost of the user’s vacation by calling the 3 functions that you created above.
 Example : The car cost: $x, the hotel cost: $y, the plane tickets cost: $z.
@@ -388,6 +382,8 @@ Submit your exercises to DI Learning
 
 More Info
 */
+
+
  const hotelCost = () => {
     let nights
 
@@ -409,6 +405,10 @@ More Info
     const regex = new RegExp(/\d/)
     return regex.test(str)
  }
+isOnlyNumbers = (str) => {
+    const regex = new RegExp(/^[0-9]*$/)
+    return regex.test(str)
+}
 
  const planeRideCost = () => {
     let destination = ""
@@ -416,11 +416,64 @@ More Info
     while (destination == "" || includesNumbers(destination)) {
         destination = prompt(`Enter your destination: `)
     }
-    if (destination === "\nLondon") return `$183`
-    if (destination === "\nParis") return `$220`
+    if (destination === "London") return `$183`
+    if (destination === "Paris") return `$220`
     
     return "$300"
  }
 
  price  = planeRideCost();
-console.log(`flight ${price}`);
+console.log(`flight ticket ${price}`);
+
+// Define a function called rentalCarCost().
+// It should ask the user for the number of days they would like to rent the car.
+// If the user doesn’t answer or if the answer is not a number, ask again.
+// Calculate the cost to rent the car. The car costs $40 everyday.
+// If the user rents a car for more than 10 days, they get a 5% discount.
+// The function should return the total price of the car rental.
+
+
+rentalCarCost = () => {
+    let numberOfDays
+
+    while (!isOnlyNumbers(numberOfDays)) {
+        numberOfDays = Number(prompt(`How many days would you like to rent the car? `))
+    }
+    const dailyPrice = 40
+    
+    let discount = 0 
+    if (numberOfDays >= 10) discount = 0.05
+
+    const totalPrice = dailyPrice * numberOfDays * (1 - discount)
+    return totalPrice
+}
+
+totalVacationCost = () => {
+    let numberOfnights // Hotel nights 
+    let numberOfDays // Car rental 
+    let destination = ""
+
+    while (!isOnlyNumbers(numberOfnights)) {
+        numberOfnights = prompt(`Enter the number of nights at the Hotel: `)
+    }
+    while (!isOnlyNumbers(numberOfDays)) {
+        numberOfDays = prompt(`Enter the number of car rental days: `)
+    }
+    while (destination == "" || includesNumbers(destination)) {
+        destination = prompt(`Enter your destination: `)
+    }
+
+    const carPrice = rentalCarCost(numberOfDays)
+    const hotelPrice = hotelCost(numberOfnights)
+    const planePrice = planeRideCost(destination)
+    
+    console.log(`Hotel Price $${hotelPrice}`);
+    console.log(`Car price $${carPrice}`);
+    console.log(`Plane price $${planePrice}`);
+
+    const totalPrice = carPrice + hotelPrice + planePrice
+    console.log(`Total price $${totalPrice}`);
+    // return totalPrice
+}
+
+totalVacationCost()
