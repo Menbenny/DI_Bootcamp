@@ -29,6 +29,7 @@
 const div = document.querySelector('div')
 
 div.style.backgroundColor = 'lightblue'
+const divBackground = getComputedStyle(div).backgroundColor
 div.style.padding = '10px'
 
 const Pete = document.querySelector('ul').children[1]
@@ -37,10 +38,13 @@ Pete.style.border = '1px solid black'
 const body = document.body
 body.style.fontSize = '2em'
 
-while (div.style.background === 'lightblue') {
-    let x = Pete;
-    let y = document.querySelector('ul').children[0].innerHTML;
-    alert(`Hello ${x} and ${y}`)
+const users = document.querySelectorAll('li')
+
+if (divBackground === 'rgb(173, 216, 230)')
+    // ? color condition takes the RGB and not string 'lightblue'
+    {
+    console.log(`This is lightblue`);
+    console.log(`Hello ${users[0].textContent} and ${users[1].textContent}!`); 
 }
 
 
