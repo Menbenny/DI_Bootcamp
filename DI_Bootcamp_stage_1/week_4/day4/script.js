@@ -26,25 +26,64 @@
 
 // EXERCISE 2
 
-const div = document.querySelector('div')
+// const div = document.querySelector('div')
 
-div.style.backgroundColor = 'lightblue'
-const divBackground = getComputedStyle(div).backgroundColor
-div.style.padding = '10px'
+// div.style.backgroundColor = 'lightblue'
+// const divBackground = getComputedStyle(div).backgroundColor
+// div.style.padding = '10px'
 
-const Pete = document.querySelector('ul').children[1]
+// const Pete = document.querySelector('ul').children[1]
 
-Pete.style.border = '1px solid black'
-const body = document.body
-body.style.fontSize = '2em'
+// Pete.style.border = '1px solid black'
+// const body = document.body
+// body.style.fontSize = '2em'
 
-const users = document.querySelectorAll('li')
+// if (divBackground === 'rgb(173, 216, 230)') {
+//     let x = Pete.innerHTML;
+//     let y = document.querySelector('ul').children[0].innerHTML;
+//     console.log(`Hello ${x} and ${y}`)
+// }
 
-if (divBackground === 'rgb(173, 216, 230)')
-    // ? color condition takes the RGB and not string 'lightblue'
+//Exercise 3 
+
+//2
+// document.querySelector('div').id = 'socialNetworkNavigation'
+
+// document.querySelector('div').setAttribute('id', 'socialNetworkNavigation')
+
+
+//3
+// var ul = document.querySelector('ul')
+// let newLi = document.createElement('li')
+// newLi.textContent = 'Logout'
+// ul.appendChild(newLi)
+
+// let firstChild = ul.firstElementChild.textContent
+// let lastChild = ul.lastElementChild.textContent
+
+// console.log(firstChild, lastChild);
+
+// Exercise 4
+
+var allBooks = [
     {
-    console.log(`This is lightblue`);
-    console.log(`Hello ${users[0].textContent} and ${users[1].textContent}!`); 
-}
+        title: 'Think and Grow Rich',
+        author: 'Napolean Hill',
+        image: 'https://picsum.photos/200/300',
+        alreadyRead: true
+    },
+    {
+        title: 'It Ends With Us ',
+        author: 'Colleen Hoover 2016',
+        image: 'https://picsum.photos/200/300',
+        alreadyRead: false
+    }
+    
+];
+
+console.log(allBooks[0]);
+
+
+
 
 
