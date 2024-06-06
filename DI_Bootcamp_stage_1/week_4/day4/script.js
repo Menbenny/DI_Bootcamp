@@ -81,9 +81,35 @@ var allBooks = [
     
 ];
 
-console.log(allBooks[0]);
+// console.log(allBooks[0]);
 
+function renderBooks(books) {
+    const table = document.createElement("table");
 
+    books.forEach(book => {
+        const tr = document.createElement("tr");
+
+        const tdDetails = document.createElement("td");
+        tdDetails.textContent = `${book.titile} written by ${book.author}`;
+        if (book.alreadyRead) {
+            tdDetails.classList.add("read");
+        }
+        tr.appendChild(tdDetails);
+
+        const tdImage = document.createElement("td");
+        const img = document.createElement("img");
+        img.src = book.image;
+        img.style.width = '100px';
+
+        // tdImage.appendChild(tdImage);
+
+        table.appendChild(tr)
+    });
+
+    document.querySelector(".listBooks").appendChild(table)
+}
+
+renderBooks(allBooks);
 
 
 
