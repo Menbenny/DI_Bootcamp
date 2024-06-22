@@ -40,3 +40,7 @@
     position: absolute;
     background-color: red;
   }
+
+  #target.is-hovered {
+    border: 1px solid black;
+  }
