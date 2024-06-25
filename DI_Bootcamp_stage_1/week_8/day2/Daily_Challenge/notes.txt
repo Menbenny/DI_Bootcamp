@@ -1,0 +1,25 @@
+DEEP Cloning with JSON
+-- Convert into string and back into arr
+-- Passes 3 phases
+
+What happens to the memory location when you DEEP CLONE.
+
+//////////////////////////////////////////////////////////////
+DOM APPENDING CHILD second METHOD
+* create a div with an id to append to 
+
+
+let users = [
+    { userid: 1, name: "John", email: "jjj@gmail.com" },
+    { userid: 2, name: "Marry", email: "mmm@gmail.com" },
+    { userid: 3, name: "Anne", email: "aaa@gmail.com" },
+    { userid: 3, name: "Anne", email: "aaa@gmail.com" },
+  ];
+
+//   RENDERING TECHNIQUE DOM INJECTION
+
+let html = users.map((item) => {
+    return `<div><h2>${item.userid}</h2><h2>${item.name}</h2><h2>${item.email}</h2></div>`
+})
+
+document.getElementById('root').innerHTML = html.join('');
