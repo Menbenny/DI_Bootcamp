@@ -17,7 +17,8 @@ If the user doesn’t speak any of these 3 languages: display ‘01110011 011011
 // !   I need to apply REGEX on this exercise
 
 // let language = prompt(`Enter a language`);
-// let result = /language/i;
+// let result = language.toLowerCase();
+// // let result = /language/i;
 
 // switch (result) {
 //     case "English":
@@ -104,11 +105,11 @@ Submit Your Exercises :
 // REGEX TEST
 
 
-let text = prompt();
-let pattern = /test/i;
-let result = pattern.test(text);
+// let text = prompt();
+// let pattern = /test/i;
+// let result = pattern.test(text);
 
-console.log(result);
+// console.log(result);
 
 
 

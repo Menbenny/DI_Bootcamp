@@ -1,140 +1,234 @@
+/*  exercise 1*/
+// let fav_food = 'Tiramisu';
+
+// let fav_meal = 'Lunch';
+
+// console.log(`I eat ${fav_food} at every ${fav_meal}`);
+
+
+/*Exercise 2 */
+
+const myWatchedSeries = ["black mirror", "money heist", "the big bang theory"];
+
+const  myWatchedSeriesLength = myWatchedSeries.length;
+
+let myWatchedSeriesSentence = myWatchedSeries.split(" ");
+
+console.log(`I watched 3 serieses: ${myWatchedSeriesSentence}`);
+
+// // PART II
+
+
+// myWatchedSeries[2] = 'Friends';
+// console.log(myWatchedSeries);
+
+// myWatchedSeries.push('Lupin');
+// myWatchedSeries.unshift('3 body problem')
+
+// myWatchedSeries.splice(1, 1);
+
+// console.log(myWatchedSeries[1][2]);
+
+// console.log(myWatchedSeries);
+
+// Exercise 3
+
+// const celsiusTemp = 23;
+// const fahrenheit = (celsiusTemp/5*9) + 5;
+
+// console.log(`${celsiusTemp}°C is ${fahrenheit}°F`);
+
+// exercise 4
+
+// let c;
+// let a = 34;
+// let b = 21;
+
+// console.log(a+b) 
+//first expression
+// Prediction:55
+// Actual: 55
+
+// a = 2;
+
+// console.log(a+b)
+ //second expression
+// Prediction: 23
+// Actual: 23
+
+// c = undefined 
+
 /*
-Exercises XP
-Last Updated: September 22nd, 2023
-
-What We Will Learn:
-Variables
-Conditionals
-Loops
-Objects
-
-
-🌟 Exercise 1 : List Of People
+Exercise 5 : Guess The Answers #2
 Instructions
-const people = ["Greg", "Mary", "Devon", "James"];
+For each expression, in a Javascript file in VS CODE, predict what you think the output will be in a comment (//) without first running the command.
+Of course, explain each prediction.
+
+Then run the expression in the console of your browser (NOT IN VS CODE).
+
+Note the actual output in a comment and compare it with your prediction.
 
 
-Part I - Review About Arrays
-Write code to remove “Greg” from the people array.
 
-Write code to replace “James” to “Jason”.
+For example
 
-Write code to add your name to the end of the people array.
-
-Write code that console.logs Mary’s index. take a look at the indexOf method on Google.
-
-Write code to make a copy of the people array using the slice method.
-The copy should NOT include “Mary” or your name.
-Hint: remember that now the people array should look like this const people = ["Mary", "Devon", "Jason", "Yourname"];
-Hint: Check out the documentation for the slice method
-
-Write code that gives the index of “Foo”. Why does it return -1 ?
-
-Create a variable called last which value is the last element of the array.
-Hint: What is the relationship between the index of the last element in the array and the length of the array?
+typeof("potato")
+// Prediction: Vegetable
+// Actual: String
 
 
-Part II - Loops
-Using a loop, iterate through the people array and console.log each person.
+What is the output of each of the expressions below?
 
-Using a loop, iterate through the people array and exit the loop after you console.log “Devon” .
-Hint: take a look at the break statement in the lesson.
+
+typeof(15)
+// Prediction:
+number
+// Actual:
+
+typeof(5.5)
+// Prediction:
+number
+// Actual:
+
+typeof(NaN)
+// Prediction:
+boelean
+// Actual:
+
+typeof("hello")
+// Prediction:
+string
+// Actual:
+
+typeof(true)
+// Prediction:
+boelean
+// Actual:
+
+typeof(1 != 2)
+// Prediction:
+true
+// Actual:
+
+"hamburger" + "s"
+// Prediction:
+hamburgers
+// Actual:
+
+"hamburgers" - "s"
+// Prediction:
+NaN
+// Actual:
+
+"1" + "3"
+// Prediction:
+13
+// Actual:
+
+"1" - "3"
+// Prediction:
+-2
+// Actual:
+
+"johnny" + 5
+// Prediction:
+johnny5
+// Actual:
+
+"johnny" - 5
+// Prediction:n
+NaN
+// Actual:
+
+99 * "hello"
+// Prediction:
+NaN
+// Actual:
+
+1 != 1
+// Prediction:
+False
+// Actual:
+
+1 == "1"
+// Prediction:
+True
+// Actual:
+
+1 === "1"
+// Prediction:
+=== compares type, not values. Hence it is type and case sensitive 
+// Actual:
+
+
+Exercise 6 : Guess The Answers #3
+Instructions
+For each expression, in a Javascript file in VS CODE, predict what you think the output will be in a comment (//) without first running the command.
+Of course, explain each prediction.
+
+Then run the expression in the console of your browser (NOT IN VS CODE).
+
+Note the actual output in a comment and compare it with your prediction.
+
+
+
+What is the output of each of the expressions below?
+
+
+5 + "34"
+// Prediction:
+534
+// Actual:
+
+5 - "4"
+// Prediction:
+NaN
+// Actual:
+
+10 % 5
+// Prediction
+2
+// Actual:
+
+5 % 10
+// Prediction
+0.5
+// Actual:
+
+" " + " "
+// Prediction
+UNDEFINED:
+// Actual:
+
+" " + 0
+// Prediction:
+0
+// Actual:
+
+true + true
+// Prediction:
+// Actual:
+
+true + false
+// Prediction:
+// Actual:
+
+false + true
+// Prediction:
+// Actual:
+
+false - true
+// Prediction:
+// Actual:
+
+// !true
+// Prediction:
+false
+// Actual:
+
+3 - 4
+// Prediction
+-1:
+// Actual:
 
 */
-
-const people = ["Greg", "Mary", "Devon", "James"];
-
-people.splice(0,1);
-people.splice(1,1);
-people(2, 3, 'Jason');
-people.concat('Ben_G');
-people.indexOf('Mary');
-
-
-/*
-
-
-🌟 Exercise 2 : Your Favorite Colors
-Instructions
-Create an array called colors where the value is a list of your five favorite colors.
-Loop through the array and as you loop console.log a string like so: “My #1 choice is blue”, “My #2 choice is red” ect… .
-Bonus: Change it to console.log “My 1st choice”, “My 2nd choice”, “My 3rd choice”, picking the correct suffix for each number.
-Hint : create an array of suffixes to do the Bonus
-
-
-🌟 Exercise 3 : Repeat The Question
-Instructions
-Prompt the user for a number.
-Hint : Check the data type you receive from the prompt (ie. Use the typeof method)
-
-While the number is smaller than 10 continue asking the user for a new number.
-Tip : Which while loop is more relevant for this situation?
-
-
-🌟 Exercise 4 : Building Management
-Instructions:
-const building = {
-    numberOfFloors: 4,
-    numberOfAptByFloor: {
-        firstFloor: 3,
-        secondFloor: 4,
-        thirdFloor: 9,
-        fourthFloor: 2,
-    },
-    nameOfTenants: ["Sarah", "Dan", "David"],
-    numberOfRoomsAndRent:  {
-        sarah: [3, 990],
-        dan:  [4, 1000],
-        david: [1, 500],
-    },
-}
-
-
-Review About Objects
-Copy and paste the above object to your Javascript file.
-
-Console.log the number of floors in the building.
-
-Console.log how many apartments are on the floors 1 and 3.
-
-Console.log the name of the second tenant and the number of rooms he has in his apartment.
-
-Check if the sum of Sarah’s and David’s rent is bigger than Dan’s rent. If it is, than increase Dan’s rent to 1200.
-
-
-🌟 Exercise 5 : Family
-Instructions
-Create an object called family with a few key value pairs.
-Using a for in loop, console.log the keys of the object.
-Using a for in loop, console.log the values of the object.
-
-
-Exercise 6 : Rudolf
-Instructions
-const details = {
-  my: 'name',
-  is: 'Rudolf',
-  the: 'raindeer'
-}
-Given the object above and using a for loop, console.log “my name is Rudolf the raindeer”
-
-
-Exercise 7 : Secret Group
-Instructions
-const names = ["Jack", "Philip", "Sarah", "Amanda", "Bernard", "Kyle"];
-A group of friends have decided to start a secret society. The society’s name will be the first letter of each of their names sorted in alphabetical order.
-Hint: a string is an array of letters
-Console.log the name of their secret society. The output should be “ABJKPS”
-
-
-Submit Your Exercises :
-Don’t forget to push to Github
-
-Submit your exercises to DI Learning
-
-More Info
-Duration (approx)
-> 1h30
-
-*/
-

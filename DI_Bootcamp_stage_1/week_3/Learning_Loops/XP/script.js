@@ -118,7 +118,7 @@ While the number is smaller than 10 continue asking the user for a new number.
 Tip : Which while loop is more relevant for this situation?
 
 */
-var  input;
+// var  input;
 
 
 
@@ -129,10 +129,16 @@ var  input;
 //     }
 // };
 
+// let num;
+
+// while (parseInt.num < 10) {
+//     num = prompt(`Enter a number: `)
+// }
+
 let num;
 
-while (parseInt.num < 10) {
-    num = prompt(`Enter a number: `)
+while(parseInt(num) < 10){  
+    num = prompt ("Enter number bigger or equal to 10");
 }
 
 

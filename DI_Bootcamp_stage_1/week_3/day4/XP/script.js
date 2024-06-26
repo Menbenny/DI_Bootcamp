@@ -17,8 +17,11 @@ x is the biggest number
 let x = 5;
 let y = 2;
 
-if (x > y == true) {
-    alert(`x is bigger`)
+if (x > y) {
+    alert(`x is the biggest`)
+    {
+        alert(`y is the biggest`)
+    }
 };
 
 
@@ -60,7 +63,8 @@ If it is odd, display: “x is an odd number”. Where x is the actual number th
 */
 
 
-// let number = prompt(`Enter a number: `);
+// let number = Number(prompt(`Enter a number: `));
+// ? Explicit conversion to number
 
 // if (number % 2 == 0 ) {
 //     alert(`${number} is an even`)
@@ -91,20 +95,22 @@ name_user1, name_user2 and 3 more are online
 Submit Your Exercises :
 */
 
-const users = ["cat&doglovers", "helooo@000", "sheshbesh700", "Matteous"];
+// const users = ["cat&doglovers", "helooo@000", "sheshbesh700", "Matteous"];
 
-if (users.length == 0) {
-    console.log(`no one is online`)
-};
-if (users.length == 1) {
-    console.log(`${users[0]} is online`)
-};
-if (users.length == 2) {
-    console.log(`${users[0]} and ${users[1]} are online`)
-};
-if (users.length > 2) {
-    console.log(`${users[0]}, ${users[1]} and ${users.length - 2} more are online`);
-};
+// if (users.length == 0) {
+//     console.log(`no one is online`)
+// }
+// else if (users.length == 1) {
+//     console.log(`${users[0]} is online`)
+// }
+// else if (users.length == 2) {
+//     console.log(`${users[0]} and ${users[1]} are online`)
+// }
+// else (users.length > 2) {
+//     console.log(`${users[0]}, ${users[1]} and ${users.length - 2} more are online`)
+
+//     // ! semi colon positioning seems incorrect
+// };
 
 
 // console.log(users)
