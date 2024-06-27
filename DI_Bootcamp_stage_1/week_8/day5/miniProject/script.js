@@ -39,8 +39,16 @@ function generateQuote() {
     } while (randomIndex === lastQuoteIndex);
 
     lastQuoteIndex = randomIndex;
-    return console.log(quotes[randomIndex])
-}
+    return document.querySelector('button').addEventListener('click',() => {
+        const quoteSection = document.getElementById('quote-section');
+        const randomQuote = generateQuote();
+        quoteSection.innerHTML =  `<p>"${quotes[randomIndex].quote}"</p><p><em>- ${quotes[randomIndex].author}</em></p>`;
+    })
+    
+    // console.log(quotes[randomIndex])
+    
+    }
+    
 
 
 
