@@ -26,11 +26,21 @@ let quotes = [
     }
 ]
 
+let lastQuoteIndex = -1
 // console.log(quotes[1].author);
 function generateQuote() {
-    for (item in quotes) {
-        console.log(quotes[item]);
-    }
+    // for (item in quotes) {
+    //     console.log(quotes[item]);
+    // }
+
+    let randomIndex;
+    do {
+        randomIndex = Math.floor(Math.random() * quotes.length);
+    } while (randomIndex === lastQuoteIndex);
+
+    lastQuoteIndex = randomIndex;
+    return console.log(quotes[randomIndex])
 }
 
-generateQuote()
+
+
