@@ -1,0 +1,4 @@
+map() method - transforms and maps original array into a new array 
+(supposedly with a new location memory)
+filter() - 
+reduce()
