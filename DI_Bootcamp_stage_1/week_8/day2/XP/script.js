@@ -84,12 +84,31 @@ The client wants 6 ingredients in his juice, therefore, invoke the addIngredient
 //part 1
 
 function makeJuice(juiceSize){
+
+    let ingredients = [];
+
     function addIngredients(firstIngredient, secondIngredient, thirdIngredient){
         const div = document.querySelector('div')
         const sentence = document.createElement('p')
         div.appendChild(sentence)
         sentence.innerHTML = `The client wants a ${juiceSize} juice with ${firstIngredient}, ${secondIngredient} and ${thirdIngredient} `
+
+        ingredients.push(firstIngredient, secondIngredient, thirdIngredient)
+
+
     }
     addIngredients('lemon', 'pineapple', 'mango')
+
+    function displayJuice(firstIngredient, secondIngredient, thirdIngredient){
+        const div = document.querySelector('div')
+        const sentence = document.createElement('p')
+        div.appendChild(sentence)
+        sentence.innerHTML = `The client wants a ${juiceSize} juice with ${firstIngredient}, ${secondIngredient} and ${thirdIngredient} `
+
+        ingredients.push(firstIngredient, secondIngredient, thirdIngredient)
+
+
+    }
+    displayJuice('apple', 'banana', 'kiwi')
 }
 makeJuice('large')
