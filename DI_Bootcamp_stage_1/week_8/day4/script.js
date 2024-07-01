@@ -39,4 +39,20 @@
 // console.log(welcomeStudents);
 
 //Exercise 3
-const epic = []
+// const epic = ['a', 'long', 'time', 'ago', 'in a', 'galaxy', 'far far', 'away'];
+
+// const combinedString = epic.reduce((acc, word) => acc + ' ' + word);
+// console.log(combinedString);
+
+//Exercise 4
+// const students = [
+//     { name: "Ray", course: "Computer Science", isPassed: true }, 
+//     { name: "Liam", course: "Computer Science", isPassed: false }, 
+//     { name: "Jenner", course: "Information Technology", isPassed: true }, 
+//     { name: "Marco", course: "Robotics", isPassed: true }, 
+//     { name: "Kimberly", course: "Artificial Intelligence", isPassed: false }, 
+//     { name: "Jamie", course: "Big Data", isPassed: false }
+// ];
+
+// const passedStudents = students.filter(student => student.isPassed);
+// console.log(passedStudents);
