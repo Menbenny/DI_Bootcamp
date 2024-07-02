@@ -1,6 +1,11 @@
-function displayStudentInfo(objUser){
-    const {first, last} = objUser
-    console.log(first, last);
-}
+//Exercise 1
 
-displayStudentInfo({first: 'Vic', last: 'Maroth'})
+
+
+// Exercise 2
+// function displayStudentInfo(objUser){
+//     const {first, last} = objUser
+//     console.log(first, last);
+// }
+
+// displayStudentInfo({first: 'Vic', last: 'Maroth'})

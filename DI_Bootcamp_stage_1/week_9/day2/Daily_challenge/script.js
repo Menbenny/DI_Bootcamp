@@ -18,6 +18,8 @@ class Video {
         this.uploader = uploader
         this.time = time
     }
-
+    watch() {
+        return `${this.uploader} watched all ${this.time} of ${this.title}`
+    }
 }
 
