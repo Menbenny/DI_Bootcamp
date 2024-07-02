@@ -2,3 +2,7 @@ map() method - transforms and maps original array into a new array
 (supposedly with a new location memory)
 filter() - 
 reduce()
+
+Difference between primetive and reference object - Premetive is defaultly 
+defined by the programming language. Whereas reference is an assigned/declared
+address
