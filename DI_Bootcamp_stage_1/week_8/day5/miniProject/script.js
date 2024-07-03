@@ -55,7 +55,31 @@ document.getElementById('addQuoteForm').addEventListener('submit', (e) => {
     document.getElementById('newAuthor').value = '';
 });
 
+document.getElementById('charCountWithSpaces').addEventListener('click', () => {
+    if (lastDisplayedQuote) {
+        alert(`Character count (with spaces): ${lastDisplayedQuote.quote.length}`);
 
+    }
+});
+
+document.getElementById(`charCountWithouSpaces`).addEventListener('click', () => {
+    if (lastDisplayedQuote) {
+        alert(`Character count (without spaces): ${lastDisplayedQuote.quote.replace(/\s/g, '').length}`);
+    }
+});
+
+document.getElementById(`wordCount`).addEventListener('click', () => {
+    if (lastDisplayedQuote) {
+        alert(`word count: ${lastDisplayedQuote.quote.split(' ').length}`);
+    }
+});
+
+document.getElementById('likeQuote').addEventListener('click', () => {
+    if(lastDisplayedQuote) {
+        lastDisplayedQuote.likes++;
+        document.getElementById('likeDisplay').textContent = `Likes: ${lastDisplayedQuote.likes}`
+    }
+})
     
 
 
