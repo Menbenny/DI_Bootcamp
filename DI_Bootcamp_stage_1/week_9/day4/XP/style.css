@@ -1,0 +1,14 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+.comment {
+    margin-top: 20px;
+}
+
+.comment input {
+    height: 10vh;
+    line-height: 10vh;
+}
