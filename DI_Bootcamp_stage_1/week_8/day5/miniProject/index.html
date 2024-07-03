@@ -8,11 +8,21 @@
 </head>
 <body>
     <div class="container">
-        <!-- <div class="inner"> -->
+        <div class="inner">
             <button onclick="generateQuote()"><h4>Generate Quote</h4></button>
+        </div>
+        <br>
+        <div>
             <div id="quote-section"></div>
-        <!-- </div> -->
+
+        </div>
+
+        <form id="addQuoteForm">
+            <input type="text" id="newQuote" placeholder="Quote" required>
+            <input type="text" id="newAuthor" placeholder="Author" required>
+            <button type="submit">Add Quote</button>
+        </form>
     </div>
     <script src="script.js"></script>
 </body>
-</html>j
+</html>
