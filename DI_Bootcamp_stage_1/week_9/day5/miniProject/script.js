@@ -86,7 +86,27 @@ class robot {
         this.email = email;
         this.image = image;
     }
+};
+
+
+const container = document.getElementsByClassName('container');
+
+function displayRobots(robotList) {
+
+  container.innerHTML = '';
+  robotList.forEach(robot => {
+    const robotCard = document.createElement('div');
+    robotCard.classList.add('robotCard')
+
+    robotCard.innerHTML = `
+    <img src=${robots.image}/>
+    <h4>${robots.name}</h4>
+    <p>${robots.username}</p>
+    `;
+    container.appendChild(robotCard)
+  });
 }
+
 
 const robotInstances = robots.map(robot => new robot(robots.id, robots.name, robots.username, robots.email, robots.image));
 
