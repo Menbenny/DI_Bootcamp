@@ -81,89 +81,13 @@ const robots = [
 class robot {
     constructor (id, name, username, email) {
         this.id = id;
-        this.name = 'Leanne Graham';
-        this.username = 'Bret';
-        this.email = 'Sincere@april.biz'
+        this.name = name;
+        this.username = username;
+        this.email = email;
+        this.image = image;
     }
 }
 
-class robot {
-  constructor (id, name, username, email) {
-      this.id = id;
-      this.name = 'Ervin Howell';
-      this.username = 'Antonette';
-      this.email = 'Shanna@melissa.tv'
-  }
-}
+const robotInstances = robots.map(robot => new robot(robots.id, robots.name, robots.username, robots.email, robots.image));
 
-class robot {
-  constructor (id, name, username, email) {
-      this.id = id;
-      this.name = 'Clementine Bauch';
-      this.username = 'Samantha';
-      this.email ='Nathan@yesenia.net'
-  }
-}
-
-class robot {
-  constructor (id, name, username, email) {
-      this.id = id;
-      this.name = 'Patricia Lebsack';
-      this.username =  'Karianne';
-      this.email = 'Julianne.OConner@kory.org'
-  }
-}
-
-class robot {
-  constructor (id, name, username, email) {
-      this.id = id;
-      this.name = 'Chelsey Dietrich';
-      this.username = 'Kamren';
-      this.email = 'Lucio_Hettinger@annie.ca'
-  }
-}
-
-class robot {
-  constructor (id, name, username, email) {
-      this.id = id;
-      this.name =  'Mrs. Dennis Schulist';
-      this.username = 'Leopoldo_Corkery';
-      this.email = 'Karley_Dach@jasper.info'
-  }
-}
-
-class robot {
-  constructor (id, name, username, email) {
-      this.id = id;
-      this.name = 'Kurtis Weissnat';
-      this.username = 'Elwyn.Skiles';
-      this.email = 'Telly.Hoeger@billy.biz'
-  }
-}
-
-class robot {
-  constructor (id, name, username, email) {
-      this.id = id;
-      this.name =  'Nicholas Runolfsdottir V';
-      this.username = 'Maxime_Nienow';
-      this.email =  'Sherwood@rosamond.me'
-  }
-}
-
-class robot {
-  constructor (id, name, username, email) {
-      this.id = id;
-      this.name = 'Glenna Reichert';
-      this.username = 'Delphine';
-      this.email = 'Chaim_McDermott@dana.io'
-  }
-}
-
-class robot {
-  constructor (id, name, username, email) {
-      this.id = id;
-      this.name = 'Clementina DuBuque';
-      this.username = 'Moriah.Stanton';
-      this.email ='Rey.Padberg@karina.biz'
-  }
-}
+console.log(robotInstances);
