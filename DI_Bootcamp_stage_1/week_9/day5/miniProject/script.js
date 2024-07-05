@@ -92,7 +92,7 @@ function displayRobots(robotList) {
 
     robotCard.innerHTML = `
     <img src="${robot.image}"/>
-    <div class="profile-id">ID: ${robot.id}</div>
+    
     <h4>${robot.name}</h4>
     <p>${robot.email}</p>
     `;
@@ -111,7 +111,7 @@ const searchBox = document.getElementById('searchBox')
 
 searchBox.addEventListener("input", (event) => {
   const searchWord = event.target.value.toLowerCase();
-  const filteredRobots = robotInstances.filter((robot) => robot.name.toLowerCase().includes   (searchWord)
+  const filteredRobots = robotInstances.filter((robot) => robot.name.toLowerCase().includes(searchWord)
   );
   displayRobots(filteredRobots)
 })
