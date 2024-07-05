@@ -9,3 +9,8 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+.robotCard img {
+    width: 100%;
+    height: auto;
+}

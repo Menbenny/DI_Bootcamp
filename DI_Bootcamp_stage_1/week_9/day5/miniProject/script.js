@@ -78,6 +78,7 @@ const robots = [
     //       this.size = size;
     //     }
     //   };
+
 class robot {
     constructor (id, name, username, email) {
         this.id = id;
@@ -89,25 +90,36 @@ class robot {
 };
 
 
-const container = document.getElementsByClassName('container');
 
-function displayRobots(robotList) {
+function displayRobots(robots) {
+  const container = document.getElementsById('robotContainer');
 
   container.innerHTML = '';
-  robotList.forEach(robot => {
+  robots.forEach((robot) => {
     const robotCard = document.createElement('div');
     robotCard.classList.add('robotCard')
 
     robotCard.innerHTML = `
-    <img src=${robots.image}/>
-    <h4>${robots.name}</h4>
-    <p>${robots.username}</p>
+    <img src=${robot.image}/>
+    <div class="profile-id">ID: ${robot.id}</div>
+    <h4>${robot.name}</h4>
+    <p>${robot.email}</p>
     `;
     container.appendChild(robotCard)
   });
 }
 
+const robotInstances = robots.map(
+  (robot) =>
+    new robot(robot.id, robot.name, robot.username, robot.email, robot.image)
+)
 
-const robotInstances = robots.map(robot => new robot(robots.id, robots.name, robots.username, robots.email, robots.image));
+displayRobots(robotInstances)
 
-console.log(robotInstances);
+// function search() {
+//   document.querySelector('input').addEventListener
+//   ('submit', )
+// }
+
+
+
