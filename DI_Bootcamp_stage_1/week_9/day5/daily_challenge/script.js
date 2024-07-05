@@ -1,12 +1,11 @@
-function anagramChecker(string, anagram) {
-    for (let i = 0; i < string.length; i++){
-
-        console.log(string[i]);
-    //     for (let x = 0; x >= anagram.length; x++) {
-    //     }
-    //     console.log(i, x);
-    }
+function anagramChecker(word, anagram) {
+    const word = word.toLowerCase();
+    const anagram = anagram.toLowerCase();
+  for (let i = 0; i < word.length; i++) {
+      if (word.includes(' ')){
+          continue
+      }
+  }  
+  return word.localeCompare(anagram)
 }
-// const string = 'care';
-// anagram = 'race'
-anagramChecker('string', 'anagram')
+anagramChecker('astronomer', 'moon starer')
