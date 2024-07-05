@@ -71,16 +71,8 @@ const robots = [
     }
     ];
 
-//! Create classes for each asset
-// class Labrador extends Dog {
-    //     constructor(name, size) {
-    //       this.name = name;
-    //       this.size = size;
-    //     }
-    //   };
-
-class robot {
-    constructor (id, name, username, email) {
+class Robot {
+    constructor (id, name, username, email, image) {
         this.id = id;
         this.name = name;
         this.username = username;
@@ -89,29 +81,28 @@ class robot {
     }
 };
 
+const containerDiv = document.getElementById('robotContainer');
 
+function displayRobots(robotList) {
 
-function displayRobots(robots) {
-  const container = document.getElementsById('robotContainer');
-
-  container.innerHTML = '';
-  robots.forEach((robot) => {
+  containerDiv.innerHTML = '';
+  robotList.forEach((robot) => {
     const robotCard = document.createElement('div');
     robotCard.classList.add('robotCard')
 
     robotCard.innerHTML = `
-    <img src=${robot.image}/>
+    <img src="${robot.image}"/>
     <div class="profile-id">ID: ${robot.id}</div>
     <h4>${robot.name}</h4>
     <p>${robot.email}</p>
     `;
-    container.appendChild(robotCard)
+    containerDiv.appendChild(robotCard)
   });
 }
 
 const robotInstances = robots.map(
   (robot) =>
-    new robot(robot.id, robot.name, robot.username, robot.email, robot.image)
+    new Robot(robot.id, robot.name, robot.username, robot.email, robot.image)
 )
 
 displayRobots(robotInstances)
