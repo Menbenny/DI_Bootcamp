@@ -107,10 +107,17 @@ const robotInstances = robots.map(
 
 displayRobots(robotInstances)
 
-// function search() {
-//   document.querySelector('input').addEventListener
-//   ('submit', )
-// }
+const searchBox = document.getElementById('searchBox')
+
+searchBox.addEventListener("input", (event) => {
+  const searchWord = event.target.value.toLowerCase();
+  const filteredRobots = robotInstances.filter((robot) => robot.name.toLowerCase().includes   (searchWord)
+  );
+  displayRobots(filteredRobots)
+})
+
+
+
 
 
 
