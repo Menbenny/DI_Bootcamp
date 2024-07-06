@@ -23,3 +23,9 @@ class Video {
     }
 }
 
+const firstVideo = new Video ('Hacker101', 'Mr Robot', 300);
+firstVideo.watch();
+
+const secondVideo = new Video('Python dictionaries', 'Mosh', 600);
+secondVideo.watch();
+

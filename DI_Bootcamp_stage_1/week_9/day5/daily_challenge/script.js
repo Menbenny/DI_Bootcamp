@@ -1,11 +1,10 @@
-function anagramChecker(word, anagram) {
-    const word = word.toLowerCase();
-    const anagram = anagram.toLowerCase();
-  for (let i = 0; i < word.length; i++) {
-      if (word.includes(' ')){
-          continue
-      }
-  }  
-  return word.localeCompare(anagram)
+function anagramChecker(string1, string2) {
+  const stringFilter = (string) => {
+    return string.toLowerCase().replace(/[^a-z]/g, '').split('').sort().join('');
+  };
+  const anagram1 = stringFilter(string1);
+  const anagram2 = stringFilter(string2);
+
+  return anagram1 === anagram2
 }
-anagramChecker('astronomer', 'moon starer')
+console.log(anagramChecker('Astronomer', 'Moon starer'))
