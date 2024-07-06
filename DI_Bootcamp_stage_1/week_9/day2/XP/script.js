@@ -68,8 +68,12 @@ class animal {
 
 class mamal extends animal {
     sound(animalSound){
-        return (animal.animalName, animal.type, animal.color)
+        return toString(`${this.animalName}, ${this.type}, ${this.color}, ${animalSound}`)
     }
 }
+
+const farmerCow = new mamal('Jerry', 'Cow', 'Black and White');
+console.log(farmerCow.sound('moooo'));
+
 
 
