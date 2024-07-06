@@ -54,3 +54,22 @@
 // object2 = 4 //! object2 = object1 (object1.number = 4)
 // object3 = 4 //! object3 = object2 (object2 = object1 (object1.number = 4))
 // object4 = 5 //! object4 = {number: 5}
+
+
+// Create a class Animal with the attributes name, type and color. The type is the animal type, for example: dog, cat, dolphin ect …
+//
+class animal {
+    constructor(animalName, type, color) {
+        this.animalName = animalName;
+        this.type = type;
+        this.animalName.color = color;
+    }
+}
+
+class mamal extends animal {
+    sound(animalSound){
+        return (animal.animalName, animal.type, animal.color)
+    }
+}
+
+
