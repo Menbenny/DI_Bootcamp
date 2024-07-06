@@ -62,13 +62,13 @@ class animal {
     constructor(animalName, type, color) {
         this.animalName = animalName;
         this.type = type;
-        this.animalName.color = color;
+        this.color = color;
     }
 }
 
 class mamal extends animal {
     sound(animalSound){
-        return toString(`${this.animalName}, ${this.type}, ${this.color}, ${animalSound}`)
+        return `${animalSound} I'm a ${this.type} named ${this.animalName} and I am ${this.color}`
     }
 }
 
