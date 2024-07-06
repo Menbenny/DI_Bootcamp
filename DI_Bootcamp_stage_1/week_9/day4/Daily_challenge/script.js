@@ -1,15 +1,26 @@
 
 
-document.getElementById('myForm').addEventListener('submit', function(event){event.preventDefault();
-
+document.getElementById('myForm').addEventListener('submit',function(event) {
+    event.preventDefault();
+    
     const name = document.getElementById('name').value;
+    console.log(name);
     const lastName = document.getElementById('lastname').value;
-    const div = document.getElementsByClassName('display')
+    console.log(lastName);
 
-    const namesObject = JSON.stringify({name: name, lastName: lastName})
+    const result = {
+        name: name,
+        lastName: lastName
+    };
 
+    const jsonResult = JSON.stringify(result);
 
-    div.textContent = namesObject
+    const display = document.getElementById('display');
+
+    const object = document.createElement('p');
+    object.textContent = jsonResult;
+    
+    display.appendChild(object);
 })
 
 
