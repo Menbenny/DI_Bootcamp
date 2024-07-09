@@ -62,7 +62,7 @@ Use Promise.reject(error) to create a promise that will reject itself with the s
 const proResolve = (value) => {
     return new Promise((resolve, reject) => {
         if (value === 3) {
-            const resolve = true;
+            
             resolve(`success`)
         } else {
             reject(`Boo`)
@@ -70,13 +70,16 @@ const proResolve = (value) => {
     });
 };
 
-proResolve()
+proResolve(2)
 .then(value => {
     console.log(value);
 })
 .catch(result => {
     console.log(result);
 })
+
+// #####
+
 // const selfResolve = new Promise((resolve, reject) => {
 
 
