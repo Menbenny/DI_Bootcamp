@@ -34,7 +34,7 @@
 const sortWords = (arr) => {
     return new Promise((resolve, reject) => {
         if (arr.length > 4) {
-            resolve(arr.sort((a, b) => a - b))
+            resolve(arr.sort())
         }
         else {
             reject(`Array length less than 4`)
