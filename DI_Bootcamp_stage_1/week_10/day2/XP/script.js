@@ -57,7 +57,43 @@ Create a promise that resolves itself in 4 seconds and returns a “success” s
 Instructions
 Use Promise.resolve(value) to create a promise that will resolve itself with a value of 3.
 Use Promise.reject(error) to create a promise that will reject itself with the string “Boo!”
+*/
 
+const proResolve = (value) => {
+    return new Promise((resolve, reject) => {
+        if (value === 3) {
+            const resolve = true;
+            resolve(`success`)
+        } else {
+            reject(`Boo`)
+        }
+    });
+};
+
+proResolve()
+.then(value => {
+    console.log(value);
+})
+.catch(result => {
+    console.log(result);
+})
+// const selfResolve = new Promise((resolve, reject) => {
+
+
+//         resolve(3);
+//         reject(`Boo`)
+//     });
+
+//     console.log(Promise.resolve(value));
+
+// selfResolve.then(value => {
+//     console.log(value);
+// })
+// selfResolve.catch(result => {
+//     console.log(result);
+// })
+
+/*
 
 Exercise 4: Quizz - Not Mandatory
 Follow this tutorial and do the quizz until the page called “a few tricks with promises”.
