@@ -8,44 +8,62 @@
 //? If the array length is bigger than 4, resolve the promise. The value of the resolved promise is the array of words sorted in alphabetical order.
 // ? else, reject the promise with a reason.
 
-// const makeAllCaps = (arr) => {
-//     return new Promise((resolve, reject) => {
-//         for (let i = 0; i < arr.length; i++) {
-//             console.log(arr[i]);
-//             if (typeof(arr[i]) === String) {
-//                 resolve(arr[i].toUpperCase());
-//                 console.log(toUpperCase(arr[i]));   
-//             }
-//             if (typeof(arr[i]) === !String){
-//                 reject(`Not all items in array are a string`)
-//             }
-//         }
-//     });
-// };
+// let testArray = ['learning', 'java', 'at', 'developers', 'institute'];
+// let upper = testArray.map(testArray => testArray.toUpperCase());
+// console.log(upper);
 
-// makeAllCaps(['here', 'we', 'go', 'again!', 1])
-// .then(result => {
-//     console.log(result);
-// })
-// .catch(result => {
-//     console.log(result);
-// })
+// for (let x = 0; x < testArray.length; x ++) {
+//     // console.log(testArray[x]);
+//     const upperCase = testArray.map(testArray => {
+//         testArray.toUpperCase()
+//     })
+//     console.log(upperCase);
+// }
 
-const sortWords = (arr) => {
+
+
+// console.log(upper);
+
+const makeAllCaps = (arr) => {
     return new Promise((resolve, reject) => {
-        if (arr.length > 4) {
-            resolve(arr.sort())
-        }
-        else {
-            reject(`Array length less than 4`)
-        }
+        for (let i = 0; i < arr.length; i++) {
+           if (typeof(arr[i]) !== 'string') {
+            reject(`Not all items inside the array are strings`) 
+            return
+           } 
+        };
+
+        let caps = arr.map(arr => arr.toUpperCase());
+        resolve(caps)
+        
     });
 };
 
-sortWords(['emanuel', 'floyd', 'claire', 'danny', 'ava', 'bobby'])
+let arr = ['here', 'we', 'go', 'again!'];
+
+makeAllCaps(arr)
 .then(result => {
     console.log(result);
 })
 .catch(result => {
     console.log(result);
 })
+
+// const sortWords = (arr) => {
+//     return new Promise((resolve, reject) => {
+//         if (arr.length > 4) {
+//             resolve(arr.sort())
+//         }
+//         else {
+//             reject(`Array length less than 4`)
+//         }
+//     });
+// };
+
+// sortWords(['emanuel', 'floyd', 'claire', 'danny', 'ava', 'bobby'])
+// .then(result => {
+//     console.log(result);
+// })
+// .catch(result => {
+//     console.log(result);
+// })
