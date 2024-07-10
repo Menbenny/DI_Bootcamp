@@ -52,16 +52,16 @@ Console.log the Javascript Object that you receive.
 
 
 
-let retrieveSunGifs = async() => {
-    try {
-        let res = await (await fetch('https://api.giphy.com/v1/gifs/search?q=hilarious&rating=g&api_key=hpvZycW22qCjn5cRM1xtWB8NKq4dQ2My&q="sun"&limit=10&offset=2')).json()
-        console.log(res);
+// let retrieveSunGifs = async() => {
+//     try {
+//         let res = await (await fetch('https://api.giphy.com/v1/gifs/search?q=hilarious&rating=g&api_key=hpvZycW22qCjn5cRM1xtWB8NKq4dQ2My&q="sun"&limit=10&offset=2')).json()
+//         console.log(res);
         
-    } catch (error) {
-        console.log(error, `Error: data not found`);
-    } 
-}
-retrieveSunGifs()
+//     } catch (error) {
+//         console.log(error, `Error: error message`);
+//     } 
+// }
+// retrieveSunGifs()
 
 
 
@@ -86,11 +86,33 @@ Create an async function, that will await for the above GET request.
 The program shouldn’t contain any then() method.
 Make sure to check the status of the Response and to catch any occuring errors.
 
+*/
 
-Expected Output:
+const asyncFunc = async() => {
+    try {
+      let response = await fetch("https://www.swapi.tech/api/starships/9/")
 
-output
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`)
+      }
 
+      let objectStarWars = await response.json()
+      console.log(objectStarWars);
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+asyncFunc()
+
+
+
+
+
+
+
+
+/*
 
 
 🌟 Exercise 4: Analyze
