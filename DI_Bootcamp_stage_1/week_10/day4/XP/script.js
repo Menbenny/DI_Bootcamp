@@ -88,22 +88,22 @@ Make sure to check the status of the Response and to catch any occuring errors.
 
 */
 
-const asyncFunc = async() => {
-    try {
-      let response = await fetch("https://www.swapi.tech/api/starships/9/")
+// const asyncFunc = async() => {
+//     try {
+//       let response = await fetch("https://www.swapi.tech/api/starships/9/")
 
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`)
-      }
+//       if (!response.ok) {
+//         throw new Error(`HTTP error! status: ${response.status}`)
+//       }
 
-      let objectStarWars = await response.json()
-      console.log(objectStarWars);
-    } catch (error) {
-        console.log(error);
-    }
-}
+//       let objectStarWars = await response.json()
+//       console.log(objectStarWars);
+//     } catch (error) {
+//         console.log(error);
+//     }
+// }
 
-asyncFunc()
+// asyncFunc()
 
 
 
@@ -131,3 +131,6 @@ async function asyncCall() {
 
 asyncCall();
 */
+
+// output
+// logging 'calling' after  2 seconds later logging result 'resolved'
