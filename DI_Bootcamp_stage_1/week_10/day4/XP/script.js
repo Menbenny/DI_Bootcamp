@@ -18,16 +18,16 @@ Use the fetch() method to make a GET request to the Giphy API and Console.log th
 Make sure to check the status of the Response and to catch any occuring errors.
 */
 
-let retrieve = async() => {
-    try {
-        let res = await (await fetch('https://api.giphy.com/v1/gifs/search?q=hilarious&rating=g&api_key=hpvZycW22qCjn5cRM1xtWB8NKq4dQ2My')).json()
-        console.log(res);
+// let retrieve = async() => {
+//     try {
+//         let res = await (await fetch('https://api.giphy.com/v1/gifs/search?q=hilarious&rating=g&api_key=hpvZycW22qCjn5cRM1xtWB8NKq4dQ2My')).json()
+//         console.log(res);
         
-    } catch (error) {
-        console.log(error, `Error: data not found`);
-    } 
-}
-retrieve()
+//     } catch (error) {
+//         console.log(error, `Error: data not found`);
+//     } 
+// }
+// retrieve()
 
 
 
@@ -47,7 +47,33 @@ Read carefully the documention to understand all the possible queries that the U
 Use the Fetch API to retrieve 10 gifs about the “sun”. The starting position of the results should be 2.
 Make sure to check the status of the Response and to catch any occuring errors.
 Console.log the Javascript Object that you receive.
+*/
 
+
+
+
+let retrieveSunGifs = async() => {
+    try {
+        let res = await (await fetch('https://api.giphy.com/v1/gifs/search?q=hilarious&rating=g&api_key=hpvZycW22qCjn5cRM1xtWB8NKq4dQ2My&q="sun"&limit=10&offset=2')).json()
+        console.log(res);
+        
+    } catch (error) {
+        console.log(error, `Error: data not found`);
+    } 
+}
+retrieveSunGifs()
+
+
+
+
+
+
+
+
+
+
+
+/*
 
 🌟 Exercise 3 : Async Function
 Instructions
