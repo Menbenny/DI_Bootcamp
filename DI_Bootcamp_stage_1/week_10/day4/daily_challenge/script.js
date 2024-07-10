@@ -1,14 +1,15 @@
 const input = document.getElementById("categoryInput");
+const category = input.value.trim().toLowerCase()
 const gifForm = document.getElementById('gifForm');
-const displayDiv = document.getElementsByClassName('display')
+
 const deleteAllButton = document.getElementById('deleteAllButton')
 const apiKey = `hpvZycW22qCjn5cRM1xtWB8NKq4dQ2My`
+const searchButton = document.getElementById('searchButton')
+const url = `https://api.giphy.com/v1/gifs/random?api_key=${apiKey}&tag=${category}`;
 
-
-
-button.addEventListener("submit", async (event) => {
+searchButton.addEventListener("submit", async (event) => {
     event.preventDefault();
-    const category = input.value.trim().toLowerCase()
+    
     if (category) {
         const gif_URL = await fetchRandomGIF(category);
         if (gif_URL) {
@@ -24,7 +25,7 @@ deleteAllButton.addEventListener('click', () => {
 
 
 const fetchRandomGIF = async(category) => {
-    const url = `https://api.giphy.com/v1/gifs/random/?api_key=${apiKey}&tag=${category}`;
+    
     const options = {
         method: "GET",
         headers: {"Content-type": "application/json"}
@@ -55,8 +56,9 @@ appendGif = (url) => {
         gifItem.remove();
     });
     gifItem.appendChild(deleteButton);
-
-    displayDiv.appendChild(gifItem);
+    const displayDiv = document.getElementById('display').appendChild(gifItem);
+    // displayDiv.appendChild(gifItem);
 }
 
-appendChild(url)
+// appendGif(url)
+fetchRandomGIF(category)
