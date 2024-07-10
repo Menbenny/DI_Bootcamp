@@ -1,15 +1,9 @@
-const input = document.querySelector("input")
-// const theValue = input.value.toLowerCase()
+const input = document.getElementById("categoryInput");
+const gifForm = document.getElementById('gifForm');
 const displayDiv = document.getElementsByClassName('display')
-// const submitButton = document.querySelector("button")
 const deleteAllButton = document.getElementById('deleteAllButton')
-const API_Key = `hpvZycW22qCjn5cRM1xtWB8NKq4dQ2My`
-const url = `https://api.giphy.com/v1/gifs/random/?api_key=${API_Key}&tag=${category}`;
-const options = {
-    method: "GET",
-    headers: {"Content-type": "application/json"}
-    
-}
+const apiKey = `hpvZycW22qCjn5cRM1xtWB8NKq4dQ2My`
+
 
 
 button.addEventListener("submit", async (event) => {
@@ -21,7 +15,7 @@ button.addEventListener("submit", async (event) => {
             appendGif(gif_URL)
         }
     }
-    // console.log(theValue);
+    
 });
 
 deleteAllButton.addEventListener('click', () => {
@@ -30,17 +24,24 @@ deleteAllButton.addEventListener('click', () => {
 
 
 const fetchRandomGIF = async(category) => {
+    const url = `https://api.giphy.com/v1/gifs/random/?api_key=${apiKey}&tag=${category}`;
+    const options = {
+        method: "GET",
+        headers: {"Content-type": "application/json"}
+    
+    };
+
     try {
         let response = await fetch(url, options);
         let result = await response.json(); 
-        return result.result.images.fixed_height.url;
+        return result.data.images.fixed_height.url;
         // console.log(result);
     } catch (error) {
         console.log(`Error fetching GIF`, error);
     }
 }
 
-appendGif = () => {
+appendGif = (url) => {
     const gifItem = document.createElement('div');
     gifItem.classList.add(`gif-item`);
 
@@ -58,4 +59,4 @@ appendGif = () => {
     displayDiv.appendChild(gifItem);
 }
 
-// fetchRandomGIF()
+appendChild(url)
