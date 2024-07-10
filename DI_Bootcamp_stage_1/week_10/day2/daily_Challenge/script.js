@@ -24,30 +24,30 @@
 
 // console.log(upper);
 
-const makeAllCaps = (arr) => {
-    return new Promise((resolve, reject) => {
-        for (let i = 0; i < arr.length; i++) {
-           if (typeof(arr[i]) !== 'string') {
-            reject(`Not all items inside the array are strings`) 
-            return
-           } 
-        };
+// const makeAllCaps = (arr) => {
+//     return new Promise((resolve, reject) => {
+//         for (let i = 0; i < arr.length; i++) {
+//            if (typeof(arr[i]) !== 'string') {
+//             reject(`Not all items inside the array are strings`) 
+//             return
+//            } 
+//         };
 
-        let caps = arr.map(arr => arr.toUpperCase());
-        resolve(caps)
+//         let caps = arr.map(arr => arr.toUpperCase());
+//         resolve(caps)
         
-    });
-};
+//     });
+// };
 
-let arr = ['here', 'we', 'go', 'again!'];
+// let arr = ['here', 'we', 'go', 'again!'];
 
-makeAllCaps(arr)
-.then(result => {
-    console.log(result);
-})
-.catch(result => {
-    console.log(result);
-})
+// makeAllCaps(arr)
+// .then(result => {
+//     console.log(result);
+// })
+// .catch(result => {
+//     console.log(result);
+// })
 
 // const sortWords = (arr) => {
 //     return new Promise((resolve, reject) => {
@@ -55,7 +55,8 @@ makeAllCaps(arr)
 //             resolve(arr.sort())
 //         }
 //         else {
-//             reject(`Array length less than 4`)
+                //! Start reject error string with ERROR
+//             reject(`Error: Array length less than 4`)
 //         }
 //     });
 // };
@@ -67,3 +68,26 @@ makeAllCaps(arr)
 // .catch(result => {
 //     console.log(result);
 // })
+
+
+                                            // #### CLASS REVISION #####
+let words = ['here', 'we', 'go', 'again!'];
+
+function makeAllCaps(words){
+    return new Promise((resolve, reject) => {
+        let every = words.every(word => typeof word === 'string')
+        if(every) {
+            resolve (words.map((word) => word.toUpperCase()))
+        } else {
+            reject('error: Not all words are strings')
+        }
+    });
+}
+
+makeAllCaps(words)
+.then((uppercaseWords) => {
+    console.log(uppercaseWords);
+})
+.catch((err) => {
+    console.log(err);
+})
