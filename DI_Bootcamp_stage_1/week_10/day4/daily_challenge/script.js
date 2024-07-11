@@ -3,13 +3,12 @@ const gifForm = document.getElementById('gifForm');
 const input = document.getElementById("categoryInput");
 const deleteAllButton = document.getElementById('deleteAllButton')
 const displayDiv = document.getElementById('display');
-
-
 const searchButton = document.getElementById('searchButton')
 
 
 gifForm.addEventListener("submit", async (event) => {
     event.preventDefault();
+
     const inputCategory = input.value.trim();
     const url = `https://api.giphy.com/v1/gifs/random?api_key=${apiKey}&tag=${inputCategory}`;
 
@@ -18,8 +17,7 @@ gifForm.addEventListener("submit", async (event) => {
         if (gif_URL) {
             appendGif(gif_URL)
         }
-    }
-    
+    }    
 });
 
 deleteAllButton.addEventListener('click', () => {
@@ -28,9 +26,6 @@ deleteAllButton.addEventListener('click', () => {
 
 
 const fetchRandomGIF = async(url) => {
-    
-    
-    
     const options = {
         method: "GET",
         headers: {"Content-type": "application/json"}
@@ -41,8 +36,6 @@ const fetchRandomGIF = async(url) => {
         let response = await fetch(url, options);
         let result = await response.json(); 
         return result.data.images.original.url;
-        // return console.log(result);;
-        
     } catch (error) {
         console.log(`Error fetching GIF`, error);
     }
@@ -66,4 +59,4 @@ const appendGif = (url) => {
    displayDiv.appendChild(gifItem);
 }
 
-// appendGif(url)
+
