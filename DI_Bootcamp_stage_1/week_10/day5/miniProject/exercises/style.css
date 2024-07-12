@@ -1,0 +1,26 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* gap: 30px; */
+    /* height: 100vh; */
+    /* background-color: rgba(0, 0, 0, 0.43); */
+}
+
+#display {
+  height: 50vh;
+  width: 50vw;
+  border: 3px solid rgb(246, 197, 0);
+  border-radius: 22px;
+  margin-top: 20px;
+}
+
+
