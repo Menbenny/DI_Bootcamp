@@ -10,12 +10,18 @@ findButton.addEventListener('click', (event) => {
     findSomeoneFunction = async(fetchURL) => {
         try {
             let response = await fetch(fetchURL);
+            if (!response.ok) {
+                throw new Error (`Oh no! That person isn't available`)
+            }
             let data = await response.json()
             const character = data.result.properties
-
+            
             
             const worldUrl = character.homeworld
-            let res = await fetch(worldUrl)
+            let res = await fetch(worldUrl);
+            if (!res.ok) {
+                throw new Error (`Home world not found`)
+            }
             let worldData = await res.json()
             const homeWorldname = worldData.result.properties.name
 
@@ -37,15 +43,12 @@ findButton.addEventListener('click', (event) => {
             displayDiv.appendChild(gender)
             displayDiv.appendChild(birthYear)
             displayDiv.appendChild(homeWorldTag)
-            
             return console.log(displayDiv);
 
         } catch (error) {
             console.log(`fetch error`);
-        }
-        homeWorldFunc(worldUrl)
-    }
-    
+        } 
+    }    
     findSomeoneFunction(fetchURL)
 });
 
