@@ -15,6 +15,9 @@ findButton.addEventListener('click', (event) => {
         
         try {
             const response = await fetch(fetchURL);
+            if (!response.ok) {
+                throw new Error (`data not found!`)
+            }
             const data = await response.json()
             const character = data.result.properties 
             const worldUrl = character.homeworld
@@ -51,9 +54,11 @@ findButton.addEventListener('click', (event) => {
 });
 
 const loaderIcon = () => {
-    displayDiv.innerHTML = `  <i class="fa-solid fa-spinner fa-spin-pulse"></i> <p>Loading...</p>`;
+    displayDiv.innerHTML = `<i class="fa-solid fa-spinner fa-spin-pulse"></i> <p>Loading...</p>`;
   
 }
+
+
 
 
 

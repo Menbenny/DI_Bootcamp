@@ -47,20 +47,11 @@ const secondListOfCurrencies = async(supportedCurrencies) => {
     }
 }
 
-const fetchPrimaryCurrency = async(primaryURL, selectedCurrency) => {
-    try {
-        let response = await fetch(primaryURL);
-        let data = await response.json();
-        let conversionRate = data.conversion_rates
 
-        console.log(selectedCurrency);
-        console.log(conversionRate[selectedCurrency]);
-    } catch (error) {
-        console.log(error, `data not found!`);
-    }
-}
 
-const fetchSecondaryCurrency = async(secondaryURL, selectedCurrency) => {
+const fetchSecondaryCurrency = async(secondaryURL) => {
+// selectedCurrency -- // ! possible second parameter
+
     try {
         let response = await fetch(secondaryURL);
         let data = await response.json();
@@ -73,20 +64,67 @@ const fetchSecondaryCurrency = async(secondaryURL, selectedCurrency) => {
     }
 }
 
+
+// Fetch first data
 selectFrom.addEventListener('change', () => {   
     const selectedCurrency = selectFrom.value;
-    const primaryURL = `https://v6.exchangerate-api.com/v6/${api_key}/latest/${selectedCurrency}`    
+    const primaryURL = `https://v6.exchangerate-api.com/v6/${api_key}/latest/${selectedCurrency}`  ;
+   
+
+    const fetchPrimaryCurrency = async(primaryURL) => {
+
+
+
+        try {
+            let response = await fetch(primaryURL);
+            let data = await response.json();
+            let conversionRate = data.conversion_rates
+
+            console.log(data);
+            console.log(selectedCurrency);
+            console.log(conversionRate[selectedCurrency]);
+        } catch (error) {
+            console.log(error, `data not found!`);
+        }
+    }
     fetchPrimaryCurrency(primaryURL)
 })
 
+// SECOND Listerner -- //! SELECT TO BUTTON
 
+selectTo.addEventListener('change', () => {   
+    const selectedCurrency = selectFrom.value;
+ 
+    const secondaryURL = `https://v6.exchangerate-api.com/v6/${api_key}/latest/${selectedCurrency}`;  
 
-selectTo.addEventListener('change', () => {
-    const selectedCurrency = selectTo.value
-    const secondaryURL = `https://v6.exchangerate-api.com/v6/${api_key}/latest/${selectedCurrency}`
+    const fetchSecondaryCurrency = async(secondaryURL) => {
+
+        //selectedCurrency -- //! possible second parameter
+
+        try {
+            let response = await fetch(secondaryURL);
+            let data = await response.json();
+            let conversionRate = data.conversion_rates
+
+            console.log(data);
+            console.log(selectedCurrency);
+            console.log(conversionRate);
+
+        } catch (error) {
+            console.log(error, `data not found!`);
+        }
+    }
     fetchSecondaryCurrency(secondaryURL)
-
 })
+
+
+// Fetch second data
+// selectTo.addEventListener('change', () => {
+//     const selectedCurrency = selectTo.value
+//     const secondaryURL = `https://v6.exchangerate-api.com/v6/${api_key}/latest/${selectedCurrency}`
+//     fetchSecondaryCurrency(secondaryURL)
+
+// })
 
 firstListOfCurrencies(supportedCurrencies)
 secondListOfCurrencies(supportedCurrencies)
