@@ -117,14 +117,39 @@ selectTo.addEventListener('change', () => {
     fetchSecondaryCurrency(secondaryURL)
 })
 
+const convertCurrency = async() => {
+    const fromCurrency = selectFrom.value;
+    const toCurrency = selectTo.value;
+    const amount = document.getElementById('amountInput').value
 
-// Fetch second data
-// selectTo.addEventListener('change', () => {
-//     const selectedCurrency = selectTo.value
-//     const secondaryURL = `https://v6.exchangerate-api.com/v6/${api_key}/latest/${selectedCurrency}`
-//     fetchSecondaryCurrency(secondaryURL)
+    if (fromCurrency && toCurrency && amount) {
+        const conversionURL = `https://v6.exchangerate-api.com/v6/${api_key}/latest/${fromCurrency}`;
 
-// })
+        try {
+            let response = await fetch(conversionURL)
+            let data = await response.json();
+            let convertRate = data.conversion_rates[toCurrency];
+
+            if(convertRate) {
+                const result = (amount * convertRate).toFixed(2);
+                document.getElementById(`amountResult`).textContent = `${result} ${toCurrency}`;
+            }else {
+                document.getElementById(`amountResult`).textContent = `Conversion rate not found`;
+            }
+        } catch (error) {
+            
+            // ? difference between console.log and consol.error
+            console.error(error, `Data not found`);
+        }
+    } else {
+        document.getElementById('amountResult').textContent = `Please fill in the amount`
+    }
+};
+
+document.getElementById(`convertButton`).addEventListener('click', (e) => {
+    e.preventDefault();
+    convertCurrency();
+});
 
 firstListOfCurrencies(supportedCurrencies)
 secondListOfCurrencies(supportedCurrencies)
