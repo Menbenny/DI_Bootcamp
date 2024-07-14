@@ -4,16 +4,24 @@
     padding: 0px;
 }
 
-.display {
-    background-image: url('pexels-john-guccione-www-advergroup-com-1874301-3483098.jpg');
-    background-repeat: no-repeat;
-    overflow: hidden;
-
-    height: 100vh;
-    width: 100vw;
+body {
+ background-image: url('pexels-john-guccione-www-advergroup-com-1874301-3483098.jpg');
+ background-repeat: no-repeat;
+ background-size: cover;
+ overflow: hidden;
+ 
+ height: 100vh;
+ width: 100vw;
 }
 
+
 .display {
+
+
+    background-color: rgba(128, 128, 128, 0.881);
+    border: 10px solid rgba(1, 50, 1, 0.507);
+    height: 100vh;
+    width: 100vw;
     padding: 10px;
     display: flex;
     justify-content: center;

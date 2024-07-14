@@ -110,7 +110,7 @@ const convertCurrency = async() => {
             if(convertRate) {
                 const result = (amount * convertRate).toFixed(2);
                 const amountResult = document.getElementById(`amountResult`)
-                amountResult.innerHTML = `<p class="mt-2">${result} ${toCurrency}</p>`;   
+                amountResult.innerHTML = `<p class="mt-2">${result} <b>${toCurrency}</b></p>`;   
             }else {
                 document.getElementById(`amountResult`).textContent = `Conversion rate not found`;
             }
