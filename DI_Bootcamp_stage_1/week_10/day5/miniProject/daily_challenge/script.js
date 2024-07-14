@@ -47,24 +47,6 @@ const secondListOfCurrencies = async(supportedCurrencies) => {
     }
 }
 
-
-
-const fetchSecondaryCurrency = async(secondaryURL) => {
-// selectedCurrency -- // ! possible second parameter
-
-    try {
-        let response = await fetch(secondaryURL);
-        let data = await response.json();
-        let conversionRate = data.conversion_rates
-
-        console.log(selectedCurrency);
-        console.log(conversionRate[selectedCurrency]);
-    } catch (error) {
-        console.log(error, `data not found!`);
-    }
-}
-
-
 // Fetch first data
 selectFrom.addEventListener('change', () => {   
     const selectedCurrency = selectFrom.value;
@@ -72,9 +54,6 @@ selectFrom.addEventListener('change', () => {
    
 
     const fetchPrimaryCurrency = async(primaryURL) => {
-
-
-
         try {
             let response = await fetch(primaryURL);
             let data = await response.json();
@@ -98,9 +77,7 @@ selectTo.addEventListener('change', () => {
     const secondaryURL = `https://v6.exchangerate-api.com/v6/${api_key}/latest/${selectedCurrency}`;  
 
     const fetchSecondaryCurrency = async(secondaryURL) => {
-
         //selectedCurrency -- //! possible second parameter
-
         try {
             let response = await fetch(secondaryURL);
             let data = await response.json();
@@ -132,12 +109,12 @@ const convertCurrency = async() => {
 
             if(convertRate) {
                 const result = (amount * convertRate).toFixed(2);
-                document.getElementById(`amountResult`).textContent = `${result} ${toCurrency}`;
+                const amountResult = document.getElementById(`amountResult`)
+                amountResult.innerHTML = `<p class="mt-2">${result} ${toCurrency}</p>`;   
             }else {
                 document.getElementById(`amountResult`).textContent = `Conversion rate not found`;
             }
-        } catch (error) {
-            
+        } catch (error) {         
             // ? difference between console.log and consol.error
             console.error(error, `Data not found`);
         }

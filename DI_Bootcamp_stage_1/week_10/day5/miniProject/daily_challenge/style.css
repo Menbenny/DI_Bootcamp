@@ -5,6 +5,15 @@
 }
 
 .display {
+    background-image: url('pexels-john-guccione-www-advergroup-com-1874301-3483098.jpg');
+    background-repeat: no-repeat;
+    overflow: hidden;
+
+    height: 100vh;
+    width: 100vw;
+}
+
+.display {
     padding: 10px;
     display: flex;
     justify-content: center;
@@ -19,5 +28,10 @@
      border: 1px solid black;
      border-radius: 5px;
     height: 20px;
-    width: 100px;
+    width: 30vw;
+
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
 }
