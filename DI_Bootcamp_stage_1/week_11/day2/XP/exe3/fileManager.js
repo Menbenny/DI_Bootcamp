@@ -22,28 +22,31 @@ Run app.js and verify that the file reading and writing operations are successfu
 
 
 */
-
+const fs = require('fs');
 
 const readFile = () => {
- const fs = require('fs');
+ 
+    return new Promise((resolve, reject) =>{
+        fs.readFile('Hello_world.txt', 'utf-8', (error, data)=>{
+            if (error) {
+                reject(`File not read`);
+            } else {
+                resolve(data)
+            }
+        })
+    })
 
- fs.readFile('Hello_world.txt', 'utf-8', function (error, data){
-    if (error) {
-        console.error(`file not read`);
-    }
-    console.log(data);
- })
 }
-
 const writeFile = () => {
-    const fs = require('fs');
 
-    fs.writeFile('Bye_world.txt', 'Writing to the file', function (err, data) {
-        if (err) {
-            console.error(`file not written`);
-        }
-        console.log(data);
-    })    
+    return new Promise((resolve, reject) => {
+        fs.writeFile('Bye_world.txt', 'Writing to the file', function (err, data) {
+            if (err) {
+                reject(`file not written`);
+            }
+            resolve(data);
+        })   
+    })
 }
 
 
