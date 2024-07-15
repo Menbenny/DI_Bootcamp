@@ -20,4 +20,4 @@ const arrayObject = [
 
 module.exports = {
     arrayObject
-}
+};

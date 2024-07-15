@@ -1,14 +1,10 @@
-const {arrayObject} = require(`./products.js`)
+const {arrayObject} = require(`./products`)
 
-function search() {
-
-    // for (let i = 0; i < 2;i++) {
-    //     result = arrayObject[i].name
-         
-    //      return console.log(result);
-    // }
-//    return console.log(Object.keys(arrayObject))
+function search(productName) {
+    return arrayObject.find(product => {
+        return product.name.toLowerCase() === productName.toLowerCase()
+    })
 }
 
-search()
+console.log(search('bootstrap'))
 
