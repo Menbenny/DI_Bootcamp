@@ -9,11 +9,11 @@ readFile(helloWorldPath)
     .then((data)=> {
         
         return console.log(`Data of the hello_world.txt`, data);
-        // console.log(writeFile(byeWorldPath, `written into the file bye_world.txt`))
+    
     })
     .catch((error)=>{
         console.error(error, `Error executing`);
-    })
+    });
 
 writeFile(byeWorldPath)
     .then((data)=> {
@@ -21,9 +21,5 @@ writeFile(byeWorldPath)
     })
     .catch((error)=> {
         console.log(error, `error writing to the file `);
-    })
-// console.log(readFile(helloWorldPath));
+    });
 
-
-// readFile()
-// writeFile()

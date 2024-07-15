@@ -21,7 +21,11 @@ Use the imported functions to read the content of the “Hello World.txt” text
 Run app.js and verify that the file reading and writing operations are successful.
 
 
+
 */
+
+// file system - JS
+
 const fs = require('fs');
 
 const readFile = () => {
@@ -40,7 +44,7 @@ const readFile = () => {
 const writeFile = () => {
 
     return new Promise((resolve, reject) => {
-        fs.writeFile('Bye_world.txt', 'Writing to the file', function (err, data) {
+        fs.writeFile('Bye_world.txt', 'Test writing file', function (err, data) {
             if (err) {
                 reject(`file not written`);
             }
