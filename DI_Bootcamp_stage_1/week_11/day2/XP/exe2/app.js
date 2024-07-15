@@ -1,11 +1,11 @@
 const persons = require(`./data.js`);
 
-const ageSum = () =>{
- for(let i = 0; i < 4; i++){
-    return  console.log(persons[i]) 
- }
-
-// ! forEach()
+const ageSum = () => {
+   let sum = 0;
+  persons.forEach(person => {
+   sum += person.age;
+  })
+  const averageAge = sum / persons.length;
+  console.log(parseInt(averageAge));
 }
 ageSum()
-// console.log(persons[0].age)

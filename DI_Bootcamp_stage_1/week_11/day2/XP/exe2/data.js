@@ -22,6 +22,4 @@ const persons = [
 ];
 
 
-module.exports = {
-    persons
-}
+module.exports = persons;
