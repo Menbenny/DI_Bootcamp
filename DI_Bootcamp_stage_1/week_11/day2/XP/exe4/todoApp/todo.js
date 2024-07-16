@@ -3,8 +3,25 @@
 // ! after creating a list of tasks, 
 // ! Mark the tasks as completed 
 
+
+
 class TodoList {
-    constructor() {
-        method_1(){}
+    constructor(description) {
+        // this.name = name
+       this.description = description
+       this.completed = false;
+    }
+    // local function
+    /**
+     * @description : Marks task as completed 
+     * @created : 16/7/24 - 17:20
+     * @author : Menac_B
+     */
+
+    markAsCompleted() {
+        this.completed = true;
     }
 }
+
+// global function
+
