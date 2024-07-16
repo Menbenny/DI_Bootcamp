@@ -1,4 +1,4 @@
-function anagramChecker(string1, string2) {
+--function anagramChecker(string1, string2) {
   const stringFilter = (string) => {
     return string.toLowerCase().replace(/[^a-z]/g, '').split('').sort().join('');
   };

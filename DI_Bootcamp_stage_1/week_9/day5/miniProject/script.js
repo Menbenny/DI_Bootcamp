@@ -90,6 +90,7 @@ function displayRobots(robotList) {
     const robotCard = document.createElement('div');
     robotCard.classList.add('robotCard')
 
+    // HTML template string injection 
     robotCard.innerHTML = `
     <img src="${robot.image}"/>
     

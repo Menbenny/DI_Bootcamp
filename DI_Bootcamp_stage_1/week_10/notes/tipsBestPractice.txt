@@ -1,0 +1,1 @@
+Always separate functions - Good in interviews

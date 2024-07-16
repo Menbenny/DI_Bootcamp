@@ -1,7 +1,7 @@
 const api_key = `b17e4e753adbf4cc2d5e4a72`;
-const selectFrom = document.getElementById('fromCurrencies')
-const selectTo = document.getElementById('ToCurrencies')
-const supportedCurrencies = `https://v6.exchangerate-api.com/v6/${api_key}/codes`
+const selectFrom = document.getElementById('fromCurrencies');
+const selectTo = document.getElementById('ToCurrencies');
+const supportedCurrencies = `https://v6.exchangerate-api.com/v6/${api_key}/codes`;
 
 const firstListOfCurrencies = async(supportedCurrencies) => {
     try {
@@ -92,7 +92,7 @@ selectTo.addEventListener('change', () => {
         }
     }
     fetchSecondaryCurrency(secondaryURL)
-})
+});
 
 const convertCurrency = async() => {
     const fromCurrency = selectFrom.value;

@@ -1,14 +1,33 @@
 const findButton = document.getElementById('findButton');
 const displayDiv = document.getElementById('display');
 
+/*
+ * @description
+ * @param {*} num
+ * @param {*}
+ * @returns
+ * @author
+ * @created
+ * @updated
+ * @updates
+*/
 
+function randomNumber(num, start = 0) {
+    Math.floor(Math.random() * num ) + start;
+}
+ /*
+  *
+  * 
+  */
+randomNumber(83, 1)
 
 findButton.addEventListener('click', (event) => {
     event.preventDefault();
 
     loaderIcon();
     
-    const randomNumber = Math.floor(Math.random() * 83 ) + 1;
+    // ! BEST practice is to separate this function into global scope. 
+    // const randomNumber = Math.floor(Math.random() * 83 ) + 1;
     const fetchURL =  `https://www.swapi.tech/api/people/${randomNumber}`;
 
     const findSomeoneFunction = async(fetchURL) => {
@@ -55,7 +74,6 @@ findButton.addEventListener('click', (event) => {
 
 const loaderIcon = () => {
     displayDiv.innerHTML = `<i class="fa-solid fa-spinner fa-spin-pulse"></i> <p>Loading...</p>`;
-  
 }
 
 
