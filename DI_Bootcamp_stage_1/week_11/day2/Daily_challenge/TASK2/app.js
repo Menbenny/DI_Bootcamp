@@ -1,3 +1,4 @@
-const color = require(`./colorful-message.js`)
+import {message} from "./colorful-message.js"
+console.log(message(`Tssting Chalk`))
 
-console.log(chalk.blue(`testing`))
+
