@@ -5,11 +5,13 @@
 
 //ES6 moduleJS
 
-import {greet} from './TASK1/greetings';
-import {message} from './TASK2/colorful-message';
-import {readFunc} from './TASK3/files/read-file';
+import {greet} from './TASK1/greetings.js';
+import {message} from './TASK2/colorful-message.js';
+import {readFunc} from './TASK3/files/read-file.js';
 
-const userName = 'User';
+const userName = 'Menac_B';
 const greetMessage = greet(userName)
 
+
 console.log(message(greetMessage));
+readFunc()

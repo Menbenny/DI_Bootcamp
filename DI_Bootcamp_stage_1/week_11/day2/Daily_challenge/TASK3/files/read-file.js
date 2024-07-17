@@ -1,7 +1,8 @@
-const read = require(`fs`)
+// const fs = require(`fs`)
+import fs from 'fs'
 
-const readFunc = () => {
-	read.readFile('file-data.txt', 'utf8', (err, data) => {
+export const readFunc = () => {
+	fs.readFile('./TASK3/files/file-data.txt', 'utf8', (err, data) => {
 		if(err) {
 			console.error(`File not read`);
 			return
@@ -10,6 +11,6 @@ const readFunc = () => {
 	});
 }
 
-module.exports = readFunc
+
 
 

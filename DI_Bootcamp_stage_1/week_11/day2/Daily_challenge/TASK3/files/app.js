@@ -1,3 +1,4 @@
-const readFunction = require(`./read-file`)
+// const readFunction = require(`./read-file`)
+import {readFunc} from './read-file.js'
 
-readFunction()
+readFunc()
