@@ -1,14 +1,15 @@
-const mathFunc = require('lodash')
+// ! unclear exercise - 
 
 const mulAB = (a, b) => {
-    return _.multiply(a, b)
+    return (a * b)
 }
 
 const addAB = (a, b) => {
-    return _.add(a, b)
+    return (a + b)
 }
 
 module.exports = {
     mulAB,
     addAB
 }
+
