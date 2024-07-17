@@ -11,17 +11,15 @@
 // displayStudentInfo({first: 'Vic', last: 'Maroth'})
 
 //Exercise 3
-// const users = { user1: 18273, user2: 92833, user3: 90315 };
+const users = { user1: 18273, user2: 92833, user3: 90315 };
+const updatedUsers ={};
+for (const [key, value] of Object.entries(users)) {
+    updatedUsers[key] = value * 2;
+    console.log(updatedUsers);
+    // return console.log(value * 2)
+}
 
-// const arrUsers = Object.keys(users).reduce((arr, key) => {
-//     arr.push(users[key]);
-//     return arr;
-// }, []);
 
-// console.log(arrUsers);
-
-// const double = arrUsers.map(value => value * 2);
-// console.log(double);
 
 
 //Exercise 4
@@ -37,10 +35,26 @@
 
 
 // Exercise 5
-    // 4 SUCCESSFUL Extension
+    // 4 SUCCESSFUL -  Extension
+    // using the Dog class below
+    
+//?  class Dog {
+//?     constructor(name) {
+//?       this.name = name;
+//?      }
+//?   };
+
 // class Labrador extends Dog {
 //     constructor(name, size) {
 //       this.name = name;
+//       this.size = size;
+//     }
+//   };
+
+            // * CORRECTION -- 
+// class Labrador extends Dog {
+//     constructor(name, size) {
+//       super(name);
 //       this.size = size;
 //     }
 //   };
@@ -58,22 +72,22 @@
 
 // Create a class Animal with the attributes name, type and color. The type is the animal type, for example: dog, cat, dolphin ect …
 //
-class animal {
-    constructor(animalName, type, color) {
-        this.animalName = animalName;
-        this.type = type;
-        this.color = color;
-    }
-}
+// class animal {
+//     constructor(animalName, type, color) {
+//         this.animalName = animalName;
+//         this.type = type;
+//         this.color = color;
+//     }
+// }
 
-class mamal extends animal {
-    sound(animalSound){
-        return `${animalSound} I'm a ${this.type} named ${this.animalName} and I am ${this.color}`
-    }
-}
+// class mamal extends animal {
+//     sound(animalSound){
+//         return `${animalSound} I'm a ${this.type} named ${this.animalName} and I am ${this.color}`
+//     }
+// }
 
-const farmerCow = new mamal('Jerry', 'Cow', 'Black and White');
-console.log(farmerCow.sound('moooo'));
+// const farmerCow = new mamal('Jerry', 'Cow', 'Black and White');
+// console.log(farmerCow.sound('moooo'));
 
 
 

@@ -23,8 +23,8 @@ const marioGame = {
         }
     },
   }
-
-const JSONmarioGame = JSON.stringify(marioGame);
+// ! prettier - pass params null(no applied filter) and 2(indentation for readablity)
+const JSONmarioGame = JSON.stringify(marioGame, null, 3);
 console.log(JSONmarioGame);
 
 //Nested objects turn into strings 

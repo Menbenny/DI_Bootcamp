@@ -66,7 +66,8 @@ const toMorse = (morseObj) => {
     if(!userStr){
         return Promise.reject(`No input provided`)
     }
-    const arrStr = userStr
+    const arrStr = userStr.split("")
+    
 }
 
 toJs(morse)
@@ -75,4 +76,4 @@ toJs(morse)
 })
 .catch((error) => {
     console.log(error);
-})
+});

@@ -50,6 +50,7 @@ Create a promise that resolves itself in 4 seconds and returns a “success” s
 // .then(result => console.log(result));
 
 
+
 /*
 
 
@@ -59,23 +60,36 @@ Use Promise.resolve(value) to create a promise that will resolve itself with a v
 Use Promise.reject(error) to create a promise that will reject itself with the string “Boo!”
 */
 
-const proResolve = (value) => {
-    return new Promise((resolve, reject) => {
-        if (value === 3) {
+// const proResolve = (value) => {
+//     return new Promise((resolve, reject) => {
+//         if (value === 3) {
             
-            resolve(`success`)
-        } else {
-            reject(`Boo`)
-        }
-    });
-};
+//             resolve(`success`)
+//         } else {
+//             reject(`Boo!`)
+//         }
+//     });
+// };
 
-proResolve(2)
-.then(value => {
+// proResolve(2)
+// .then(value => {
+//     console.log(value);
+// })
+// .catch(result => {
+//     console.log(result);
+// })
+
+//* ALTERNATIVE METHOD -- Best Practice
+
+const resolvedPromise = Promise.resolve(3);
+const rejectPromise = Promise.reject("Boo!")
+
+rejectPromise
+.then((value)=> {
     console.log(value);
 })
-.catch(result => {
-    console.log(result);
+.catch((error)=> {
+    console.log(error);
 })
 
 // #####

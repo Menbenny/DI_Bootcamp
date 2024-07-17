@@ -64,12 +64,11 @@ Run challenge.js using Node.js and see the complete challenge in action.
 By completing this challenge, you’ll have a Node.js application that demonstrates module system usage, integration of NPM modules, and file operations. It’s a comprehensive exercise that brings together concepts from the previous exercises into a single daily challenge.
 
 */
-
-const greet = (name) => {
+export const greet = (name) => {
     const message = `Hello ${name}`
-    return console.log(message);
+    return message
 }
 
-module.exports = { 
-    greet
-}
+// module.exports = { 
+//     greet
+// }
