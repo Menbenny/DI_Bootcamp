@@ -30,27 +30,27 @@ const fs = require('fs');
 
 const readFile = () => {
  
-    return new Promise((resolve, reject) =>{
-        fs.readFile('Hello_world.txt', 'utf-8', (error, data)=>{
+    // return new Promise((resolve, reject) =>{
+        fs.readFile("./Hello_world.txt", 'utf-8', (error, data)=>{
             if (error) {
-                reject(`File not read`);
+                (`File not read`);
             } else {
-                resolve(data)
+                console.log(data)
             }
         })
-    })
+    // })
 
 }
 const writeFile = () => {
 
-    return new Promise((resolve, reject) => {
-        fs.writeFile('Bye_world.txt', 'Test writing file', function (err, data) {
+    
+        fs.writeFile('./Bye_world.txt', 'Test writing file', (err, data) =>{
             if (err) {
-                reject(`file not written`);
+                (`file not written`);
             }
-            resolve(data);
+            console.log(data);
         })   
-    })
+  
 }
 
 

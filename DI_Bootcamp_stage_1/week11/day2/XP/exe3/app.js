@@ -5,21 +5,21 @@ const {readFile, writeFile} = require(`./fileManager.js`)
 const helloWorldPath = `./Hello_world.txt`
 const byeWorldPath = `./Bye_world.txt`
 
-readFile(helloWorldPath)
-    .then((data)=> {
+readFile()
+    // .then((data)=> {
         
-        return console.log(`Data of the hello_world.txt`, data);
+    //     return console.log(`Data of the hello_world.txt`, data);
     
-    })
-    .catch((error)=>{
-        console.error(error, `Error executing`);
-    });
+    // })
+    // .catch((error)=>{
+    //     console.error(error, `Error executing`);
+    // });
 
-writeFile(byeWorldPath)
-    .then((data)=> {
-       return  console.log(data, `written to the file bye_world.txt`);
-    })
-    .catch((error)=> {
-        console.log(error, `error writing to the file `);
-    });
+writeFile()
+    // .then((data)=> {
+    //    return  console.log(data, `written to the file bye_world.txt`);
+    // })
+    // .catch((error)=> {
+    //     console.log(error, `error writing to the file `);
+    // });
 
