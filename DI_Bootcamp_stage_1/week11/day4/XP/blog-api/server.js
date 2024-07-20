@@ -27,6 +27,7 @@ let blogs = [
 ]
 //? #############################################################
 //! return list of blogs
+app.use(express.json())
 // app.get("/posts", (req, res)=>{
 
 //     console.log(req.query);
@@ -70,15 +71,39 @@ let blogs = [
 
 //? ###############################################################
 // ! update an existing blog post
-app.put('/api/posts/:blogs', (req, res)=> {
-    res.send("PUt request posts")
+// app.put('/api/posts/:blogs', (req, res)=> {
+//     const id = Number(req.query,id);
+//     const index = blogs.findIndex((blog)=> blog.id == id);
+
+//     if(index === -1){
+//         return res.status(404).send('Blog not found')
+//     }
+
+//     const updatedBlog = {
+//         id: blogs[index].id,
+//         title: req.body.title,
+//         content: req.body.content
+//     }
+//     blogs.push(updatedBlog),
+    
+//     res.status(200).json(blogs)
+
+// })
+
+// ! Delete
+app.delete('/api/blogs', (req, res)=>{
+    const id = Number(req.query.id)
+    const index = blogs.findIndex((blog)=> blog.id == id)
+
+    if(index === -1) {
+        res.status(404).send('Blog not found')
+    }
+    blogs.splice(index, 1)
 })
 
 
-
-
 //!_________________________________________________________________________________________PORT: _____________________________________
-const port = 5000
+const port = 3000
 
 app.listen(port, ()=> {
     console.log(`Port: ${port}`);

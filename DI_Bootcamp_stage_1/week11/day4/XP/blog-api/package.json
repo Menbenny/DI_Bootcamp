@@ -9,6 +9,7 @@
   "author": "Menac_B",
   "license": "ISC",
   "dependencies": {
+    "chalk": "^4.1.2",
     "express": "^4.19.2"
   }
 }
