@@ -1,6 +1,7 @@
 const express = require('express');
 const chalk = require('chalk');
 const app = express();
+const bp = require('body-parser')
 
 const books = [
     {
@@ -23,11 +24,18 @@ const books = [
     },
 ]
 
+// ! body-parser
+app.use(express.urlencoded({extended:true}))
 app.use(express.json())
-app.get('/api/books', (req, res)=>{
-    res.status(200).json(books)
-})
 
+// ###### -- funtional -- ########
+// app.get('/api/books', (req, res)=>{
+//     res.status(200).json(books)
+// })
+
+
+// ###### -- funtional -- ########
+// ! retrieve data by id 
 // app.get('/api/books', (req, res)=>{
 //     const id = Number(req.query.id)
 //     const book = books.find((book)=> book.id===id)
@@ -38,25 +46,17 @@ app.get('/api/books', (req, res)=>{
 //     res.status(200).json(book)
 // })
 
+
+// ###### -- funtional -- ########
+//! create
 // app.post('/api/books', (req, res)=>{
-//     const id = Number(req.query.id);
-//     const index = books.findIndex((book)=>book.id ===id)
-
-//     if(index === -1){
-//         res.status(404).send('Book not found')
-//     }
-
-//     const newBook = {
-//         id: books[index].id,
-//         title: req.body.title,
-//         author: req.body.author,
-//         publishedYear: req.body.publishedYear
-//     }
-
+    
+//     // worked after defining ://! id
+//     const id = req.query.id
+//     const newBook = {...req.body, id:books.length+1}
 //     books.push(newBook);
-//     res.status(201).json({msg: "Book created"})
+//     res.status(201).json(books)
 // })
-
 
 
 const port = 5000;
