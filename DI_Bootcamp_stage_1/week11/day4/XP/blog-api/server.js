@@ -53,6 +53,8 @@ app.use(express.json())
 // app.post('/api/posts', (request, response)=>{
 
 //     const { title, content } = request.body;
+    
+        //? Validate the entry per key
 
 //     if(!title || !content) {
 //         return response.status(404).json({msg: `Please include a title and content`})
