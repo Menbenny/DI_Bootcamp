@@ -1,15 +1,24 @@
 {
   "name": "axios-example",
   "version": "1.0.0",
-  "description": "axios - Node.js",
-  "main": "index.js",
-  "type":"module",
+  "description": "",
+  "main": "fetch-data.js",
+  "dependencies": {
+    "asynckit": "^0.4.0",
+    "axios": "^1.7.2",
+    "combined-stream": "^1.0.8",
+    "delayed-stream": "^1.0.0",
+    "express": "^4.19.2",
+    "follow-redirects": "^1.15.6",
+    "form-data": "^4.0.0",
+    "mime-db": "^1.52.0",
+    "mime-types": "^2.1.35",
+    "proxy-from-env": "^1.1.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Menac_B",
-  "license": "ISC",
-  "dependencies": {
-    "axios": "^1.7.2"
-  }
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
