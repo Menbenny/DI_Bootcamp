@@ -12,7 +12,7 @@ export const pathJoin = () => {
 
     try {
         const fileInfo = fs.statSync('data/example.txt');  
-        console.log(fileInfo);  
+        console.log('Created:', fileInfo.birthtime,'\n','File size: ', fileInfo.size);  
     } catch (error) {
         console.log(error);
     }
