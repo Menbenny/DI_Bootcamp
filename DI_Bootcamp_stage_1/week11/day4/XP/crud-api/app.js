@@ -1,9 +1,12 @@
 // PART 1
 const express =require('express');
-const axios = require('axios');
+const chalk  = require('chalk')
 const app = express()
-const port = 5000
+const { fetchPosts } = require('./data/dataService.js')
 
+fetchPosts()
+
+const port = 5000
 app.listen(port, ()=>{
     console.log(chalk.cyan(`Running on port: ${port}`));
 })

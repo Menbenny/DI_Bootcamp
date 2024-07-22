@@ -1,7 +1,10 @@
 const express = require(`express`);
-const bodyParser = require(`body-parser`);
+
 
 const app = express();
+app.use(express.urlencoded({extended:true}));
+app.use(express.json());
+
 
 let blogs = [
     {
@@ -27,8 +30,8 @@ let blogs = [
 ]
 //? #############################################################
 //! return list of blogs
-app.use(express.json())
-// app.get("/posts", (req, res)=>{
+
+// app.get("/api/blogs", (req, res)=>{
 
 //     console.log(req.query);
 //     res.send(blogs)
@@ -37,10 +40,10 @@ app.use(express.json())
 
 //? ############################################################
 //! return id based blog  
-// app.get("/api/posts", (request, response) => {
-//     console.log(request.query);
+// app.get("/api/blogs/:id", (request, response) => {
+//     // console.log(request.query);
 
-//     const { id } = request.query;
+//     const { id } = request.params;
 //     const myBlog = blogs.find(blog => blog.id == id)
 
 //     if(!myBlog) return response.status(404).json({msg: "blog not found"})
@@ -50,7 +53,7 @@ app.use(express.json())
 
 //?###################################################################
 //! Create new blog post 
-// app.post('/api/posts', (request, response)=>{
+// app.post('/api/blogs', (request, response)=>{
 
 //     const { title, content } = request.body;
     
@@ -73,35 +76,40 @@ app.use(express.json())
 
 //? ###############################################################
 // ! update an existing blog post
-// app.put('/api/posts/:blogs', (req, res)=> {
-//     const id = Number(req.query,id);
-//     const index = blogs.findIndex((blog)=> blog.id == id);
-
-//     if(index === -1){
-//         return res.status(404).send('Blog not found')
-//     }
-
-//     const updatedBlog = {
-//         id: blogs[index].id,
-//         title: req.body.title,
-//         content: req.body.content
-//     }
-//     blogs.push(updatedBlog),
+app.put('/api/blogs/:id', (req, res)=> {
     
-//     res.status(200).json(blogs)
+     const { id } = req.params;
+     const { title, content} = req.body
+    const index = blogs.findIndex((blog)=> blog.id == id);
 
-// })
+    if(index === -1){
+        return res.status(404).send('Blog not found')
+    }
+
+    blogs[index] = {
+       ...blogs[index],
+       title:title,
+       content:content
+    }
+    
+    
+    res.json(blogs)
+
+})
 
 // ! Delete
-app.delete('/api/blogs', (req, res)=>{
-    const id = Number(req.query.id)
-    const index = blogs.findIndex((blog)=> blog.id == id)
+// app.delete('/api/blogs/:id', (req, res)=>{
+    
+//     const { id } = req.params;
 
-    if(index === -1) {
-        res.status(404).send('Blog not found')
-    }
-    blogs.splice(index, 1)
-})
+//     const index = blogs.findIndex((blog)=> blog.id == id)
+
+//     if(index === -1) {
+//         res.status(404).send('Blog not found')
+//     }
+//     blogs.splice(index, 1)
+//     res.json(blogs)
+// })
 
 
 //!_________________________________________________________________________________________PORT: _____________________________________
