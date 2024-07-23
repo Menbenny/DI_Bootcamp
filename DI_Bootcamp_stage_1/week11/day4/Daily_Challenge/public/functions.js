@@ -38,26 +38,36 @@ const emojis = [
     { emoji: '🍉', name: 'Watermelon' },
     { emoji: '💪', name: 'Strong' },
     { emoji: '🤔', name: 'Thinking' }
-    ];
+];
 
-function generateEmoji(){
+module.exports = {
+    emojis
+}
+function randomNumber(){
  
    
     const randomNumber = Math.floor(Math.random() * 38);
-    console.log(randomNumber);
-    console.log(emojis[randomNumber])
+
+    // const singleEmoji = Object.keys((item))
+
+    // ! Look up entries - object iteration 
+
+    console.log(Object.entries(emojis[0]));
+    // console.log(randomNumber);
+    // console.log(emojis[randomNumber])
 }
 
-const displayFunc = () => {
-    const display = document.getElementById('display');
-    const emoji = Object.keys(emojis)
-    console.log(emoji);
+// const displayFunc = () => {
+//     const display = document.getElementById('display');
+//     const emoji = Object.keys(emojis)
+//     console.log(emoji);
 
-}
+// }
 // displayFunc()
-// generateEmoji()
+randomNumber()
 
 
 module.exports = {
-    generateEmoji
+    
+    randomNumber
 }

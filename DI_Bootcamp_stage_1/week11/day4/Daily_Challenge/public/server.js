@@ -1,6 +1,6 @@
 const express = require('express');
 const chalk = require('chalk');
-const { generateEmoji } = require('./functions');
+const { randomNumber } = require('./functions');
 const { emojis } = require('../data/emojis');
 const port = 5000
 // --- Call the data.js and functions -- //
@@ -18,13 +18,34 @@ app.use(express());
 //     // res.json(generateEmoji)
 // })
 
-fetch(`http://localhost:${port}/api/emojis`, {
-    method: 'POST',
-    headers: {
-        'content-type': 'application/json'
-    }
+// fetch(`http://localhost:${port}/api/emojis`, {
+//     method: 'POST',
+//     headers: {
+//         'content-type': 'application/json'
+//     }
 
-})
+// })
+
+app.get(`/api/emojis/:id`, (req, res)=>{
+    const { id } = req.params
+    
+    //!first option index
+    const index = randomNumber();
+
+    // ! second option index
+    // const index = emojis.findIndex((emoji)=>{
+    //     emoji.randomNumber == id
+    // });
+
+    if(index === -1) {
+        // ! Error message
+        // console.log(emojis[index]);
+    }
+    //? Success
+    res.json(Object.entries(emojis[index]))
+});
+
+
 
 
  //!_____________PORT_________________________
