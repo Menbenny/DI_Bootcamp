@@ -22,8 +22,7 @@ const app = express();
 app.use(express.urlencoded({extended:true}))
 app.use(express.json())
 
-// logger
-
+// logger - every request goes through logger  - middleware 
 const logger = (req, res, next) => {
   console.log(req.url, req.method);
 
@@ -34,7 +33,19 @@ const logger = (req, res, next) => {
   
   next();
 };
-app.use(logger)
+
+// middleware is a func getting request, response and next (continues) executing the cascading file order
+
+const auth = (req, res, next)=>{
+  const { admin } = req.query;
+  if(admin === 'yes') {
+    next();
+  }else {
+    res.send("you are not authorized");
+  }
+}
+app.use(logger);
+app.use(auth);
 
 // Prouct endpoints
 

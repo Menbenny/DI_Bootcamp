@@ -1,7 +1,7 @@
 const express = require('express');
 const chalk = require('chalk');
 // const { randomNumber } = require('./functions');
-const { emojis } = require('../data/emojis');
+const { emojis } = require('./config/emojis');
 const port = 5000
 // --- Call the data.js and functions -- //
 
