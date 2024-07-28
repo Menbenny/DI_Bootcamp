@@ -4,18 +4,15 @@ const express = require('express');
 const app = express();
 const chalk = require('chalk');
 
-// app.use('/', (functionImportFromRoutes))
+//body parsing
+app.use(express.urlencoded({extended:true}));
+app.use(express.json());
 
-
-
-
-
-
-
-
+// app.get('/', (__dirname + 'index.html'))
+// app.get('/about', (__dirname + 'about.html'))
+// // app.use('/', (functionImportFromRoutes))
 
 // export modules
-
 
 //! _________ PORT ____________
 const port = 5000
