@@ -1,0 +1,2 @@
+# Is the demo todo list from a database or a url
+# should the calling functions be in the controllers directory
