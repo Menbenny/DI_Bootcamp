@@ -1,4 +1,5 @@
 const {getAllProducts} = require('../models/productModels.js')
+const {db} = require('../config/dataBasePostGres.js')
 
 const _getAllProducts = async (req, res) => {
     try {
@@ -11,6 +12,9 @@ const _getAllProducts = async (req, res) => {
 }
 
 const _insertProduct = (name, price) => {
+
+    const { name, price } = req.body;
+
     db('products')
     .insert({name, price})
     .returning(["name", "price"])
@@ -20,3 +24,19 @@ module.exports = {
     _getAllProducts,
     _insertProduct
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//!                 CONTROLLERS

@@ -7,3 +7,33 @@ router.post("/", _insertProduct)
 
 // without curly braces because it's one router
 module.exports = router
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//!                  ROUTES

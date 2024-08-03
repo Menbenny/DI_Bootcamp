@@ -23,10 +23,14 @@ const db = knex({
         database: PGDATABASE,
         password: PGPASSWORD,
         // For global/online - not local databse
-        ssl: { rejectUnaithorized: false },
+        ssl: { rejectUnauthorized: false },
     },
 });
 
 module.exports = {
     db, 
 };
+
+
+
+//!                 CONFIG 
