@@ -51,8 +51,27 @@ router.post("/books", (req, res)=>{
 router.put("/books", (req, res)=>{
     const { id } = req.body
     const index = sampleBooks.findIndex((book)=> book.id == id)
+
+    const newBook = {
+        ...req.body,
+        id: id[index] + 1,
+        title : title,
+        author: author,
+        yearPublished: yearPublished
+    }
 })
 
 // Delete a book by ID
+router.delete("/books", (req, res)=>{
+    const { id } = req.body
+    const index = sampleBooks.findIndex((book)=> book.id == id)
+
+    if(index === -1) {
+        res.status(404).send('book not found')
+    }
+    
+    books.splice(index, 1)
+    res.json(books)
+})
 
 module.exports = router
