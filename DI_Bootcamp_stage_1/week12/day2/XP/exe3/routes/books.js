@@ -24,54 +24,59 @@ const sampleBooks = [
 
 // Get all books
 router.get("/books", (req, res)=>{
-    res.json()
+    res.json(sampleBooks)
 })
 
 // Add a new book
 router.post("/books", (req, res)=>{
     const { id } = req.body
-    const index = sampleBooks.findIndex((book)=> book.id == id)
-
-    // if(!index === -1) {
-
-    // }
+ 
 
     const newBook = {
-        ...req.body,
-        title : title,
-        author: author,
-        yearPublished: yearPublished
-    }
+       id: sampleBooks.length + 1,
+        title ,
+        author,
+        yearPublished
+    };
 
-    sampleBooks.push(newBook)
-    res.json(sampleBooks)
+    sampleBooks.push(newBook);
+    res.status(201).json(newBook)
 })
 
 // Update a book by ID
-router.put("/books", (req, res)=>{
-    const { id } = req.body
+router.put("/books/:id", (req, res)=>{
+    const { id } = req.body;
+    const { title, author, yearPublished } = req.body;
+
     const index = sampleBooks.findIndex((book)=> book.id == id)
 
-    const newBook = {
-        ...req.body,
-        id: id[index] + 1,
-        title : title,
-        author: author,
-        yearPublished: yearPublished
+    const updatedBook = {
+        
+        id: sampleBooks[index].id,
+        title : sampleBooks[index].title,
+        author: sampleBooks[index].author,
+        yearPublished: sampleBooks[index].yearPublished
     }
-})
+
+    sampleBooks[index] = updatedBook;
+
+    res.json(updatedBook);
+});
 
 // Delete a book by ID
 router.delete("/books", (req, res)=>{
-    const { id } = req.body
+    const { id } = req.params;
+
     const index = sampleBooks.findIndex((book)=> book.id == id)
 
     if(index === -1) {
         res.status(404).send('book not found')
     }
     
-    books.splice(index, 1)
-    res.json(books)
+    const deleteBook = sampleBooks.splice(index, 1);
+
+    
+    res.json(deleteBook)
 })
 
 module.exports = router
