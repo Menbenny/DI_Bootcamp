@@ -46,7 +46,29 @@ const getUserById = async (req, res) => {
         if(user){
             res.status(200).json(user);
         }else {
-            res.status(404).json({ message: 'User not found' })
+            res.status(404).json({ message: 'User not found' });
         }
+    }catch (error) {
+        res.status(500).json({ message: 'Error fetching user', error });
     }
+};
+
+const updateUser = async (req, res)=> {
+    const { id } = req.params;
+    const { email, first_name, last_name} = req.body;
+
+    try {
+        const updateUser = await userModel.updateUser(id, {email, first_name, last_name});
+        res.status(200).json(updateUser);
+    }catch (error) {
+        res.status(500).json({ message: 'Error fetching user' });
+    }
+};
+
+module.exports = {
+    registerUser,
+    loginUser,
+    getAllUsers,
+    getUserById,
+    updateUser
 }
