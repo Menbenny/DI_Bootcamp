@@ -42,3 +42,36 @@ app.post('/api/books', (req, res)=> {
     books.push(newBook);
     res.status(201).json(newBook);
 })
+
+app.put('/api/books/:bookId', (req,res) => {
+    const bookId = parseInt(req.params.bookId);
+    const { title, author, publishedYear} = req.body;
+
+    const bookIndex = books.findIndex((b) => b.id === bookId)
+    if(bookIndex === -1) {
+        return res.status(404).json({message: 'Book not found'});
+    }
+
+    books[bookIndex] = { id: bookId, title, author, publishedYear};
+    res.status(200).json(books[bookIndex]);
+});
+
+
+app.delete('/api/books/:bookId', (req, res) => {
+    const bookId = parseInt(req.params.bookId);
+    const bookIndex = books.findIndex((b) => b.id === bookId);
+
+    if(bookIndex === -1) {
+        return res.status(404).json({message: 'Not found'});
+    }
+
+    books.splice(bookIndex, 1);
+    res.status(200).json({message: 'Book deleted'});
+});
+
+const PORT = 5000;
+app.listen(PORT,()=>{
+    console.log(`Server listening on port: ${PORT}`);
+    
+});
+
