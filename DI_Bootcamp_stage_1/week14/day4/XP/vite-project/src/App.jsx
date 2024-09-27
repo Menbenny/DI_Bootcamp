@@ -43,9 +43,28 @@ const App = () => {
           </div>
         );
       case '4':
-        return <LifecycleDemo/>
+        return <LifecycleDemo/>;
+      default:
+        return null
     }
-  }
-}
+  };
+
+  return (
+    <div style={{ padding: '20px'}}>
+      <h1>React Error Boundary & Lifecycle Methods Simulation</h1>
+      <div style={{ marginBottom: '20px'}}>
+        <label htmlFor='simulation-select'>Select Simulation</label>
+        <select>
+          <option value="1">Simulation 1: Single ErrorBoundary</option>
+          <option value="2">Simulation 2: Multiple ErrorBoundaries</option>
+          <option value="3">Simulation 3: No Errorboundary</option>
+          <option value="4">Exercise 2 & 3: Lifecycle ethods</option>
+        </select>
+      </div>
+      <hr/>
+      {renderSimulation}
+    </div>
+  );
+};
 
 export default App
