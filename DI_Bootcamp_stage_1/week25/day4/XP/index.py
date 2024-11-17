@@ -75,12 +75,12 @@
 # Instructions
 # Write a while loop that will continuously ask the user for their name, unless the input is equal to your name.
 
-name = "Vic"
+# name = "Vic"
 
-user_input = ''
+# user_input = ''
 
-while user_input != name:
-    user_input = input("What is your name? ")
+# while user_input != name:
+#     user_input = input("What is your name? ")
 
 
 # 🌟 Exercise 7: Favorite fruits
@@ -91,6 +91,17 @@ while user_input != name:
 # Now that we have a list of fruits, ask the user to input a name of any fruit.
 # If the user’s input is in the favorite fruits list, print “You chose one of your favorite fruits! Enjoy!”.
 # If the user’s input is NOT in the list, print, “You chose a new fruit. I hope you enjoy”.
+
+favorite_fruits = input("Enter your favorite fruits and separate with space between each entry: ").split()
+
+print(favorite_fruits)
+
+fruit_choice = input("Choose a fruit: ")
+
+if fruit_choice in favorite_fruits:
+    print(f"{fruit_choice}: You chose one of your favrite fruits, Enjoy!")
+else:
+    print(f"{fruit_choice}: You chose a new fruit. I hope you enjoy")
 
 
 # Exercise 8: Who ordered a pizza ?
