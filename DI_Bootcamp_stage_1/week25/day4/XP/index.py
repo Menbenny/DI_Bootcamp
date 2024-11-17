@@ -42,19 +42,23 @@
 # Empty the basket.
 # Print(basket)
 
-basket = ["Banana", "Apples", "Oranges", "Blueberries"]
-basket.remove("Banana")
-basket.remove("Blueberries")
+# basket = ["Banana", "Apples", "Oranges", "Blueberries"]
+# basket.remove("Banana")
+# basket.remove("Blueberries")
 
-basket.append("Apples")
+# basket.append("Apples")
 
-print(basket)
+# print(basket)
 
 # 🌟 Exercise 4: Floats
 # Instructions
 # Recap – What is a float? What is the difference between an integer and a float?
+#? - float has a decimal point 
+
 # Create a list containing the following sequence 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5 (don’t hard-code the sequence).
 # Can you think of another way to generate a sequence of floats?
+
+
 
 
 # 🌟 Exercise 5: For Loop
@@ -62,10 +66,21 @@ print(basket)
 # Use a for loop to print all numbers from 1 to 20, inclusive.
 # Using a for loop, that loops from 1 to 20(inclusive), print out every element which has an even index.
 
+# for x in range(1, 21):
+#     print(x)
+#     if (x - 1) % 2 == 0:  
+#         print(x)
 
 # 🌟 Exercise 6 : While Loop
 # Instructions
 # Write a while loop that will continuously ask the user for their name, unless the input is equal to your name.
+
+name = "Vic"
+
+user_input = ''
+
+while user_input != name:
+    user_input = input("What is your name? ")
 
 
 # 🌟 Exercise 7: Favorite fruits
