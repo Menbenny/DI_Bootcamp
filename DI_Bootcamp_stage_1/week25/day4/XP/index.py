@@ -92,16 +92,16 @@
 # If the user’s input is in the favorite fruits list, print “You chose one of your favorite fruits! Enjoy!”.
 # If the user’s input is NOT in the list, print, “You chose a new fruit. I hope you enjoy”.
 
-favorite_fruits = input("Enter your favorite fruits and separate with space between each entry: ").split()
+# favorite_fruits = input("Enter your favorite fruits and separate with space between each entry: ").split()
 
-print(favorite_fruits)
+# print(favorite_fruits)
 
-fruit_choice = input("Choose a fruit: ")
+# fruit_choice = input("Choose a fruit: ")
 
-if fruit_choice in favorite_fruits:
-    print(f"{fruit_choice}: You chose one of your favrite fruits, Enjoy!")
-else:
-    print(f"{fruit_choice}: You chose a new fruit. I hope you enjoy")
+# if fruit_choice in favorite_fruits:
+#     print(f"{fruit_choice}: You chose one of your favrite fruits, Enjoy!")
+# else:
+#     print(f"{fruit_choice}: You chose a new fruit. I hope you enjoy")
 
 
 # Exercise 8: Who ordered a pizza ?
@@ -110,6 +110,27 @@ else:
 # As they enter each topping, print a message saying you’ll add that topping to their pizza.
 # Upon exiting the loop print all the toppings on the pizza pie and what the total price is (10 + 2.5 for each topping).
 
+# toppings = []
+# base_price = 10
+# topping_price = 2.5
+
+# while True:
+#     topping = input("Enter a topping: ").strip()
+
+#     if topping.lower() == 'quit':
+#         break
+
+#     toppings.append(topping)
+#     print(f"{topping} will be added to your pizza")
+
+# total_price = base_price + (topping_price * len(toppings))
+
+# print("\nYour pizza order")
+# print("Base pizza = $10")
+# if toppings:
+#     print("toppings: ")
+#     for topping in toppings:
+#         print(f"Total price: ${total_price:.2f}")
 
 # Exercise 9: Cinemax
 # Instructions
@@ -125,6 +146,41 @@ else:
 # A group of teenagers are coming to your movie theater and want to watch a movie that is restricted for people between the ages of 16 and 21.
 # Given a list of names, write a program that asks teenager for their age, if they are not permitted to watch the movie, remove them from the list.
 # At the end, print the final list.
+
+# total_cost = 0
+# family_ages = []
+
+# user = input("Family or single ticket? ").strip().lower()
+# if user.lower() == 'single':
+
+#     age = int(input("Enter your age: "))
+
+#     if age < 3:
+#         print("ticket is free")
+#     elif 3<= age <= 12:
+#         ticket_price = 10
+#         total_cost += ticket_price
+#         print(f"Ticket price: {ticket_price}")
+#     else:
+#         ticket_price = 15
+#         total_cost += ticket_price
+#         print(f"Ticket price: {ticket_price}")
+
+# elif user.lower() == 'family':
+#     age = input("Enter the family members ages separated by spaces: ").strip()
+
+#     family_ages.append(age)
+
+#     for age in family_ages:
+#         if age < 3:
+#             print("ticket is free")
+#         if age >= 3 & age <= 12:
+#             ticket_price = 10
+#             print(f"Ticket price: {ticket_price}")
+#         if age > 12:
+#             ticket_price = 15
+#             print(f"Ticket price: {ticket_price}")
+        
 
 
 # Exercise 10 : Sandwich Orders
