@@ -1,0 +1,8 @@
+{
+    "SocialMedias": ["Twitter", "Facebook", "Instagram"],
+    "Skills": ["React", "JavaScript", "Node.js"],
+    "Experiences": [
+      { "company": "Google", "role": "Developer" },
+      { "company": "Microsoft", "role": "Engineer" }
+    ]
+  }
