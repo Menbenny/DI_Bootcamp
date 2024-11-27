@@ -18,17 +18,17 @@
 
 # number: 17 - length 6 ➞ [17, 34, 51, 68, 85, 102]
 
-number - int(input("Enter a number: "))
+the_number = int(input("Enter a the_number: "))
 length = int(input("Rnter the length: "))
 
-def get_multiples(number, lnegth):
+def get_multiples(the_number, lnegth):
     multiples = []
     for i in range(1, length + 1):
-        multiples.append(number * i)
-        return multiples
+        multiples.append(the_number * i)
+    return multiples
     
 
-resu;t = get_multiples(number, length)
+result = get_multiples(the_number, length)
 
 
 # Challenge 2
@@ -45,6 +45,17 @@ resu;t = get_multiples(number, length)
 # Notes
 # Final strings won’t include words with double letters (e.g. “passing”, “lottery”).
 
+def remove_consecutive_duplicates(word):
+    result = []
+    prev_char = ""
+    for char in word:
+        if char != prev_char:
+            result.append(char)
+        prev_char = char
+    return ''.join(result)
 
+word = input("Enter a word: ")
+result = remove_consecutive_duplicates(word)
+print(f"The word wothoug consecutive duplicaes is: {result}")
 
 # Duration & Difficulty
