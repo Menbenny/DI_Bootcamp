@@ -35,6 +35,15 @@ class App extends Component {
     return (
       <div>
         <h1>{this.state.message}</h1>
+        <form onSubmit={this.handleSubmit}>
+          <input
+            type="text"
+            value={this.handleInputChange}
+            placeholder="Type something"
+          />
+          <button type="submit">Submit</button>
+        </form>
+        <p>{this.state.serverResponse}</p>
       </div>
     );
   }
