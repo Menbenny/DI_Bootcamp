@@ -1,8 +1,8 @@
-import { useState } from 'react'
+import React, { useState } from 'react'
 import './App.css'
-import ErrorBoundary from './component/ErrorBoundary'
-import BuggyCounter from './component/buggyCounter'
-import LifecycleDemo from './component/LifecycleDemo'
+import ErrorBoundary from './Components/ErrorBoundary'
+import BuggyCounter from './Components/buggyCounter'
+import LifecycleDemo from './Components/LifecycleDemo'
 
 const App = () => {
   const [simulation, setSimulation] = useState('1');

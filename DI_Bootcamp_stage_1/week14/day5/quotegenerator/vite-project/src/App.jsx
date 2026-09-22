@@ -25,13 +25,14 @@ const App = () => {
   }, []);
 
   const generateRandomQuote = () => {
-    let index = getRandomIndex(quotes.length);
+    let index = getRandomIndex(Quotes.length);
 
     while(index === prevIndex) {
-      index = getRandomIndex(quotes.length);
+      index = getRandomIndex(Quotes.length);
     }
-    setCurrentQuote(quotes[index]);
+    setCurrentQuote(Quotes[index]);
     setPrevIndex(index);
+
 
     setBgColor(getRandomColor());
     setTextColor(getRandomColor());

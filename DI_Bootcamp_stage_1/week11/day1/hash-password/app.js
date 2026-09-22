@@ -1,3 +1,3 @@
 import {hashMyPassword} from "./hash.js"
 
-console.log(hashMyPassword('benjamin'))
+console.log(hashMyPassword('random'))
